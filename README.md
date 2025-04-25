@@ -96,11 +96,10 @@ Contoh:
 
 Tipe Commit:
 
-    Tipe	  |         Arti  
-- feat	      |  Menambahkan fitur baru
-- fix	      |  Memperbaiki bug atau error
-- docs	      |  Perubahan dokumentasi
-- refactor	  |  Mengubah struktur kode tanpa ubah fungsi
+- feat = Menambahkan fitur baru
+- fix = Memperbaiki bug atau error
+- docs = Perubahan dokumentasi
+- refactor = Mengubah struktur kode tanpa ubah fungsi
 
 
 ## 6. Aturan Pull Request (PR)
