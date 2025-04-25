@@ -34,7 +34,7 @@ Contoh:
 
 ## 3. Langkah-langkah untuk Project Manager (PM)
 
-# Hanya dilakukan 1 kali di awal proyek
+### Hanya dilakukan 1 kali di awal proyek
 
 ```bash
 git checkout -b dev
@@ -58,7 +58,7 @@ git pull origin dev
 git checkout -b frontend/nama-fitur
 ```
 
-# atau
+### atau
 
 ```bash
 git checkout -b backend/nama-fitur
