@@ -81,7 +81,7 @@ git push origin frontend/nama-fitur
 
 ## 5. Format Commit Message
 
-Gunakan format berikut:
+### Gunakan format berikut:
 
 [DIVISI] tipe: deskripsi singkat
 Contoh:
@@ -94,7 +94,7 @@ Contoh:
 
 - [BE] docs: update README setup firebase
 
-Tipe Commit:
+### Tipe Commit:
 
 - feat = Menambahkan fitur baru
 - fix = Memperbaiki bug atau error
