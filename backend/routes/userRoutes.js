@@ -37,4 +37,27 @@ router.patch('/:username/progress', (req, res) => {
   res.json({ message: 'Progress updated successfully' });
 });
 
+// POST /user/:username/submit-quiz
+router.post('/:username/submit-quiz', (req, res) => {
+  const { materialId, score } = req.body;
+  const users = JSON.parse(fs.readFileSync(usersFile));
+  const userIndex = users.findIndex(u => u.username === req.params.username);
+
+  if (userIndex === -1) {
+    return res.status(404).json({ message: 'User not found' });
+  }
+
+  const user = users[userIndex];
+
+  if (!user.completedQuizzes.includes(materialId)) {
+    user.completedQuizzes.push(materialId);
+    user.xp += score * 10;
+  }
+
+  users[userIndex] = user;
+  fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
+
+  res.json({ message: 'Quiz result saved', newXP: user.xp });
+});
+
 module.exports = router;

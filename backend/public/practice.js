@@ -74,4 +74,24 @@ function showResult() {
     <p>Skor kamu: ${score} dari ${currentMaterial.questions.length}</p>
     <button onclick="location.reload()">Kembali ke Daftar Quiz</button>
   `;
+
+  // Kirim ke backend
+  const username = 'minzelo'; // ← Ganti sesuai user login nantinya
+  fetch(`/user/${username}/submit-quiz`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      materialId: currentMaterial.id,
+      score: score
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log('Hasil kuis disimpan:', data);
+  })
+  .catch(err => {
+    console.error('Gagal menyimpan hasil kuis:', err);
+  });
 }
