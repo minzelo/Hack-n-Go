@@ -7,7 +7,8 @@ const port = 3000;
 
 // === Import routes ===
 const quizRoutes = require('./routes/quizRoutes');
-const userRoutes = require('./routes/userRoutes'); // ← Tambahan baru
+const userRoutes = require('./routes/userRoutes');
+const learningRoutes = require('./routes/learningRoutes'); // ← Tambahan baru
 
 // Middleware
 app.use(express.json());
@@ -18,7 +19,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing API
 app.use('/api/quiz', quizRoutes);
-app.use('/user', userRoutes); // ← Routing untuk Profile/Progress
+app.use('/user', userRoutes);
+app.use('/api/modules', learningRoutes); // ← Routing modul belajar
 
 // Helper function untuk membaca file users.json
 function getUsers() {
@@ -76,7 +78,7 @@ app.post('/register', async (req, res) => {
     username,
     email,
     password: hashedPassword,
-    xp: 0, // ← inisialisasi tambahan
+    xp: 0,
     streak: 0,
     completedLessons: [],
     completedQuizzes: [],
