@@ -1,11 +1,13 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require('bcrypt'); // ← tambahkan untuk hashing password
+const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
 
+// === Import routes ===
 const quizRoutes = require('./routes/quizRoutes');
+const userRoutes = require('./routes/userRoutes'); // ← Tambahan baru
 
 // Middleware
 app.use(express.json());
@@ -14,8 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 // Serve file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routing untuk quiz
+// Routing API
 app.use('/api/quiz', quizRoutes);
+app.use('/user', userRoutes); // ← Routing untuk Profile/Progress
 
 // Helper function untuk membaca file users.json
 function getUsers() {
@@ -72,7 +75,12 @@ app.post('/register', async (req, res) => {
   const newUser = {
     username,
     email,
-    password: hashedPassword
+    password: hashedPassword,
+    xp: 0, // ← inisialisasi tambahan
+    streak: 0,
+    completedLessons: [],
+    completedQuizzes: [],
+    achievements: []
   };
 
   users.push(newUser);

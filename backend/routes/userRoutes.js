@@ -1,0 +1,40 @@
+// backend/routes/userRoutes.js
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const router = express.Router();
+
+const usersFile = path.join(__dirname, '../data/users.json');
+
+// GET /user/:username/profile
+router.get('/:username/profile', (req, res) => {
+  const users = JSON.parse(fs.readFileSync(usersFile));
+  const user = users.find(u => u.username === req.params.username);
+  if (!user) return res.status(404).json({ message: 'User not found' });
+
+  const profileData = {
+    username: user.username,
+    xp: user.xp,
+    streak: user.streak,
+    completedLessons: user.completedLessons,
+    completedQuizzes: user.completedQuizzes,
+    achievements: user.achievements
+  };
+
+  res.json(profileData);
+});
+
+// PATCH /user/:username/progress
+router.patch('/:username/progress', (req, res) => {
+  const users = JSON.parse(fs.readFileSync(usersFile));
+  const userIndex = users.findIndex(u => u.username === req.params.username);
+  if (userIndex === -1) return res.status(404).json({ message: 'User not found' });
+
+  const updates = req.body;
+  users[userIndex] = { ...users[userIndex], ...updates };
+
+  fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
+  res.json({ message: 'Progress updated successfully' });
+});
+
+module.exports = router;
