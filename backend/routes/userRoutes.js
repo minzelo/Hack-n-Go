@@ -60,4 +60,18 @@ router.post('/:username/submit-quiz', (req, res) => {
   res.json({ message: 'Quiz result saved', newXP: user.xp });
 });
 
+// GET /user/leaderboard/all - tampilkan user dengan XP tertinggi
+router.get('/leaderboard/all', (req, res) => {
+  const users = JSON.parse(fs.readFileSync(usersFile));
+
+  const sorted = users
+    .map(u => ({
+      username: u.username,
+      xp: u.xp
+    }))
+    .sort((a, b) => b.xp - a.xp);
+
+  res.json(sorted);
+});
+
 module.exports = router;
