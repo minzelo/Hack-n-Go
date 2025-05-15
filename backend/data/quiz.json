@@ -1,8 +1,69 @@
 [
   {
-    "id": 1,
-    "question": "What is phishing?",
-    "options": ["Spam", "Hacking", "Fake login", "Firewall"],
-    "answer": "Fake login"
+    "category": "Password Security",
+    "materials": [
+      {
+        "id": "password-basics",
+        "title": "Dasar-dasar Password",
+        "level": "Beginner",
+        "questions": [
+          {
+            "question": "Apa itu password manager?",
+            "options": [
+              "Alat untuk menyimpan password dengan aman",
+              "Tempat membuat password palsu",
+              "Folder di komputer"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Apa karakteristik password yang kuat?",
+            "options": [
+              "Panjang, acak, dan unik",
+              "Nama pacar dan tanggal ulang tahun",
+              "Hanya angka 123456"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "id": "password-vs-passphrase",
+        "title": "Password vs Passphrase",
+        "level": "Intermediate",
+        "questions": [
+          {
+            "question": "Apa itu passphrase?",
+            "options": [
+              "Kata sandi berupa frasa panjang",
+              "Password yang ditulis ulang",
+              "Kata sandi dengan 4 angka"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Phishing",
+    "materials": [
+      {
+        "id": "phishing-intro",
+        "title": "Pengantar Phishing",
+        "level": "Beginner",
+        "questions": [
+          {
+            "question": "Apa itu phishing?",
+            "options": [
+              "Serangan untuk mencuri informasi lewat email palsu",
+              "Memancing ikan digital",
+              "Alat antivirus"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ]
   }
 ]
