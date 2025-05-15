@@ -1,10 +1,12 @@
 [
   {
     "email": "admin@example.com",
-    "password": "password123"
+    "username": "admin",
+    "password": "$2b$10$hashedPassword..."
   },
   {
-    "email": "user@example.com",
-    "password": "mypassword"
+    "username": "minzelo",
+    "email": "amogus@sugoma.com",
+    "password": "$2b$10$5XClCWRnw897u/.oUgwGVOP5mbynhfJKr0F7rz.dI4jm9TeaVlYsi"
   }
 ]

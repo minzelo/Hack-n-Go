@@ -1,16 +1,17 @@
 const express = require('express');
-const path = require('path'); // Untuk handle static file
+const path = require('path');
 const fs = require('fs');
+const bcrypt = require('bcrypt'); // ← tambahkan untuk hashing password
 const app = express();
 const port = 3000;
 
 const quizRoutes = require('./routes/quizRoutes');
 
-// Middleware untuk parsing JSON dan form URL-encoded
+// Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // ← Tambahan penting untuk form login
+app.use(express.urlencoded({ extended: true }));
 
-// Serve file statis dari folder 'public' (untuk login.html dan lainnya)
+// Serve file statis dari folder 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing untuk quiz
@@ -22,20 +23,65 @@ function getUsers() {
   return JSON.parse(data);
 }
 
-// Route untuk handle login POST
-app.post('/login', (req, res) => {
+// Helper function untuk menulis ke users.json
+function saveUsers(users) {
+  fs.writeFileSync(
+    path.join(__dirname, 'data', 'users.json'),
+    JSON.stringify(users, null, 2)
+  );
+}
+
+// ==================== ROUTE LOGIN ====================
+app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   const users = getUsers();
 
-  const matchedUser = users.find(user => user.email === email && user.password === password);
-
-  if (matchedUser) {
-    return res.send('Login berhasil!');
-  } else {
-    return res.status(401).send('Email atau password salah.');
+  const user = users.find(u => u.email === email);
+  if (!user) {
+    return res.status(401).send('Email tidak ditemukan.');
   }
+
+  const isPasswordMatch = await bcrypt.compare(password, user.password);
+  if (!isPasswordMatch) {
+    return res.status(401).send('Password salah.');
+  }
+
+  res.send('Login berhasil!');
 });
 
+// ==================== ROUTE REGISTER ====================
+app.post('/register', async (req, res) => {
+  const { username, email, password, confirmPassword } = req.body;
+
+  if (!username || !email || !password || !confirmPassword) {
+    return res.status(400).send('Semua field wajib diisi.');
+  }
+
+  if (password !== confirmPassword) {
+    return res.status(400).send('Password dan konfirmasi tidak cocok.');
+  }
+
+  const users = getUsers();
+  const userExists = users.find(u => u.email === email);
+  if (userExists) {
+    return res.status(400).send('Email sudah terdaftar.');
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  const newUser = {
+    username,
+    email,
+    password: hashedPassword
+  };
+
+  users.push(newUser);
+  saveUsers(users);
+
+  res.redirect('/login.html');
+});
+
+// ==================== START SERVER ====================
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
