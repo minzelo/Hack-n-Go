@@ -33,7 +33,7 @@ Login user menggunakan email dan password.
 ```
 Response: "Login berhasil!" atau 401 jika gagal.
 
-### POST /register
+### `POST /register`
 Registrasi user baru.
 ```json
 {
@@ -47,7 +47,7 @@ Response: Redirect ke /login.html jika sukses.
 
 ## 👤 USER PROFILE & PROGRESS
 
-### GET /user/:username/profile
+### `GET /user/:username/profile`
 Ambil data profil dan progres user.
 ```json
 {
@@ -59,7 +59,7 @@ Ambil data profil dan progres user.
   "achievements": [...]
 }
 ```
-### PATCH /user/:username/progress
+### `PATCH /user/:username/progress`
 Update progres user.
 ```json
 {
@@ -67,7 +67,7 @@ Update progres user.
   "streak": 3
 }
 ```
-### POST /user/:username/submit-quiz
+### `POST /user/:username/submit-quiz`
 Simpan hasil quiz dan tambahkan XP.
 ```json
 {
@@ -75,7 +75,7 @@ Simpan hasil quiz dan tambahkan XP.
   "score": 9
 }
 ```
-### GET /user/leaderboard/all
+### `GET /user/leaderboard/all`
 Ambil leaderboard user berdasarkan XP.
 ```json
 [
@@ -85,7 +85,7 @@ Ambil leaderboard user berdasarkan XP.
 ```
 ## 🧠 LEARN MODULE
 
-### GET /api/modules
+### `GET /api/modules`
 Ambil semua kategori belajar.
 ```json
 [
@@ -96,7 +96,7 @@ Ambil semua kategori belajar.
   }
 ]
 ```
-### GET /api/modules/:categoryId
+### `GET /api/modules/:categoryId`
 Ambil semua modul dari kategori.
 ```json
 {
@@ -111,7 +111,7 @@ Ambil semua modul dari kategori.
   ]
 }
 ```
-### GET /api/modules/:categoryId/:moduleId
+### `GET /api/modules/:categoryId/:moduleId`
 Ambil daftar lesson dari satu modul.
 ```json
 {
@@ -121,7 +121,7 @@ Ambil daftar lesson dari satu modul.
   ]
 }
 ```
-### GET /api/modules/:categoryId/:moduleId/:lessonId
+### `GET /api/modules/:categoryId/:moduleId/:lessonId`
 Ambil konten lesson.
 ```json
 {
@@ -149,7 +149,7 @@ Ambil konten lesson.
 
 ## 🧪 QUIZ MODULE
 
-### GET /api/quiz
+### `GET /api/quiz`
 Ambil daftar kategori quiz.
 ```json
 [
@@ -160,7 +160,7 @@ Ambil daftar kategori quiz.
   }
 ]
 ```
-### GET /api/quiz/:categoryId
+### `GET /api/quiz/:categoryId`
 Ambil quiz dalam kategori.
 ```json
 {
@@ -175,7 +175,7 @@ Ambil quiz dalam kategori.
   ]
 }
 ```
-### GET /api/quiz/:categoryId/:quizId
+### `GET /api/quiz/:categoryId/:quizId`
 Ambil soal-soal dari 1 quiz.
 ```json
 {
