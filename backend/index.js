@@ -8,27 +8,24 @@ const port = 3000;
 // === Import routes ===
 const quizRoutes = require('./routes/quizRoutes');
 const userRoutes = require('./routes/userRoutes');
-const learningRoutes = require('./routes/learningRoutes'); // ← Tambahan baru
+const learningRoutes = require('./routes/learningRoutes'); // ✅ Untuk modul belajar
 
-// Middleware
+// === Middleware ===
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public'))); // serve file static
 
-// Serve file statis dari folder 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+// === API Routing ===
+app.use('/api/quiz', quizRoutes);          // endpoint quiz
+app.use('/user', userRoutes);              // endpoint user
+app.use('/api/modules', learningRoutes);   // endpoint modul belajar
 
-// Routing API
-app.use('/api/quiz', quizRoutes);
-app.use('/user', userRoutes);
-app.use('/api/modules', learningRoutes); // ← Routing modul belajar
-
-// Helper function untuk membaca file users.json
+// === Helper functions ===
 function getUsers() {
   const data = fs.readFileSync(path.join(__dirname, 'data', 'users.json'), 'utf-8');
   return JSON.parse(data);
 }
 
-// Helper function untuk menulis ke users.json
 function saveUsers(users) {
   fs.writeFileSync(
     path.join(__dirname, 'data', 'users.json'),
@@ -36,25 +33,21 @@ function saveUsers(users) {
   );
 }
 
-// ==================== ROUTE LOGIN ====================
+// === Login Route ===
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   const users = getUsers();
 
   const user = users.find(u => u.email === email);
-  if (!user) {
-    return res.status(401).send('Email tidak ditemukan.');
-  }
+  if (!user) return res.status(401).send('Email tidak ditemukan.');
 
   const isPasswordMatch = await bcrypt.compare(password, user.password);
-  if (!isPasswordMatch) {
-    return res.status(401).send('Password salah.');
-  }
+  if (!isPasswordMatch) return res.status(401).send('Password salah.');
 
   res.send('Login berhasil!');
 });
 
-// ==================== ROUTE REGISTER ====================
+// === Register Route ===
 app.post('/register', async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;
 
@@ -91,7 +84,7 @@ app.post('/register', async (req, res) => {
   res.redirect('/login.html');
 });
 
-// ==================== START SERVER ====================
+// === Start Server ===
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`🚀 Server running at http://localhost:${port}`);
 });

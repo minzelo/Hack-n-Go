@@ -31,7 +31,8 @@
     "completedQuizzes": [
       "quiz_1",
       "quiz_3",
-      "password-security"
+      "password-security",
+      "phishing-detection"
     ],
     "achievements": [
       "first_lesson",

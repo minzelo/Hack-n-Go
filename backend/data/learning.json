@@ -1,0 +1,115 @@
+[
+  {
+    "id": "iso27001",
+    "categoryTitle": "ISO 27001",
+    "description": "Understand the best practices for information security.",
+    "modules": [
+      {
+        "id": "password-security",
+        "title": "Password Security",
+        "description": "Learn how to create and manage secure passwords",
+        "lessons": [
+          {
+            "id": "password-basics",
+            "title": "Password Basics",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Passwords are the first line of defense against unauthorized access..."
+              },
+              {
+                "type": "heading",
+                "text": "Why Passwords Matter"
+              },
+              {
+                "type": "paragraph",
+                "text": "Your passwords protect everything from your email to your banking account..."
+              },
+              {
+                "type": "list",
+                "text": [
+                  "At least 12 characters long",
+                  "Include uppercase and lowercase letters",
+                  "Include numbers and special characters",
+                  "Avoid using personal information like names or birthdays"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "common-password-mistakes",
+            "title": "Common Password Mistakes",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Using 'password123' or your name is never a good idea..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "phishing-awareness",
+        "title": "Phishing Awareness",
+        "description": "Identify and avoid phishing attempts",
+        "lessons": [
+          {
+            "id": "phishing-intro",
+            "title": "What is Phishing?",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Phishing is a method attackers use to trick users into revealing sensitive info..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "owasp",
+    "categoryTitle": "OWASP TOP 10",
+    "description": "Master the top 10 most common web security vulnerabilities.",
+    "modules": [
+      {
+        "id": "injection",
+        "title": "Injection Attacks",
+        "description": "Learn how injection flaws like SQL injection work",
+        "lessons": [
+          {
+            "id": "sql-basics",
+            "title": "SQL Injection Basics",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "SQL Injection occurs when user input is improperly sanitized..."
+              },
+              {
+                "type": "code",
+                "text": "SELECT * FROM users WHERE username = '$user'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "xss",
+        "title": "Cross-site Scripting (XSS)",
+        "description": "Learn how malicious scripts can be injected into web pages",
+        "lessons": [
+          {
+            "id": "xss-intro",
+            "title": "Introduction to XSS",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "XSS attacks allow attackers to inject client-side scripts into webpages..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
