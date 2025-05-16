@@ -33,7 +33,7 @@ Login user menggunakan email dan password.
 ```
 Response: "Login berhasil!" atau 401 jika gagal.
 
-POST /register
+### POST /register
 Registrasi user baru.
 ```json
 {
@@ -45,11 +45,11 @@ Registrasi user baru.
 ```
 Response: Redirect ke /login.html jika sukses.
 
-👤 USER PROFILE & PROGRESS
+## 👤 USER PROFILE & PROGRESS
 
-GET /user/:username/profile
+### GET /user/:username/profile
 Ambil data profil dan progres user.
-
+```json
 {
   "username": "minzelo",
   "xp": 150,
@@ -58,35 +58,36 @@ Ambil data profil dan progres user.
   "completedQuizzes": [...],
   "achievements": [...]
 }
-
-PATCH /user/:username/progress
+```
+### PATCH /user/:username/progress
 Update progres user.
-
+```json
 {
   "xp": 200,
   "streak": 3
 }
-
-POST /user/:username/submit-quiz
+```
+### POST /user/:username/submit-quiz
 Simpan hasil quiz dan tambahkan XP.
-
+```json
 {
   "materialId": "quiz_1",
   "score": 9
 }
-
-GET /user/leaderboard/all
+```
+### GET /user/leaderboard/all
 Ambil leaderboard user berdasarkan XP.
-
+```json
 [
   { "username": "admin", "xp": 300 },
   { "username": "minzelo", "xp": 150 }
 ]
-🧠 LEARN MODULE
+```
+## 🧠 LEARN MODULE
 
-GET /api/modules
+### GET /api/modules
 Ambil semua kategori belajar.
-
+```json
 [
   {
     "id": "iso27001",
@@ -94,10 +95,10 @@ Ambil semua kategori belajar.
     "description": "..."
   }
 ]
-
-GET /api/modules/:categoryId
+```
+### GET /api/modules/:categoryId
 Ambil semua modul dari kategori.
-
+```json
 {
   "categoryTitle": "ISO 27001",
   "modules": [
@@ -109,20 +110,20 @@ Ambil semua modul dari kategori.
     }
   ]
 }
-
-GET /api/modules/:categoryId/:moduleId
+```
+### GET /api/modules/:categoryId/:moduleId
 Ambil daftar lesson dari satu modul.
-
+```json
 {
   "moduleTitle": "Password Security",
   "lessons": [
     { "id": "password-basics", "title": "Password Basics" }
   ]
 }
-
-GET /api/modules/:categoryId/:moduleId/:lessonId
+```
+### GET /api/modules/:categoryId/:moduleId/:lessonId
 Ambil konten lesson.
-
+```json
 {
   "title": "Password Basics",
   "content": [
@@ -144,12 +145,13 @@ Ambil konten lesson.
     }
   ]
 }
+```
 
-🧪 QUIZ MODULE
+## 🧪 QUIZ MODULE
 
-GET /api/quiz
+### GET /api/quiz
 Ambil daftar kategori quiz.
-
+```json
 [
   {
     "id": "iso27001",
@@ -157,9 +159,10 @@ Ambil daftar kategori quiz.
     "description": "..."
   }
 ]
-GET /api/quiz/:categoryId
+```
+### GET /api/quiz/:categoryId
 Ambil quiz dalam kategori.
-
+```json
 {
   "categoryTitle": "ISO 27001",
   "quizzes": [
@@ -171,9 +174,10 @@ Ambil quiz dalam kategori.
     }
   ]
 }
-GET /api/quiz/:categoryId/:quizId
+```
+### GET /api/quiz/:categoryId/:quizId
 Ambil soal-soal dari 1 quiz.
-
+```json
 {
   "title": "Password Security",
   "level": "Beginner",
@@ -185,15 +189,16 @@ Ambil soal-soal dari 1 quiz.
     }
   ]
 }
+```
 
-📁 DATA FILES
+## 📁 DATA FILES
 /data/users.json – semua user, XP, progress
 
 /data/quiz.json – semua soal quiz per kategori
 
 /data/learning.json – materi belajar berjenjang
 
-📌 CATATAN
+## 📌 CATATAN
 Tidak ada session/cookie — gunakan localStorage di frontend untuk simpan login.
 
 File JSON tidak boleh dibuka bersamaan manual + server karena raw editing bisa overwrite.
