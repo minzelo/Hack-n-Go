@@ -1,43 +1,50 @@
 [
   {
-    "category": "Password Security",
-    "materials": [
+    "id": "iso27001",
+    "categoryTitle": "ISO 27001",
+    "description": "Test your knowledge of best practices.",
+    "quizzes": [
       {
-        "id": "password-basics",
-        "title": "Dasar-dasar Password",
+        "id": "password-security",
+        "title": "Password Security",
         "level": "Beginner",
+        "description": "Test your knowledge of password best practices",
         "questions": [
           {
-            "question": "Apa itu password manager?",
+            "question": "Which of the following is the most secure password?",
             "options": [
-              "Alat untuk menyimpan password dengan aman",
-              "Tempat membuat password palsu",
-              "Folder di komputer"
+              "password123",
+              "P@ssw0rd",
+              "Tr0ub4dor&3",
+              "correct-horse-battery-staple"
             ],
-            "answer": 0
+            "answer": 3
           },
           {
-            "question": "Apa karakteristik password yang kuat?",
+            "question": "What is a passphrase?",
             "options": [
-              "Panjang, acak, dan unik",
-              "Nama pacar dan tanggal ulang tahun",
-              "Hanya angka 123456"
+              "A long string of symbols",
+              "A memorable sequence of words",
+              "A password reset key",
+              "A string of numbers only"
             ],
-            "answer": 0
+            "answer": 1
           }
         ]
       },
       {
-        "id": "password-vs-passphrase",
-        "title": "Password vs Passphrase",
+        "id": "phishing-detection",
+        "title": "Phishing Detection",
         "level": "Intermediate",
+        "description": "Can you spot the signs of a phishing attempt?",
         "questions": [
           {
-            "question": "Apa itu passphrase?",
+            "question": "What is a common sign of phishing?",
             "options": [
-              "Kata sandi berupa frasa panjang",
-              "Password yang ditulis ulang",
-              "Kata sandi dengan 4 angka"
+              "Email from unknown sender asking for credentials",
+              "Correct grammar and branding",
+              "Two-factor authentication",
+              "Encrypted email"
             ],
             "answer": 0
           }
@@ -46,21 +53,25 @@
     ]
   },
   {
-    "category": "Phishing",
-    "materials": [
+    "id": "owasp",
+    "categoryTitle": "OWASP TOP 10",
+    "description": "Learn about the top 10 web vulnerabilities.",
+    "quizzes": [
       {
-        "id": "phishing-intro",
-        "title": "Pengantar Phishing",
-        "level": "Beginner",
+        "id": "injection",
+        "title": "Injection",
+        "level": "Advanced",
+        "description": "How much do you know about SQL injection?",
         "questions": [
           {
-            "question": "Apa itu phishing?",
+            "question": "What is SQL Injection?",
             "options": [
-              "Serangan untuk mencuri informasi lewat email palsu",
-              "Memancing ikan digital",
-              "Alat antivirus"
+              "A way to optimize queries",
+              "Injecting harmful SQL commands into input fields",
+              "A secure login method",
+              "A type of backup"
             ],
-            "answer": 0
+            "answer": 1
           }
         ]
       }
