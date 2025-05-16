@@ -30,17 +30,19 @@ Login user menggunakan email dan password.
   "email": "admin@example.com",
   "password": "password123"
 }
+```
 Response: "Login berhasil!" atau 401 jika gagal.
 
 POST /register
 Registrasi user baru.
-
+```json
 {
   "username": "minzelo",
   "email": "minzelo@example.com",
   "password": "mypassword",
   "confirmPassword": "mypassword"
 }
+```
 Response: Redirect ke /login.html jika sukses.
 
 👤 USER PROFILE & PROGRESS
