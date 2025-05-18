@@ -1,114 +1,174 @@
 [
   {
-    "id": "iso27001",
-    "categoryTitle": "ISO 27001",
-    "description": "Understand the best practices for information security.",
+    "id": "owasp",
+    "categoryTitle": "OWASP Top 10",
+    "description": "Sepuluh jenis kerentanan paling umum di aplikasi mobile.",
     "modules": [
       {
-        "id": "password-security",
-        "title": "Password Security",
-        "description": "Learn how to create and manage secure passwords",
-        "lessons": [
+        "id": "improper-credential-usage",
+        "title": "Improper Credential Usage",
+        "description": "Pelajari kesalahan umum dalam penggunaan kredensial.",
+        "lessons":  [
           {
-            "id": "password-basics",
-            "title": "Password Basics",
+            "id": "improper-usage-content",
+            "title": "Understanding Improper Credential Usage",
             "content": [
               {
                 "type": "paragraph",
-                "text": "Passwords are the first line of defense against unauthorized access..."
+                "text": "Improper Credential Usage adalah kesalahan umum dalam menyimpan, membagikan, atau menggunakan kredensial secara tidak aman, seperti menyimpan kata sandi di kode sumber, menggunakan kredensial default, atau membagikan kredensial lewat email."
               },
               {
                 "type": "heading",
-                "text": "Why Passwords Matter"
-              },
-              {
-                "type": "paragraph",
-                "text": "Your passwords protect everything from your email to your banking account..."
+                "text": "Contoh Improper Credential Usage"
               },
               {
                 "type": "list",
                 "text": [
-                  "At least 12 characters long",
-                  "Include uppercase and lowercase letters",
-                  "Include numbers and special characters",
-                  "Avoid using personal information like names or birthdays"
+                  "Menyimpan kredensial langsung di dalam kode (hardcoded)",
+                  "Menggunakan kredensial default (admin/admin)",
+                  "Menyimpan file konfigurasi tanpa enkripsi",
+                  "Mengirim kata sandi lewat email"
                 ]
-              }
-            ]
-          },
-          {
-            "id": "common-password-mistakes",
-            "title": "Common Password Mistakes",
-            "content": [
+              },
               {
-                "type": "paragraph",
-                "text": "Using 'password123' or your name is never a good idea..."
+                "type": "heading",
+                "text": "Cara Aman Mengelola Kredensial"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Gunakan password manager",
+                  "Implementasikan autentikasi dua faktor (2FA)",
+                  "Gunakan environment variables dan credential vault",
+                  "Enkripsi semua kredensial saat penyimpanan"
+                ]
               }
             ]
           }
         ]
       },
       {
-        "id": "phishing-awareness",
-        "title": "Phishing Awareness",
-        "description": "Identify and avoid phishing attempts",
-        "lessons": [
-          {
-            "id": "phishing-intro",
-            "title": "What is Phishing?",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Phishing is a method attackers use to trick users into revealing sensitive info..."
-              }
-            ]
-          }
-        ]
+        "id": "inadequate-supply-chain-security",
+        "title": "Inadequate Supply Chain Security",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-authentication-authorization",
+        "title": "Insecure Authentication/Authorization",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-io-validation",
+        "title": "Insufficient Input/Output Validation",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-communication",
+        "title": "Insecure Communication",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "inadequate-privacy-controls",
+        "title": "Inadequate Privacy Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-binary-protections",
+        "title": "Insufficient Binary Protections",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "security-misconfiguration",
+        "title": "Security Misconfiguration",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-data-storage",
+        "title": "Insecure Data Storage",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-cryptography",
+        "title": "Insufficient Cryptography",
+        "description": "Konten belum tersedia.",
+        "lessons": []
       }
     ]
   },
   {
-    "id": "owasp",
-    "categoryTitle": "OWASP TOP 10",
-    "description": "Master the top 10 most common web security vulnerabilities.",
+    "id": "iso27001",
+    "categoryTitle": "ISO/IEC 27001",
+    "description": "Standar internasional untuk sistem manajemen keamanan informasi (ISMS).",
     "modules": [
       {
-        "id": "injection",
-        "title": "Injection Attacks",
-        "description": "Learn how injection flaws like SQL injection work",
+        "id": "organizational-controls",
+        "title": "Organizational Controls",
+        "description": "Pelajari pengelolaan kontrol organisasi dalam konteks keamanan informasi.",
         "lessons": [
           {
-            "id": "sql-basics",
-            "title": "SQL Injection Basics",
+            "id": "organizational-controls-content",
+            "title": "Introduction to Organizational Controls",
             "content": [
               {
                 "type": "paragraph",
-                "text": "SQL Injection occurs when user input is improperly sanitized..."
+                "text": "Kontrol organisasi dalam ISO/IEC 27001 mencakup kebijakan, peran, dan proses yang digunakan untuk menjaga keamanan informasi dalam suatu organisasi."
               },
               {
-                "type": "code",
-                "text": "SELECT * FROM users WHERE username = '$user'"
+                "type": "heading",
+                "text": "Contoh Kontrol Organisasi"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Penetapan kebijakan keamanan informasi",
+                  "Penunjukan peran dan tanggung jawab",
+                  "Pelaksanaan pelatihan kesadaran keamanan",
+                  "Proses manajemen insiden",
+                  "Audit internal berkala"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Manfaat Penerapan Kontrol"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Meningkatkan kesadaran keamanan di seluruh organisasi",
+                  "Membantu dalam kepatuhan terhadap standar dan regulasi",
+                  "Mengurangi risiko pelanggaran data",
+                  "Meningkatkan kepercayaan mitra dan pelanggan"
+                ]
               }
             ]
           }
         ]
       },
       {
-        "id": "xss",
-        "title": "Cross-site Scripting (XSS)",
-        "description": "Learn how malicious scripts can be injected into web pages",
-        "lessons": [
-          {
-            "id": "xss-intro",
-            "title": "Introduction to XSS",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "XSS attacks allow attackers to inject client-side scripts into webpages..."
-              }
-            ]
-          }
-        ]
+        "id": "people-controls",
+        "title": "People Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "physical-controls",
+        "title": "Physical Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "technological-controls",
+        "title": "Technological Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
       }
     ]
   }

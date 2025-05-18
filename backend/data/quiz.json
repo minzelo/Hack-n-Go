@@ -1,79 +1,315 @@
 [
   {
-    "id": "iso27001",
-    "categoryTitle": "ISO 27001",
-    "description": "Test your knowledge of best practices.",
+    "id": "owasp",
+    "categoryTitle": "OWASP Top 10",
+    "description": "Sepuluh jenis kerentanan paling umum di aplikasi mobile.",
     "quizzes": [
       {
-        "id": "password-security",
-        "title": "Password Security",
+        "id": "improper-credential-usage",
+        "title": "Improper Credential Usage",
         "level": "Beginner",
-        "description": "Test your knowledge of password best practices",
+        "description": "Uji pemahaman kamu tentang kesalahan umum dalam penggunaan kredensial.",
         "questions": [
           {
-            "question": "Which of the following is the most secure password?",
+            "question": "Apa yang dimaksud dengan “improper Credential Usage”?",
             "options": [
-              "password123",
-              "P@ssw0rd",
-              "Tr0ub4dor&3",
-              "correct-horse-battery-staple"
+              "Penggunaan kredensial yang kuat dan unik",
+              "Penggunaan kredensial default atau mudah ditebak",
+              "Penggunaan authentication multifactor",
+              "Penggunaan enkripsi untuk menyimpan data"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Mengapa penggunaan kata sandi seperti “123456” berisiko?",
+            "options": [
+              "Sulit diingat",
+              "Mudah ditebak oleh penyerang",
+              "Terlalu panjang",
+              "Tidak dapat digunakan di semua situs"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Apa itu “credential stuffing”?",
+            "options": [
+              "Mengisi formulir pendaftaran dengan data palsu",
+              "Menggunakan kredensial yang sama di banyak situs",
+              "Menguji kombinasi nama pengguna dan kata sandi yang dicuri",
+              "Menyimpan kredensial di tempat yang aman"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Bagaimana cara melindungi akun dari serangan brute force?",
+            "options": [
+              "Menggunakan kata sandi yang sama di semua akun",
+              "Menonaktifkan autentikasi dua faktor",
+              "Menggunakan autentikasi dua faktor (2FA)",
+              "Menghindari penggunaan kata sandi"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Apa risiko menggunakan kredensial default pada perangkat atau aplikasi?",
+            "options": [
+              "Meningkatkan keamanan",
+              "Memudahkan akses oleh penyerang",
+              "Mengurangi kebutuhan pelatihan",
+              "Tidak ada risiko"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Mengapa penting untuk mengganti kata sandi secara berkala?",
+            "options": [
+              "Untuk mempersulit penyerang menebak kata sandi",
+              "Untuk mengikuti tren teknologi",
+              "Untuk menghindari lupa kata sandi",
+              "Tidak penting"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Apa itu manajer kata sandi (password manager)?",
+            "options": [
+              "Alat untuk membuat dan menyimpan kata sandi yang kuat",
+              "Program untuk meretas kata sandi",
+              "Layanan untuk membagikan kata sandi",
+              "Sistem untuk menghapus kata sandi"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Apa yang harus dilakukan jika mencurigai akun telah diretas?",
+            "options": [
+              "Mengabaikannya",
+              "Mengganti kata sandi dan mengaktifkan 2FA",
+              "Menonaktifkan akun",
+              "Membuat akun baru"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Apa itu Two Factor Authentication (2FA)?",
+            "options": [
+              "Menggunakan dua kata sandi yang berbeda",
+              "Menggabungkan nama pengguna dan kata sandi",
+              "Menggunakan dua metode verifikasi untuk masuk",
+              "Menggunakan kata sandi yang panjang"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Mengapa tidak disarankan menggunakan kata sandi yang sama di beberapa akun?",
+            "options": [
+              "Memudahkan pengelolaan akun",
+              "Mengurangi risiko keamanan",
+              "Jika satu akun diretas, akun lain juga berisiko",
+              "Tidak ada alasan khusus"
+            ],
+            "answer": 2
+          }
+        ]
+      },
+      {
+        "id": "inadequate-supply-chain-security",
+        "title": "Inadequate Supply Chain Security",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insecure-authentication-authorization",
+        "title": "Insecure Authentication/Authorization",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insufficient-io-validation",
+        "title": "Insufficient Input/Output Validation",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insecure-communication",
+        "title": "Insecure Communication",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "inadequate-privacy-controls",
+        "title": "Inadequate Privacy Controls",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insufficient-binary-protections",
+        "title": "Insufficient Binary Protections",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "security-misconfiguration",
+        "title": "Security Misconfiguration",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insecure-data-storage",
+        "title": "Insecure Data Storage",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "insufficient-cryptography",
+        "title": "Insufficient Cryptography",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      }
+    ]
+  },
+  {
+    "id": "iso27001",
+    "categoryTitle": "ISO/IEC 27001",
+    "description": "Standar internasional untuk sistem manajemen keamanan informasi (ISMS).",
+    "quizzes": [
+      {
+        "id": "organizational-controls",
+        "title": "Organizational Controls",
+        "level": "Beginner",
+        "description": "Uji pemahaman kamu tentang kontrol organisasi dalam keamanan informasi.",
+        "questions": [
+          {
+            "question": "Apa tujuan utama dari kontrol organisasi dalam ISO/IEC 27001?",
+            "options": [
+              "Mengatur struktur organisasi",
+              "Menetapkan kebijakan dan prosedur keamanan informasi",
+              "Mengelola keuangan perusahaan",
+              "Meningkatkan penjualan"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Siapa yang bertanggung jawab atas keamanan informasi dalam organisasi?",
+            "options": [
+              "Semua anggota organisasi",
+              "Hanya manajer TI",
+              "Hanya tim keamanan",
+              "Hanya karyawan baru"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Mengapa penting memiliki kebijakan keamanan informasi tertulis?",
+            "options": [
+              "Untuk memenuhi persyaratan hukum",
+              "Untuk memberikan panduan kepada karyawan",
+              "Untuk menunjukkan komitmen manajemen",
+              "Semua jawaban benar"
             ],
             "answer": 3
           },
           {
-            "question": "What is a passphrase?",
+            "question": "Apa itu pelatihan kesadaran keamanan informasi?",
             "options": [
-              "A long string of symbols",
-              "A memorable sequence of words",
-              "A password reset key",
-              "A string of numbers only"
+              "Pelatihan tentang penggunaan perangkat lunak",
+              "Pelatihan tentang pentingnya menjaga keamanan informasi",
+              "Pelatihan tentang pemasaran digital",
+              "Pelatihan tentang manajemen proyek"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Apa langkah pertama dalam menerapkan kontrol organisasi?",
+            "options": [
+              "Menyusun kebijakan keamanan informasi",
+              "Membeli perangkat lunak keamanan",
+              "Mengganti semua kata sandi",
+              "Memecat karyawan yang tidak patuh"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Mengapa penting melakukan penilaian risiko secara berkala?",
+            "options": [
+              "Untuk mengidentifikasi ancaman baru",
+              "Untuk memenuhi persyaratan ISO",
+              "Untuk mengurangi biaya operasional",
+              "Tidak penting"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Apa itu peran dan tanggung jawab dalam konteks keamanan informasi?",
+            "options": [
+              "Tugas yang diberikan kepada karyawan",
+              "Deskripsi pekerjaan umum",
+              "Penugasan spesifik terkait keamanan informasi",
+              "Tidak ada hubungannya"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Mengapa penting memiliki proses manajemen insiden keamanan informasi?",
+            "options": [
+              "Untuk mendokumentasikan semua aktivitas",
+              "Untuk merespons dan memulihkan dari insiden dengan cepat",
+              "Untuk melatih karyawan baru",
+              "Untuk meningkatkan penjualan"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Apa itu kontrol akses dalam keamanan informasi?",
+            "options": [
+              "Proses mengatur siapa yang dapat mengakses informasi tertentu",
+              "Proses membuat informasi tersedia untuk semua",
+              "Proses menyimpan informasi di cloud",
+              "Proses mencetak dokumen"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "Mengapa penting melakukan audit internal terhadap sistem manajemen keamanan informasi?",
+            "options": [
+              "Untuk menemukan kesalahan dalam laporan keuangan",
+              "Untuk memastikan kepatuhan terhadap kebijakan dan prosedur",
+              "Untuk meningkatkan penjualan",
+              "Tidak penting"
             ],
             "answer": 1
           }
         ]
       },
       {
-        "id": "phishing-detection",
-        "title": "Phishing Detection",
-        "level": "Intermediate",
-        "description": "Can you spot the signs of a phishing attempt?",
-        "questions": [
-          {
-            "question": "What is a common sign of phishing?",
-            "options": [
-              "Email from unknown sender asking for credentials",
-              "Correct grammar and branding",
-              "Two-factor authentication",
-              "Encrypted email"
-            ],
-            "answer": 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "owasp",
-    "categoryTitle": "OWASP TOP 10",
-    "description": "Learn about the top 10 web vulnerabilities.",
-    "quizzes": [
+        "id": "people-controls",
+        "title": "People Controls",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
       {
-        "id": "injection",
-        "title": "Injection",
-        "level": "Advanced",
-        "description": "How much do you know about SQL injection?",
-        "questions": [
-          {
-            "question": "What is SQL Injection?",
-            "options": [
-              "A way to optimize queries",
-              "Injecting harmful SQL commands into input fields",
-              "A secure login method",
-              "A type of backup"
-            ],
-            "answer": 1
-          }
-        ]
+        "id": "physical-controls",
+        "title": "Physical Controls",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
+      },
+      {
+        "id": "technological-controls",
+        "title": "Technological Controls",
+        "level": "Beginner",
+        "description": "Belum tersedia.",
+        "questions": []
       }
     ]
   }

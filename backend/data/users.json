@@ -22,7 +22,7 @@
     "username": "minzelo",
     "email": "amogus@sugoma.com",
     "password": "$2b$10$5XClCWRnw897u/.oUgwGVOP5mbynhfJKr0F7rz.dI4jm9TeaVlYsi",
-    "xp": 150,
+    "xp": 170,
     "streak": 5,
     "completedLessons": [
       "password_security_lesson1",
@@ -32,11 +32,23 @@
       "quiz_1",
       "quiz_3",
       "password-security",
-      "phishing-detection"
+      "phishing-detection",
+      "injection",
+      "improper-credential-usage"
     ],
     "achievements": [
       "first_lesson",
       "3_day_streak"
     ]
+  },
+  {
+    "username": "Raihan",
+    "email": "halo@halo.com",
+    "password": "$2b$10$pPPLtv9A40sOwHMWVezS0ePldWtV/qJB6J9B.tPyVlqQu/aJly80e",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": []
   }
 ]
