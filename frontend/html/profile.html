@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap">
+    </head>
+    <body>
+        <div class="phone-frame">
+            <div class="profile">
+                <!-- Progress Section -->
+                <div class="profile-child"></div>
+                <div class="profile-item"></div>
+                <div class="profile-inner"></div>
+                <div class="div">65%</div>
+                <div class="rectangle-div"></div>
+                <div class="profile-child1"></div>
+                <div class="div1">40%</div>
+                <div class="profile-child2"></div>
+                <div class="profile-child3"></div>
+                <div class="div2">0%</div>
+                <div class="profile-child4"></div>
+                <b class="progress">Progress</b>
+
+                <!-- Achievement Section -->
+                <div class="profile-child5"></div>
+                <div class="profile-child6"></div>
+                <b class="view-all-achievements">View All Achievements</b>
+                <div class="profile-child7" id="rectangle10"></div>
+                
+                <!-- User Stats -->
+                <b class="sign-out">Sign Out</b>
+                <div class="current-streak">Current Streak</div>
+                <div class="first-lesson">First Lesson</div>
+                <div class="perfect-quiz">Perfect Quiz</div>
+                <div class="day-streak">3 Day Streak</div>
+                <div class="module-master">Module Master</div>
+                
+                <!-- Course Progress -->
+                <b class="password-security">Password Security</b>
+                <b class="phishing-awareness">Phishing Awareness</b>
+                <b class="public-wifi-safety">Public WiFi Safety</b>
+                
+                <!-- User Achievements -->
+                <div class="security-expert">Security Expert</div>
+                <div class="quiz-champion">Quiz Champion</div>
+                <div class="completed-lessons">Completed Lessons</div>
+                <div class="total-xp">Total XP</div>
+                <b class="b">8</b>
+                <div class="quizzes-taken">Quizzes Taken</div>
+                <b class="b1">5</b>
+                <b class="b2">2/5</b>
+                <b class="b3">750</b>
+                <div class="level-5">Level #5</div>
+                <div class="div3">65%</div>
+
+                <!-- Navigation Section -->
+                <div class="profile-child8"></div>
+                <div class="profile-child9"></div>
+                <div class="ellipse-div">
+				<img class="view-light-icon" alt="" src="./icons/View_light.svg">
+				<div class="profile-child10">
+					<b class="b4">5</b>
+				</div>
+				
+				</div>
+               
+                <div class="profile-child11"></div>
+                
+                <!-- Navigation Links -->
+                <div class="home">Home</div>
+                <div class="learn">Learn</div>
+                <div class="practice">Practice</div>
+                <div class="profile1">Profile</div>
+                <div class="leaderboard">Leaderboard</div>
+                
+                <!-- Navigation Icons -->
+                <img class="home-icon" alt="" src="./icons/Homepurp.svg">
+                <img class="book-open-alt-icon" alt="" src="./icons/Book_open_alt.svg" id="bookOpenAltIcon">
+                <img class="atom-alt-icon" alt="" src="./icons/Atom_alt.svg" id="atomAltIcon">
+                <img class="trophy-icon" alt="" src="./icons/Trophy.svg" id="trophyIcon">
+                <img class="user-icon" alt="" src="./icons/Userred.svg" id="userIcon">
+                
+                <!-- Profile Headers -->
+                <b class="profile2">Profile</b>
+                <b class="stats">Stats</b>
+                <b class="achievements">Achievements</b>
+                
+                <!-- Additional UI Elements -->
+                <div class="profile-child12"></div>
+                <div class="profile-child13"></div>
+                <div class="profile-child14"></div>
+                <div class="profile-child15"></div>
+                <img class="trophy-icon1" alt="" src="./icons/Trophyblack.svg">
+                <div class="profile-child16"></div>
+                <div class="profile-child17"></div>
+                <b class="cyber-ninja">Cyber Ninja</b>
+                
+                
+                <!-- Achievement Icons -->
+                <img class="book-open-icon" alt="" src="./icons/Book_openblue.png">
+                <img class="done-ring-round-icon" alt="" src="./icons/Done_ring_roundblue.png">
+                <img class="fire-icon" alt="" src="./icons/Fireblue.svg">
+                <img class="chield-icon" alt="" src="./icons/Chieldblack.svg">
+                <img class="mortarboard-icon" alt="" src="./icons/Mortarboard.svg">
+            </div>
+        </div>
+
+        <!-- Script Section -->
+        <script>
+            // Sign Out Button
+            const rectangle10 = document.getElementById("rectangle10");
+            if (rectangle10) {
+                rectangle10.addEventListener("click", function(e) {
+                    // Add your sign out logic here
+                });
+            }
+
+            // Navigation Event Listeners
+            const bookOpenAltIcon = document.getElementById("bookOpenAltIcon");
+            const atomAltIcon = document.getElementById("atomAltIcon");
+            const trophyIcon = document.getElementById("trophyIcon");
+            const userIcon = document.getElementById("userIcon");
+
+            if (bookOpenAltIcon) {
+                bookOpenAltIcon.addEventListener("click", function(e) {
+                    // Add navigation logic
+                });
+            }
+
+            if (atomAltIcon) {
+                atomAltIcon.addEventListener("click", function(e) {
+                    // Add navigation logic
+                });
+            }
+
+            if (trophyIcon) {
+                trophyIcon.addEventListener("click", function(e) {
+                    // Add navigation logic
+                });
+            }
+
+            if (userIcon) {
+                userIcon.addEventListener("click", function(e) {
+                    window.location.href = "Profile.html";
+                });
+            }
+        </script>
+    </body>
+</html>

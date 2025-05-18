@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.quiz-results-child {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 116px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.quiz-results1 {
+  	position: absolute;
+  	top: 14px;
+  	left: 151px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 100px;
+  	height: 26px;
+}
+.quiz-results-item {
+  	position: absolute;
+  	top: 57px;
+  	left: 20px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 328px;
+}
+.quiz-results-inner {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.arrow-left-icon {
+  	position: absolute;
+  	top: 15px;
+  	left: 15px;
+  	width: 24px;
+  	height: 24px;
+}
+.good-job {
+  	position: absolute;
+  	top: 147px;
+  	left: 162px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 81px;
+}
+.you-answered-1 {
+  	position: absolute;
+  	top: 177px;
+  	left: 73px;
+  	font-size: 16px;
+  	color: #fff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 260px;
+}
+.xp {
+  	position: absolute;
+  	top: 228px;
+  	left: 69px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #a127ff;
+  	text-align: center;
+  	width: 260px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 69px;
+  	left: 165px;
+  	border-radius: 50%;
+  	background-color: #3b72ff;
+  	width: 69px;
+  	height: 69px;
+}
+.book-open-icon {
+  	position: absolute;
+  	top: 85px;
+  	left: 181px;
+  	width: 37px;
+  	height: 38px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 320px;
+  	left: 73px;
+  	border-radius: 10px;
+  	background-color: #67ff71;
+  	border: 1px solid rgba(0, 16, 2, 0.37);
+  	box-sizing: border-box;
+  	width: 250px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.next-question {
+  	position: absolute;
+  	top: 330px;
+  	left: 161px;
+  	display: inline-block;
+  	color: #000;
+  	width: 74px;
+  	height: 21px;
+}
+.quiz-results {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	font-family: 'IBM Plex Sans';
+}
+.frame-child {
+    position: absolute;
+    top: 270px;
+    left: 73px;
+    border-radius: 10px;
+    background-color: #f8f8ff;
+    border: 1px solid rgba(132, 162, 255, 0.37);
+    box-sizing: border-box;
+    width: 117px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.frame-item {
+    position: absolute;
+    top: 270px;
+    left: 211px;
+    border-radius: 10px;
+    background-color: #0418f4;
+    border: 1px solid rgba(132, 162, 255, 0.37);
+    box-sizing: border-box;
+    width: 111px;
+    height: 37px;
+    cursor: pointer;
+}
+
+.try-again {
+    position: absolute;
+    top: 281px;
+    left: 240px;
+    display: inline-block;
+    width: 53px;
+    height: 21px;
+    color: #fff;
+}
+
+.back-to-practice {
+    position: absolute;
+    top: 281px;
+    left: 89px;
+    display: inline-block;
+    color: #000;
+    width: 85px;
+    height: 21px;
+}
+
+.rectangle-parent {
+    position: relative;
+    height: 37px;
+    text-align: left;
+    font-size: 11px;
+    font-family: 'IBM Plex Sans';
+}
+
