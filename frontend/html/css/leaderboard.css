@@ -1,0 +1,812 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.scoreboard-child {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 120px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 122px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.leaderboard1 {
+  	position: absolute;
+  	top: 16px;
+  	left: 18px;
+  	font-size: 24px;
+  	display: inline-block;
+  	width: 222px;
+  	height: 26px;
+}
+.scoreboard-item {
+  	position: absolute;
+  	top: 81px;
+  	left: 18px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 368px;
+  	height: 127px;
+}
+.your-rank {
+  	position: absolute;
+  	top: 113px;
+  	left: 305px;
+  	font-size: 11px;
+  	display: inline-block;
+  	width: 57px;
+  	height: 20px;
+}
+.th {
+  	position: absolute;
+  	top: 133px;
+  	left: 337px;
+  	font-size: 14px;
+  	display: inline-block;
+  	width: 25px;
+  	height: 20px;
+}
+.up-3-places {
+  	position: absolute;
+  	top: 156px;
+  	left: 261px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 101px;
+  	height: 26px;
+}
+.scoreboard-inner {
+  	position: absolute;
+  	top: 134px;
+  	left: 314px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 18px;
+  	height: 18px;
+}
+.hack-master {
+  	position: absolute;
+  	top: 165px;
+  	left: 100px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 56px;
+  	height: 10px;
+}
+.st-2340 {
+  	position: absolute;
+  	top: 177px;
+  	left: 98px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 52px;
+  	height: 10px;
+}
+.obama {
+  	position: absolute;
+  	top: 149px;
+  	left: 176px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 46px;
+  	height: 10px;
+}
+.rd-2340 {
+  	position: absolute;
+  	top: 161px;
+  	left: 161px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 55px;
+  	height: 10px;
+}
+.cyber-wiz {
+  	position: absolute;
+  	top: 149px;
+  	left: 39px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 46px;
+  	height: 10px;
+}
+.nd-2340 {
+  	position: absolute;
+  	top: 160px;
+  	left: 31px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 54px;
+  	height: 10px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 106px;
+  	left: 95px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	border: 5px solid #ffbb00;
+  	box-sizing: border-box;
+  	width: 57px;
+  	height: 58px;
+}
+.scoreboard-child1 {
+  	position: absolute;
+  	top: 103px;
+  	left: 167px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	border: 5px solid #ff7700;
+  	box-sizing: border-box;
+  	width: 43px;
+  	height: 43px;
+}
+.scoreboard-child2 {
+  	position: absolute;
+  	top: 103px;
+  	left: 37px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	border: 5px solid #3d3d3d;
+  	box-sizing: border-box;
+  	width: 43px;
+  	height: 43px;
+}
+.scoreboard-child3 {
+  	position: absolute;
+  	top: 147px;
+  	left: 132px;
+  	border-radius: 50%;
+  	background-color: #ffbb00;
+  	width: 17px;
+  	height: 18px;
+}
+.scoreboard-child4 {
+  	position: absolute;
+  	top: 135px;
+  	left: 193px;
+  	border-radius: 50%;
+  	background-color: #ff7700;
+  	width: 12px;
+  	height: 12px;
+}
+.scoreboard-child5 {
+  	position: absolute;
+  	top: 133px;
+  	left: 67px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 13px;
+  	height: 13px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 226px;
+  	left: 18px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 368px;
+  	height: 560px;
+}
+.scoreboard-child6 {
+  	position: absolute;
+  	top: 320px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.weekly-leaderboard {
+  	position: absolute;
+  	top: 242px;
+  	left: 26px;
+  	font-size: 20px;
+  	display: inline-block;
+  	width: 226px;
+  	height: 26px;
+}
+.top-performers-this {
+  	position: absolute;
+  	top: 274px;
+  	left: 26px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 131px;
+  	height: 16px;
+}
+.cyber-ninja {
+  	position: absolute;
+  	top: 327px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b {
+  	position: absolute;
+  	top: 332px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-5 {
+  	position: absolute;
+  	top: 341px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child7 {
+  	position: absolute;
+  	top: 330px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp {
+  	position: absolute;
+  	top: 332px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child8 {
+  	position: absolute;
+  	top: 370px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja1 {
+  	position: absolute;
+  	top: 377px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b1 {
+  	position: absolute;
+  	top: 382px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-51 {
+  	position: absolute;
+  	top: 391px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child9 {
+  	position: absolute;
+  	top: 380px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp1 {
+  	position: absolute;
+  	top: 382px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child10 {
+  	position: absolute;
+  	top: 420px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja2 {
+  	position: absolute;
+  	top: 427px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b2 {
+  	position: absolute;
+  	top: 432px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-52 {
+  	position: absolute;
+  	top: 441px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child11 {
+  	position: absolute;
+  	top: 430px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp2 {
+  	position: absolute;
+  	top: 432px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child12 {
+  	position: absolute;
+  	top: 470px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja3 {
+  	position: absolute;
+  	top: 477px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b3 {
+  	position: absolute;
+  	top: 482px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-53 {
+  	position: absolute;
+  	top: 491px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child13 {
+  	position: absolute;
+  	top: 480px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp3 {
+  	position: absolute;
+  	top: 482px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child14 {
+  	position: absolute;
+  	top: 520px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja4 {
+  	position: absolute;
+  	top: 527px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b4 {
+  	position: absolute;
+  	top: 532px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-54 {
+  	position: absolute;
+  	top: 541px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child15 {
+  	position: absolute;
+  	top: 530px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp4 {
+  	position: absolute;
+  	top: 532px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child16 {
+  	position: absolute;
+  	top: 570px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja5 {
+  	position: absolute;
+  	top: 577px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b5 {
+  	position: absolute;
+  	top: 582px;
+  	left: 37px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 5px;
+  	height: 13px;
+}
+.level-55 {
+  	position: absolute;
+  	top: 591px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child17 {
+  	position: absolute;
+  	top: 580px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp5 {
+  	position: absolute;
+  	top: 582px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child18 {
+  	position: absolute;
+  	top: 620px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja6 {
+  	position: absolute;
+  	top: 627px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b6 {
+  	position: absolute;
+  	top: 632px;
+  	left: 34px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 16px;
+  	height: 13px;
+}
+.level-56 {
+  	position: absolute;
+  	top: 641px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child19 {
+  	position: absolute;
+  	top: 630px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp6 {
+  	position: absolute;
+  	top: 632px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child20 {
+  	position: absolute;
+  	top: 670px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja7 {
+  	position: absolute;
+  	top: 677px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b7 {
+  	position: absolute;
+  	top: 682px;
+  	left: 34px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 20px;
+  	height: 13px;
+}
+.level-57 {
+  	position: absolute;
+  	top: 691px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child21 {
+  	position: absolute;
+  	top: 680px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp7 {
+  	position: absolute;
+  	top: 682px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard-child22 {
+  	position: absolute;
+  	top: 720px;
+  	left: 26px;
+  	border-radius: 10px;
+  	background-color: #464970;
+  	width: 353px;
+  	height: 41px;
+}
+.cyber-ninja8 {
+  	position: absolute;
+  	top: 727px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 59px;
+  	height: 12px;
+}
+.b8 {
+  	position: absolute;
+  	top: 732px;
+  	left: 34px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 17px;
+  	height: 13px;
+}
+.level-58 {
+  	position: absolute;
+  	top: 741px;
+  	left: 83px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 11px;
+}
+.scoreboard-child23 {
+  	position: absolute;
+  	top: 730px;
+  	left: 57px;
+  	border-radius: 50%;
+  	background-color: #d9d9d9;
+  	width: 21px;
+  	height: 21px;
+}
+.xp8 {
+  	position: absolute;
+  	top: 732px;
+  	left: 307px;
+  	font-size: 13px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 55px;
+  	height: 29px;
+}
+.scoreboard {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 10px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+

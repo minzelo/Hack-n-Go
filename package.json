@@ -1,0 +1,14 @@
+{
+  "name": "hackngo",
+  "version": "1.0.0",
+  "description": "HacknGo - Cybersecurity Learning Platform",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "cd backend && node index.js",
+    "dev": "cd backend && node index.js",
+    "test": "echo \"No tests specified\" && exit 1"
+  },
+  "keywords": ["cybersecurity", "education", "learning"],
+  "author": "HacknGo Team",
+  "license": "MIT"
+} 

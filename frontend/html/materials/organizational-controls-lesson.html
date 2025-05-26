@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet" href="/html/css/on-click-lessons.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+  	<title>Organizational Controls - HacknGo</title>
+</head>
+<body>
+  	<div class="phone-frame">
+		<div class="on-click-lesson">
+			<div class="on-click-lesson-child"></div>
+			<div class="on-click-lesson-item"></div>
+			<div class="on-click-lesson-inner" id="rectangle2"></div>
+			<b class="back-to-module" id="backToModule">Back to Module</b>
+			<b class="mark-as-complete">Mark as Complete</b>
+			<div class="rectangle-div"></div>
+			<div class="home">Home</div>
+			<div class="learn">Learn</div>
+			<div class="practice">Practice</div>
+			<div class="profile">Profile</div>
+			<div class="leaderboard">Leaderboard</div>
+			<img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+			<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+			<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+			<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+			<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+			<b class="password-security">Organizational Controls</b>
+			<div class="on-click-lesson-child1"></div>
+			<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+			<div class="passwords-are-the-container">
+				<p class="passwords-are-the">
+					Organizational controls in ISO/IEC 27001 include policies, roles, and processes used to maintain information security within an organization.
+				</p>
+				<p class="blank-line">&nbsp;</p>
+				<p class="why-passwords-matter"><b>Examples of Organizational Controls</b></p>
+				<p class="passwords-are-the"><b>&nbsp;</b></p>
+				<ul class="at-least-12-characters-long-mi">
+					<li class="at-least-12-characters-long"><span>Establishing information security policies</span></li>
+					<li class="at-least-12-characters-long"><span>Assigning roles and responsibilities</span></li>
+					<li class="at-least-12-characters-long"><span>Conducting security awareness training</span></li>
+					<li class="at-least-12-characters-long"><span>Incident management processes</span></li>
+					<li class="at-least-12-characters-long"><span>Regular internal audits</span></li>
+				</ul>
+				<p class="blank-line">&nbsp;</p>
+				<p class="why-passwords-matter"><b>Benefits of Control Implementation</b></p>
+				<p class="passwords-are-the"><b>&nbsp;</b></p>
+				<ul class="at-least-12-characters-long-mi">
+					<li class="at-least-12-characters-long"><span>Increases security awareness across the organization</span></li>
+					<li class="at-least-12-characters-long"><span>Helps with compliance to standards and regulations</span></li>
+					<li class="at-least-12-characters-long"><span>Reduces the risk of data breaches</span></li>
+					<li class="at-least-12-characters-long"><span>Increases trust from partners and customers</span></li>
+				</ul>
+				<p class="passwords-are-the">
+					Implementing proper organizational controls creates a strong foundation for information security management and helps organizations meet their security objectives while maintaining compliance with relevant standards.
+				</p>
+			</div>
+		</div>
+	</div>
+  	
+  	<!-- Navigation JavaScript -->
+  	<script>
+  	    // Navigation event listeners
+  	    document.addEventListener('DOMContentLoaded', function() {
+  	        // Back to module button
+  	        document.getElementById('backToModule').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/iso27001-module.html';
+  	        });
+  	        
+  	        // Back button (arrow)
+  	        document.getElementById('backButton').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/iso27001-module.html';
+  	        });
+  	        
+  	        // Navigation clicks
+  	        document.getElementById('homeIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/home.html';
+  	        });
+  	        
+  	        document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        document.getElementById('atomAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/practice.html';
+  	        });
+  	        
+  	        document.getElementById('trophyIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/leaderboard.html';
+  	        });
+  	        
+  	        document.getElementById('userIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/profile.html';
+  	        });
+  	        
+  	        // Mark as complete functionality
+  	        document.querySelector('.mark-as-complete').addEventListener('click', () => {
+  	            markLessonComplete();
+  	        });
+  	    });
+  	    
+  	    // Function to mark lesson as complete
+  	    async function markLessonComplete() {
+  	        try {
+  	            const userData = JSON.parse(localStorage.getItem('userData'));
+  	            if (!userData || !userData.username) {
+  	                alert('Please log in to save your progress.');
+  	                return;
+  	            }
+  	            
+  	            // Update progress in backend
+  	            const response = await fetch(`/api/users/${userData.username}/progress`, {
+  	                method: 'POST',
+  	                headers: {
+  	                    'Content-Type': 'application/json'
+  	                },
+  	                body: JSON.stringify({
+  	                    module: 'iso27001',
+  	                    lessonId: 'organizational-controls'
+  	                })
+  	            });
+  	            
+  	            if (!response.ok) {
+  	                throw new Error('Failed to update progress');
+  	            }
+  	            
+  	            const result = await response.json();
+  	            
+  	            // Update local storage with new XP
+  	            userData.xp = result.xp;
+  	            userData.moduleProgress = result.moduleProgress;
+  	            localStorage.setItem('userData', JSON.stringify(userData));
+  	            
+  	            alert('Lesson completed! You earned 50 XP.');
+  	            
+  	        } catch (error) {
+  	            console.error('Error marking lesson complete:', error);
+  	            alert('Failed to save progress. Please try again.');
+  	        }
+  	    }
+  	</script>
+</body>
+</html> 

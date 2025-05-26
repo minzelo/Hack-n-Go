@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/on-click-module.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+  	
+  	<title>ISO/IEC 27001 - HacknGo</title>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="on-click-module">
+    		<div class="on-click-module-child">
+    		</div>
+    		<div class="on-click-module-item">
+    		</div>
+    		<div class="on-click-module-inner">
+    		</div>
+    		<div class="complete">0% Complete</div>
+    		<div class="lessons">0/4</div>
+    		<div class="learn-how-to">Learn about information security management systems (ISMS)</div>
+    		<div class="rectangle-div">
+    		</div>
+    		<div class="home">Home</div>
+    		<div class="learn">Learn</div>
+    		<div class="practice">Practice</div>
+    		<div class="profile">Profile</div>
+    		<div class="leaderboard">Leaderboard</div>
+    		<img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+    		
+    		<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+    		
+    		<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+    		
+    		<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+    		
+    		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+    		
+    		<b class="password-security">ISO/IEC 27001</b>
+    		<div class="on-click-module-child1" id="lesson1">
+    		</div>
+    		<b class="password-security1">Organizational Controls</b>
+    		<div class="lesson">Lesson</div>
+    		<div class="ellipse-div">
+    		</div>
+    		<img class="check-ring-icon" alt="" src="/html/icons/Check_ring.svg">
+    		
+    		<div class="on-click-module-child2" id="lesson2">
+    		</div>
+    		<b class="common-password-mistakes">People Controls</b>
+    		<div class="lesson1">Lesson</div>
+    		<div class="on-click-module-child3">
+    		</div>
+    		<img class="lock-icon" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child4" id="lesson3">
+    		</div>
+    		<b class="password-strength-quiz">Physical Controls</b>
+    		<div class="quiz">Lesson</div>
+    		<div class="on-click-module-child5">
+    		</div>
+    		<img class="lock-icon1" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child6" id="lesson4">
+    		</div>
+    		<b class="password-managers">Technological Controls</b>
+    		<div class="lesson2">Lesson</div>
+    		<div class="on-click-module-child7">
+    		</div>
+    		<img class="lock-icon2" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+    		
+  	</div>
+  </div>
+  	
+  	<!-- Navigation JavaScript -->
+  	<script>
+  	    document.addEventListener('DOMContentLoaded', function() {
+  	        // Load user progress on page load
+  	        loadUserProgress();
+  	        
+  	        // Back button
+  	        document.getElementById('backButton').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        // Lesson 1 - Available (Organizational Controls)
+  	        document.getElementById('lesson1').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/organizational-controls-lesson.html';
+  	        });
+  	        
+  	        // Other lessons - Coming soon
+  	        const comingSoonLessons = ['lesson2', 'lesson3', 'lesson4'];
+  	        
+  	        comingSoonLessons.forEach(lessonId => {
+  	            document.getElementById(lessonId).addEventListener('click', () => {
+  	                alert('This lesson is coming soon! Stay tuned for more content.');
+  	            });
+  	        });
+  	        
+  	        // Navigation clicks
+  	        document.getElementById('homeIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/home.html';
+  	        });
+  	        
+  	        document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        document.getElementById('atomAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/practice.html';
+  	        });
+  	        
+  	        document.getElementById('trophyIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/leaderboard.html';
+  	        });
+  	        
+  	        document.getElementById('userIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/profile.html';
+  	        });
+  	    });
+  	    
+  	    // Function to load user progress
+  	    async function loadUserProgress() {
+  	        try {
+  	            const userData = JSON.parse(localStorage.getItem('userData'));
+  	            if (!userData || !userData.username) {
+  	                console.log('No user data found');
+  	                return;
+  	            }
+  	            
+  	            // Fetch user progress from backend
+  	            const response = await fetch(`/api/users/${userData.username}/progress`);
+  	            if (!response.ok) {
+  	                throw new Error('Failed to fetch user progress');
+  	            }
+  	            
+  	            const progressData = await response.json();
+  	            const iso27001Progress = progressData.moduleProgress.iso27001;
+  	            
+  	            // Update progress display
+  	            updateProgressDisplay(iso27001Progress);
+  	            
+  	        } catch (error) {
+  	            console.error('Error loading user progress:', error);
+  	        }
+  	    }
+  	    
+  	    // Function to update progress display
+  	    function updateProgressDisplay(iso27001Progress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${iso27001Progress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${iso27001Progress.completedLessons.length}/${iso27001Progress.totalLessons}`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.on-click-module-inner');
+  	        if (progressBar) {
+  	            const maxWidth = 329; // Same as background progress bar
+  	            const newWidth = (iso27001Progress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	</script>
+</body>
+</html> 

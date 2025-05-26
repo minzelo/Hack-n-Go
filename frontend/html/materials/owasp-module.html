@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/on-click-module.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+  	
+  	<title>OWASP Top 10 - HacknGo</title>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="on-click-module">
+    		<div class="on-click-module-child">
+    		</div>
+    		<div class="on-click-module-item">
+    		</div>
+    		<div class="on-click-module-inner">
+    		</div>
+    		<div class="complete">0% Complete</div>
+    		<div class="lessons">0/10</div>
+    		<div class="learn-how-to">Learn about the most common mobile application vulnerabilities</div>
+    		<div class="rectangle-div">
+    		</div>
+    		<div class="home">Home</div>
+    		<div class="learn">Learn</div>
+    		<div class="practice">Practice</div>
+    		<div class="profile">Profile</div>
+    		<div class="leaderboard">Leaderboard</div>
+    		<img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+    		
+    		<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+    		
+    		<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+    		
+    		<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+    		
+    		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+    		
+    		<b class="password-security">OWASP Top 10</b>
+    		<div class="on-click-module-child1" id="lesson1">
+    		</div>
+    		<b class="password-security1">Improper Credential Usage</b>
+    		<div class="lesson">Lesson</div>
+    		<div class="ellipse-div">
+    		</div>
+    		<img class="check-ring-icon" alt="" src="/html/icons/Check_ring.svg">
+    		
+    		<div class="on-click-module-child2" id="lesson2">
+    		</div>
+    		<b class="common-password-mistakes">Inadequate Supply Chain Security</b>
+    		<div class="lesson1">Lesson</div>
+    		<div class="on-click-module-child3">
+    		</div>
+    		<img class="lock-icon" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child4" id="lesson3">
+    		</div>
+    		<b class="password-strength-quiz">Insecure Authentication/Authorization</b>
+    		<div class="quiz">Lesson</div>
+    		<div class="on-click-module-child5">
+    		</div>
+    		<img class="lock-icon1" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child6" id="lesson4">
+    		</div>
+    		<b class="password-managers">Insufficient Input/Output Validation</b>
+    		<div class="lesson2">Lesson</div>
+    		<div class="on-click-module-child7">
+    		</div>
+    		<img class="lock-icon2" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child8" id="lesson5">
+    		</div>
+    		<b class="creating-strong-passwords">Insecure Communication</b>
+    		<div class="lesson3">Lesson</div>
+    		<div class="on-click-module-child9">
+    		</div>
+    		<img class="lock-icon3" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child10" id="lesson6">
+    		</div>
+    		<b class="password-security2">Inadequate Privacy Controls</b>
+    		<div class="lesson4">Lesson</div>
+    		<div class="on-click-module-child11">
+    		</div>
+    		<img class="lock-icon4" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child12" id="lesson7">
+    		</div>
+    		<b class="password-security3">Insufficient Binary Protections</b>
+    		<div class="lesson5">Lesson</div>
+    		<div class="on-click-module-child13">
+    		</div>
+    		<img class="lock-icon5" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child14" id="lesson8">
+    		</div>
+    		<b class="password-security4">Security Misconfiguration</b>
+    		<div class="lesson6">Lesson</div>
+    		<div class="on-click-module-child15">
+    		</div>
+    		<img class="lock-icon6" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child16" id="lesson9">
+    		</div>
+    		<b class="lesson9-title">Insecure Data Storage</b>
+    		<div class="lesson7">Lesson</div>
+    		<div class="lesson9-bg">
+    		</div>
+    		<img class="lock-icon7" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<div class="on-click-module-child17" id="lesson10">
+    		</div>
+    		<b class="lesson10-title">Insufficient Cryptography</b>
+    		<div class="lesson8">Lesson</div>
+    		<div class="lesson10-bg">
+    		</div>
+    		<img class="lock-icon8" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+    		
+  	</div>
+  </div>
+  	
+  	<!-- Navigation JavaScript -->
+  	<script>
+  	    document.addEventListener('DOMContentLoaded', function() {
+  	        // Load user progress on page load
+  	        loadUserProgress();
+  	        
+  	        // Back button
+  	        document.getElementById('backButton').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        // Lesson 1 - Available (Improper Credential Usage)
+  	        document.getElementById('lesson1').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/improper-credential-usage-lesson.html';
+  	        });
+  	        
+  	        // Other lessons - Coming soon
+  	        const comingSoonLessons = ['lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7', 'lesson8', 'lesson9', 'lesson10'];
+  	        
+  	        comingSoonLessons.forEach(lessonId => {
+  	            document.getElementById(lessonId).addEventListener('click', () => {
+  	                alert('This lesson is coming soon! Stay tuned for more content.');
+  	            });
+  	        });
+  	        
+  	        // Navigation clicks
+  	        document.getElementById('homeIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/home.html';
+  	        });
+  	        
+  	        document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        document.getElementById('atomAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/practice.html';
+  	        });
+  	        
+  	        document.getElementById('trophyIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/leaderboard.html';
+  	        });
+  	        
+  	        document.getElementById('userIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/profile.html';
+  	        });
+  	    });
+  	    
+  	    // Function to load user progress
+  	    async function loadUserProgress() {
+  	        try {
+  	            const userData = JSON.parse(localStorage.getItem('userData'));
+  	            if (!userData || !userData.username) {
+  	                console.log('No user data found');
+  	                return;
+  	            }
+  	            
+  	            // Fetch user progress from backend
+  	            const response = await fetch(`/api/users/${userData.username}/progress`);
+  	            if (!response.ok) {
+  	                throw new Error('Failed to fetch user progress');
+  	            }
+  	            
+  	            const progressData = await response.json();
+  	            const owaspProgress = progressData.moduleProgress.owasp;
+  	            
+  	            // Update progress display
+  	            updateProgressDisplay(owaspProgress);
+  	            
+  	        } catch (error) {
+  	            console.error('Error loading user progress:', error);
+  	        }
+  	    }
+  	    
+  	    // Function to update progress display
+  	    function updateProgressDisplay(owaspProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${owaspProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${owaspProgress.completedLessons.length}/${owaspProgress.totalLessons}`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.on-click-module-inner');
+  	        if (progressBar) {
+  	            const maxWidth = 329; // Same as background progress bar
+  	            const newWidth = (owaspProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	</script>
+</body>
+</html> 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Test</title>
+</head>
+<body>
+    <h1>Profile Test</h1>
+    <p>This page tests the profile functionality by simulating a logged-in user.</p>
+    
+    <button onclick="simulateLogin()">Simulate Login as 'test' user</button>
+    <button onclick="goToProfile()">Go to Profile Page</button>
+    <button onclick="clearData()">Clear User Data</button>
+    
+    <div id="status"></div>
+    
+    <script>
+        function simulateLogin() {
+            // Simulate the user data that would be stored after login
+            const userData = {
+                username: "test",
+                email: "test@test.com",
+                xp: 0,
+                streak: 0,
+                completedLessons: [],
+                completedQuizzes: [],
+                achievements: [],
+                createdAt: "2025-05-25T10:50:15.083Z"
+            };
+            
+            localStorage.setItem('userData', JSON.stringify(userData));
+            localStorage.setItem('userEmail', 'test@test.com');
+            localStorage.setItem('loginSuccess', 'true');
+            
+            document.getElementById('status').innerHTML = '<p style="color: green;">✅ Simulated login as "test" user. User data stored in localStorage.</p>';
+        }
+        
+        function goToProfile() {
+            window.location.href = '/html/profile.html';
+        }
+        
+        function clearData() {
+            localStorage.removeItem('userData');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('loginSuccess');
+            
+            document.getElementById('status').innerHTML = '<p style="color: red;">❌ User data cleared from localStorage.</p>';
+        }
+        
+        // Check current status on page load
+        window.onload = function() {
+            const userData = localStorage.getItem('userData');
+            if (userData) {
+                const user = JSON.parse(userData);
+                document.getElementById('status').innerHTML = `<p style="color: blue;">ℹ️ Current user: ${user.username} (${user.email})</p>`;
+            } else {
+                document.getElementById('status').innerHTML = '<p style="color: gray;">ℹ️ No user data found.</p>';
+            }
+        };
+    </script>
+</body>
+</html> 

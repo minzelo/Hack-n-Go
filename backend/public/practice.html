@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hack'n Go - Practice Quiz</title>
+  <script defer src="practice.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f4f4f4; }
+    .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h2 { text-align: center; }
+    .block { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+    .quiz-box { display: none; margin-top: 2rem; }
+    .question { font-weight: bold; margin-bottom: 0.5rem; }
+    .options button { display: block; margin: 0.5rem 0; width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Practice Quizzes</h1>
+    <div id="categories"></div>
+    <div id="quizzes"></div>
+
+    <div class="quiz-box" id="quizBox">
+      <h2 id="quizTitle"></h2>
+      <div id="questionContainer"></div>
+    </div>
+  </div>
+</body>
+</html>

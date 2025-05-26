@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.chield-icon {
+  	position: absolute;
+  	top: 166px;
+  	left: 105px;
+  	width: 35px;
+  	height: 36px;
+}
+.hackngo {
+  	position: absolute;
+  	top: 166px;
+  	left: 144px;
+  	font-size: 32px;
+  	display: inline-block;
+  	font-family: 'Inria Sans';
+  	width: 154px;
+  	height: 36px;
+}
+.signin-new-account-child {
+  	position: absolute;
+  	top: 222px;
+  	left: 25px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 305px;
+}
+.signin-new-account-item {
+  	position: absolute;
+  	top: 393px;
+  	left: 45px;
+  	border-radius: 10px;
+  	background-color: #0418f4;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 315px;
+  	height: 38px;
+  	cursor: pointer;
+}
+.sign-in {
+  	position: absolute;
+  	top: 405px;
+  	left: 183px;
+  	display: inline-block;
+  	width: 35px;
+  	height: 22px;
+}
+.sign-in1 {
+  	position: absolute;
+  	top: 233px;
+  	left: 156px;
+  	font-size: 24px;
+  	display: inline-block;
+  	width: 90px;
+  	height: 22px;
+}
+.signin-new-account-inner {
+  	position: absolute;
+  	top: 282px;
+  	left: 45px;
+  	border-radius: 10px;
+  	background-color: #333a8e;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+}
+.enter-your-email {
+  	position: absolute;
+  	top: 293px;
+  	left: 67px;
+  	display: inline-block;
+  	width: 142px;
+  	height: 13px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 332px;
+  	left: 45px;
+  	border-radius: 10px;
+  	background-color: #333a8e;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+}
+.enter-your-password {
+  	position: absolute;
+  	top: 343px;
+  	left: 67px;
+  	display: inline-block;
+  	width: 142px;
+  	height: 13px;
+}
+.dont-have-an {
+  	position: absolute;
+  	top: 462px;
+  	left: 105px;
+  	display: inline-block;
+  	white-space: pre-wrap;
+  	width: 192px;
+  	height: 13px;
+}
+.sign-up {
+  	position: absolute;
+  	top: 462px;
+  	left: 230px;
+  	display: inline-block;
+  	color: #728aff;
+  	width: 41px;
+  	height: 13px;
+  	cursor: pointer;
+}
+.signin-new-account {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+

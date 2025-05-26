@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/sign-in.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@700&display=swap" />
+    <script src="/html/js/page-transitions.js"></script>
+</head>
+<body>
+    <div class="phone-frame">
+  	<div class="signin-new-account">
+    		<img class="chield-icon" alt="" src="/html/icons/Chield.svg">
+    		
+    		<b class="hackngo">HacknGo</b>
+    		<div class="signin-new-account-child">
+    		</div>
+    		<form id="loginForm" action="/login" method="POST">
+    		    <b class="sign-in1">Sign in</b>
+    		    <div class="signin-new-account-inner">
+    		    </div>
+    		    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+    		    <div class="rectangle-div"></div>
+    		    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+    		    <div class="signin-new-account-item" id="loginButton"></div>
+    		    <b class="sign-in">Sign in</b>
+    		    <div id="errorMessage" style="display: none;"></div>
+    		</form>
+    		<b class="dont-have-an">Don't Have an account?</b>
+    		<b class="sign-up" id="signUpText">Sign up</b>
+  	</div>
+  	</div>
+  	
+  	
+  	
+  	
+  	<script>
+    		var loginButton = document.getElementById("loginButton");
+    		if(loginButton) {
+      			loginButton.addEventListener("click", function (e) {
+        			e.preventDefault();
+        			
+        			// Clear any previous error messages
+        			document.getElementById("errorMessage").style.display = "none";
+        			
+        			// Get form data with trim
+        			const email = document.getElementById("email").value.trim();
+        			const password = document.getElementById("password").value;
+        			
+        			// Basic validation
+        			if (!email || !password) {
+        			    document.getElementById("errorMessage").textContent = "Please fill in all fields";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Email validation
+        			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        			if (!emailRegex.test(email)) {
+        			    document.getElementById("errorMessage").textContent = "Please enter a valid email address";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Prepare login data
+        			const loginData = {
+        			    email: email,
+        			    password: password,
+        			    timestamp: new Date().toISOString()
+        			};
+        			
+        			console.log('Sending login data:', loginData);
+        			
+        			// Send login request to backend
+        			fetch('/login', {
+        			    method: 'POST',
+        			    headers: {
+        			        'Content-Type': 'application/json',
+        			        'Accept': 'application/json'
+        			    },
+        			    body: JSON.stringify(loginData),
+        			})
+        			.then(response => {
+        			    console.log('Response status:', response.status);
+        			    if (response.ok) {
+        			        return response.json();
+        			    } else {
+        			        // Handle error responses properly
+        			        return response.json().then(errorData => {
+        			            throw new Error(errorData.message || 'Login failed');
+        			        }).catch(() => {
+        			            // If JSON parsing fails, use status-based message
+        			            if (response.status === 401) {
+        			                throw new Error('Invalid email or password. Please try again.');
+        			            } else if (response.status === 400) {
+        			                throw new Error('Please enter valid email and password.');
+        			            } else {
+        			                throw new Error('Login failed. Please try again.');
+        			            }
+        			        });
+        			    }
+        			})
+        			.then(data => {
+        			    console.log('Login successful:', data);
+        			    // Store login success data
+        			    localStorage.setItem('loginSuccess', 'true');
+        			    localStorage.setItem('userEmail', email);
+        			    if (data.user) {
+        			        localStorage.setItem('userData', JSON.stringify(data.user));
+        			    }
+        			    // Use transition manager for smooth navigation
+        			    if (window.pageTransitionManager) {
+        			        window.pageTransitionManager.navigateToPage('/html/home.html');
+        			    } else {
+        			        window.location.href = '/html/home.html';
+        			    }
+        			})
+        			.catch(error => {
+        			    console.error('Login error:', error);
+        			    // Display user-friendly error messages
+        			    let errorMessage = error.message;
+        			    
+        			    // Convert Indonesian messages to English
+        			    if (errorMessage.includes('Email tidak ditemukan')) {
+        			        errorMessage = 'Email not found. Please check your email or sign up for a new account.';
+        			    } else if (errorMessage.includes('Password salah')) {
+        			        errorMessage = 'Incorrect password. Please try again.';
+        			    } else if (errorMessage.includes('Server error')) {
+        			        errorMessage = 'Server error. Please try again later.';
+        			    }
+        			    
+        			    document.getElementById("errorMessage").textContent = errorMessage;
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    document.getElementById("errorMessage").style.color = "#ff4444";
+        			    document.getElementById("errorMessage").style.backgroundColor = "rgba(255, 68, 68, 0.1)";
+        			    document.getElementById("errorMessage").style.padding = "10px";
+        			    document.getElementById("errorMessage").style.borderRadius = "5px";
+        			    document.getElementById("errorMessage").style.fontSize = "12px";
+        			    document.getElementById("errorMessage").style.textAlign = "center";
+        			    document.getElementById("errorMessage").style.marginTop = "25px";
+        			});
+      			});
+    		}
+    </script></body>
+</html>

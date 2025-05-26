@@ -1,0 +1,176 @@
+[
+  {
+    "username": "admin",
+    "email": "admin@example.com",
+    "password": "$2b$10$hashedPassword...",
+    "xp": 150,
+    "streak": 5,
+    "completedLessons": [
+      "password_security_lesson1",
+      "phishing_lesson2"
+    ],
+    "completedQuizzes": [
+      "quiz_1",
+      "quiz_3"
+    ],
+    "achievements": [
+      "first_lesson",
+      "3_day_streak"
+    ],
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [
+          "improper-credential-usage"
+        ],
+        "totalLessons": 10,
+        "progressPercentage": 10
+      },
+      "iso27001": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      }
+    }
+  },
+  {
+    "username": "minzelo",
+    "email": "amogus@sugoma.com",
+    "password": "$2b$10$5XClCWRnw897u/.oUgwGVOP5mbynhfJKr0F7rz.dI4jm9TeaVlYsi",
+    "xp": 270,
+    "streak": 5,
+    "completedLessons": [
+      "password_security_lesson1",
+      "phishing_lesson2"
+    ],
+    "completedQuizzes": [
+      "quiz_1",
+      "quiz_3",
+      "password-security",
+      "phishing-detection",
+      "injection",
+      "improper-credential-usage",
+      "organizational-controls"
+    ],
+    "achievements": [
+      "first_lesson",
+      "3_day_streak"
+    ],
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [
+          "improper-credential-usage"
+        ],
+        "totalLessons": 10,
+        "progressPercentage": 10
+      },
+      "iso27001": {
+        "completedLessons": [
+          "organizational-controls"
+        ],
+        "totalLessons": 4,
+        "progressPercentage": 25
+      }
+    }
+  },
+  {
+    "username": "Raihan",
+    "email": "halo@halo.com",
+    "password": "$2b$10$pPPLtv9A40sOwHMWVezS0ePldWtV/qJB6J9B.tPyVlqQu/aJly80e",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": [],
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [],
+        "totalLessons": 10,
+        "progressPercentage": 0
+      },
+      "iso27001": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      }
+    }
+  },
+  {
+    "username": "poo",
+    "email": "pee@poo.com",
+    "password": "$2b$10$ZlkrvkVYa.6dQDLIM5f4SuoU8FbZI0fq5BYKDGgXhAdOsPN7KNHOy",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": [],
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [],
+        "totalLessons": 10,
+        "progressPercentage": 0
+      },
+      "iso27001": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      }
+    }
+  },
+  {
+    "username": "test",
+    "email": "test@test.com",
+    "password": "$2b$10$AdJD0sNECqneaDP0wYPsseDjN/OTPMGSOO0gx6EdQPkIT36zDMEaq",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": [],
+    "createdAt": "2025-05-25T10:50:15.083Z",
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [],
+        "totalLessons": 10,
+        "progressPercentage": 0
+      },
+      "iso27001": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      }
+    }
+  },
+  {
+    "username": "dar",
+    "email": "dar@dar.com",
+    "password": "$2b$10$mmuDOPMlpGoyItxA7DmMfeLsbl3KFqpY8Wdu3Qv7ze5VDUQ90zYAu",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": [],
+    "createdAt": "2025-05-26T07:50:29.922Z"
+  },
+  {
+    "username": "testing",
+    "email": "testing@a.com",
+    "password": "$2b$10$xbgGsaNJoKE/Z1Fe7lGX6u32O7dqg1yp6KjY3FP3PYBjdJJ6f0Yk.",
+    "xp": 0,
+    "streak": 0,
+    "completedLessons": [],
+    "completedQuizzes": [],
+    "achievements": [],
+    "createdAt": "2025-05-26T08:37:54.616Z",
+    "moduleProgress": {
+      "owasp": {
+        "completedLessons": [],
+        "totalLessons": 10,
+        "progressPercentage": 0
+      },
+      "iso27001": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      }
+    }
+  }
+]

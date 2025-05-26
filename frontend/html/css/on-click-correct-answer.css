@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.quiz-results-child {
+  	position: absolute;
+  	top: 59px;
+  	left: 21px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 359px;
+  	height: 9px;
+}
+.quiz-results-item {
+  	position: absolute;
+  	top: 59px;
+  	left: 15px;
+  	border-radius: 6px;
+  	background-color: #af52de;
+  	width: 365px;
+  	height: 9px;
+}
+.quiz-results-inner {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 120px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 122px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.password-security-quiz {
+  	position: absolute;
+  	top: 14px;
+  	left: 108px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 186px;
+  	height: 26px;
+}
+.b {
+  	position: absolute;
+  	top: 14px;
+  	left: 353px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 31px;
+  	height: 26px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 96px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 365px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 205px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #fff;
+  	border: 2px solid #5b71ff;
+  	box-sizing: border-box;
+  	width: 15px;
+  	height: 15px;
+}
+.quiz-results-child1 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.arrow-left-icon {
+  	position: absolute;
+  	top: 15px;
+  	left: 15px;
+  	width: 24px;
+  	height: 24px;
+}
+.which-of-the {
+  	position: absolute;
+  	top: 117px;
+  	left: 40px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 354px;
+}
+.quiz-results-child2 {
+  	position: absolute;
+  	top: 192px;
+  	left: 54px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid #ff2d55;
+  	box-sizing: border-box;
+  	width: 295px;
+  	height: 42px;
+}
+
+.answer-text {
+  	color: white;
+	font: IBM Plex Sans;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 10px;
+}
+.quiz-results-child3 {
+  	position: absolute;
+  	top: 255px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #fff;
+  	border: 2px solid #5b71ff;
+  	box-sizing: border-box;
+  	width: 15px;
+  	height: 15px;
+}
+.quiz-results-child4 {
+  	position: absolute;
+  	top: 242px;
+  	left: 54px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid #ff2d55;
+  	box-sizing: border-box;
+  	width: 295px;
+  	height: 42px;
+}
+.quiz-results-child5 {
+  	position: absolute;
+  	top: 305px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #fff;
+  	border: 2px solid #5b71ff;
+  	box-sizing: border-box;
+  	width: 15px;
+  	height: 15px;
+}
+.quiz-results-child6 {
+  	position: absolute;
+  	top: 292px;
+  	left: 54px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid #ff2d2d;
+  	box-sizing: border-box;
+  	width: 295px;
+  	height: 42px;
+}
+.quiz-results-child7 {
+  	position: absolute;
+  	top: 355px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #fff;
+  	border: 2px solid #5b71ff;
+  	box-sizing: border-box;
+  	width: 15px;
+  	height: 15px;
+}
+.quiz-results-child8 {
+  	position: absolute;
+  	top: 342px;
+  	left: 54px;
+  	border-radius: 10px;
+  	background-color: #22992a;
+  	border: 1px solid #fff;
+  	box-sizing: border-box;
+  	width: 295px;
+  	height: 42px;
+}
+.done-ring-round-icon {
+  	position: absolute;
+  	top: 351px;
+  	left: 302px;
+  	width: 24px;
+  	height: 24px;
+}
+.quiz-results-child9 {
+  	position: absolute;
+  	top: 401px;
+  	left: 230px;
+  	border-radius: 10px;
+	color: white;
+	font: IBM Plex Sans;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	
+	padding: 10px 41px;
+  	background: linear-gradient(90deg, #2f9400, #3822ff);
+  	
+  	cursor: pointer;
+}
+.quiz-results {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	font-family: 'IBM Plex Sans';
+}
+

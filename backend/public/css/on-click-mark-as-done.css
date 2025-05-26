@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.phone-frame::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.on-click-mark-as-complete {
+  	width: 100%;
+  	min-height: 921px;
+  	position: relative;
+  	background-color: #20273d;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	font-family: 'IBM Plex Sans';
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.on-click-mark-as-complete-child {
+  	position: absolute;
+  	top: 60px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 669px;
+}
+.on-click-mark-as-complete-item {
+  	position: absolute;
+  	top: 753px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #8bacff;
+  	border: 2px solid #0065c3;
+  	box-sizing: border-box;
+  	width: 362px;
+  	height: 79px;
+}
+.on-click-mark-as-complete-inner {
+  	position: absolute;
+  	top: 680px;
+  	left: 42px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 119px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.back-to-module {
+  	position: absolute;
+  	top: 691px;
+  	left: 63px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 84px;
+  	height: 21px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 774px;
+  	left: 245px;
+  	border-radius: 10px;
+  	background-color: #224eff;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 119px;
+  	height: 37px;
+}
+.next-lesson {
+  	position: absolute;
+  	top: 785px;
+  	left: 260px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 84px;
+  	height: 21px;
+}
+.completed {
+  	position: absolute;
+  	top: 686px;
+  	left: 269px;
+  	font-size: 15px;
+  	display: inline-block;
+  	color: #32de07;
+  	width: 94px;
+  	height: 21px;
+}
+.on-click-mark-as-complete-child1 {
+  	position: absolute;
+  	top: 859px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 891px;
+  	left: 60px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 891px;
+  	left: 116px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 891px;
+  	left: 173px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 891px;
+  	left: 311px;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 891px;
+  	left: 231px;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 866px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 868px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 868px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 867px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 866px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.password-security {
+  	position: absolute;
+  	top: 16px;
+  	left: 50px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 147px;
+  	height: 26px;
+}
+.on-click-mark-as-complete-child2 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.arrow-left-icon {
+  	position: absolute;
+  	top: 15px;
+  	left: 15px;
+  	width: 24px;
+  	height: 24px;
+}
+.passwords-are-the {
+  	margin: 0;
+  	/* white-space: pre-wrap; */
+}
+.blank-line {
+  	margin: 0;
+}
+.why-passwords-matter {
+  	margin: 0;
+  	/* white-space: pre-wrap; */
+  	font-size: 20px;
+}
+.at-least-12-characters-long {
+  	margin-bottom: 0px;
+  	/* white-space: pre-wrap; */
+}
+.at-least-12-characters-long-mi {
+  	margin: 0;
+  	padding-left: 20px;
+}
+.passwords-are-the-container {
+  	position: absolute;
+  	top: 84px;
+  	left: 42px;
+  	color: #fff;
+  	display: inline-block;
+  	width: 319px;
+  	font-size: 15px;
+}
+.done-ring-round-icon {
+  	position: absolute;
+  	top: 685px;
+  	left: 238px;
+  	width: 24px;
+  	height: 24px;
+}
+.continue-learning {
+  	position: absolute;
+  	top: 765px;
+  	left: 75px;
+  	font-size: 15px;
+  	font-weight: 600;
+  	color: #313131;
+}
+.move-on-to {
+  	position: absolute;
+  	top: 785px;
+  	left: 75px;
+  	font-size: 12px;
+  	font-weight: 500;
+  	color: #323232;
+  	display: inline-block;
+  	width: 144px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 774px;
+  	left: 31px;
+  	border-radius: 50%;
+  	background-color: #3d8bff;
+  	width: 37px;
+  	height: 37px;
+}
+.arrow-right-icon {
+  	position: absolute;
+  	top: 784px;
+  	left: 330px;
+  	width: 18px;
+  	height: 18px;
+}
+.book-open-alt-icon1 {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+  	width: 24px;
+  	height: 24px;
+}
+

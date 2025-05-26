@@ -1,0 +1,667 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-frame {
+    width: 402px;
+    height: 874px;
+    background: #1c1c1c;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.phone-frame::-webkit-scrollbar {
+    width: 6px;
+}
+
+.phone-frame::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+.phone-frame::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+.profile {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	min-height: 1062px;
+  	text-align: left;
+  	font-size: 13px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+
+@media (min-width: 391px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+.profile-child {
+  	position: absolute;
+  	top: 72px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 98px;
+}
+.profile-item {
+  	position: absolute;
+  	top: 177px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 219px;
+}
+.profile-inner {
+  	position: absolute;
+  	top: 701px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 187px;
+}
+.div {
+  	position: absolute;
+  	top: 762px;
+  	left: 334px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 195px;
+  	height: 20px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 764px;
+  	left: 40px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 289px;
+  	height: 6px;
+}
+.profile-child1 {
+  	position: absolute;
+  	top: 764px;
+  	left: 40px;
+  	border-radius: 6px;
+  	background: linear-gradient(90deg, #ff82d9 1.92%, #af52de 48.08%, #a900ff);
+  	width: 182px;
+  	height: 6px;
+}
+.div1 {
+  	position: absolute;
+  	top: 802px;
+  	left: 334px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 195px;
+  	height: 20px;
+}
+.profile-child2 {
+  	position: absolute;
+  	top: 804px;
+  	left: 40px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 289px;
+  	height: 6px;
+}
+.profile-child3 {
+  	position: absolute;
+  	top: 804px;
+  	left: 40px;
+  	border-radius: 6px;
+  	background: linear-gradient(90deg, #ff82d9 1.92%, #af52de 48.08%, #a900ff);
+  	width: 112px;
+  	height: 6px;
+}
+.div2 {
+  	position: absolute;
+  	top: 842px;
+  	left: 334px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 195px;
+  	height: 20px;
+}
+.profile-child4 {
+  	position: absolute;
+  	top: 844px;
+  	left: 40px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 289px;
+  	height: 6px;
+}
+.progress {
+  	position: absolute;
+  	top: 717px;
+  	left: 40px;
+  	font-size: 15px;
+  	display: inline-block;
+  	width: 114px;
+  	height: 20px;
+}
+.profile-child5 {
+  	position: absolute;
+  	top: 407px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 283px;
+}
+.profile-child6 {
+  	position: absolute;
+  	top: 642px;
+  	left: 33px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 324px;
+  	height: 37px;
+}
+.view-all-achievements {
+  	position: absolute;
+  	top: 653px;
+  	left: 134px;
+  	font-size: 11px;
+  	display: inline-block;
+  	width: 120px;
+  	height: 21px;
+}
+.profile-child7 {
+  	position: absolute;
+  	top: 912px;
+  	left: 18px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 352px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.sign-out {
+  	position: absolute;
+  	top: 923px;
+  	left: 177px;
+  	font-size: 11px;
+  	display: inline-block;
+  	width: 46px;
+  	height: 21px;
+}
+.current-streak {
+  	position: absolute;
+  	top: 270px;
+  	left: 59px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 117px;
+  	height: 26px;
+}
+.first-lesson {
+  	position: absolute;
+  	top: 526px;
+  	left: 29px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 117px;
+  	height: 26px;
+}
+.perfect-quiz {
+  	position: absolute;
+  	top: 526px;
+  	left: 158px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 72px;
+  	height: 26px;
+}
+.day-streak {
+  	position: absolute;
+  	top: 526px;
+  	left: 261px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 80px;
+  	height: 26px;
+}
+.module-master {
+  	position: absolute;
+  	top: 616px;
+  	left: 29px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 117px;
+  	height: 26px;
+}
+.password-security {
+  	position: absolute;
+  	top: 751px;
+  	left: 36px;
+  	font-size: 9px;
+  	display: inline-block;
+  	text-align: center;
+  	width: 87px;
+  	height: 13px;
+}
+.phishing-awareness {
+  	position: absolute;
+  	top: 791px;
+  	left: 40px;
+  	font-size: 9px;
+  	display: inline-block;
+  	text-align: center;
+  	width: 87px;
+  	height: 13px;
+}
+.public-wifi-safety {
+  	position: absolute;
+  	top: 831px;
+  	left: 35px;
+  	font-size: 9px;
+  	display: inline-block;
+  	text-align: center;
+  	width: 87px;
+  	height: 13px;
+}
+.security-expert {
+  	position: absolute;
+  	top: 616px;
+  	left: 149px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 91px;
+  	height: 26px;
+}
+.quiz-champion {
+  	position: absolute;
+  	top: 616px;
+  	left: 256px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 91px;
+  	height: 26px;
+}
+.completed-lessons {
+  	position: absolute;
+  	top: 270px;
+  	left: 221px;
+  	font-size: 12px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 107px;
+  	height: 32px;
+}
+.total-xp {
+  	position: absolute;
+  	top: 343px;
+  	left: 244px;
+  	font-size: 12px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.b {
+  	position: absolute;
+  	top: 233px;
+  	left: 107px;
+  	font-size: 32px;
+  	color: #d686ff;
+}
+.quizzes-taken {
+  	position: absolute;
+  	top: 343px;
+  	left: 75px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 85px;
+  	height: 33px;
+}
+.b1 {
+  	position: absolute;
+  	top: 302px;
+  	left: 107px;
+  	font-size: 32px;
+  	color: #ff282c;
+}
+.b2 {
+  	position: absolute;
+  	top: 233px;
+  	left: 246px;
+  	font-size: 32px;
+  	color: #ff35da;
+}
+.b3 {
+  	position: absolute;
+  	top: 302px;
+  	left: 244px;
+  	font-size: 32px;
+  	color: #009dff;
+}
+.level-5 {
+  	position: absolute;
+  	top: 130px;
+  	left: 97px;
+  	font-size: 10px;
+  	display: inline-block;
+  	width: 147px;
+  	height: 20px;
+}
+.div3 {
+  	position: absolute;
+  	top: 145px;
+  	left: 319px;
+  	font-size: 8px;
+  	display: inline-block;
+  	width: 147px;
+  	height: 20px;
+}
+.profile-child8 {
+  	position: absolute;
+  	top: 147px;
+  	left: 97px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 218px;
+  	height: 6px;
+}
+.profile-child9 {
+  	position: absolute;
+  	top: 147px;
+  	left: 97px;
+  	border-radius: 6px;
+  	background: linear-gradient(90deg, #ff82d9 1.92%, #af52de 48.08%, #a900ff);
+  	width: 137px;
+  	height: 6px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 89px;
+  	left: 32px;
+  	border-radius: 50%;
+  	background-color: #5787ff;
+  	width: 54px;
+  	height: 54px;
+    
+}
+.view-light-icon {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+  	width: 28px;
+  	height: 28px;
+}
+.profile-child10 {
+  	position: absolute;
+  	bottom: 0;
+  	right: 0;
+  	border-radius: 50%;
+  	background-color: #1534ff;
+  	width: 17px;
+  	height: 17px;
+}
+.profile-child11 {
+  	position: absolute;
+  	top: 1001px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 1033px;
+  	left: 60px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 1033px;
+  	left: 116px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 1033px;
+  	left: 173px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile1 {
+  	position: absolute;
+  	top: 1033px;
+  	left: 311px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 1033px;
+  	left: 231px;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 1008px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 1010px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 1010px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 1009px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 1008px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.profile2 {
+  	position: absolute;
+  	top: 16px;
+  	left: 18px;
+  	font-size: 24px;
+  	display: inline-block;
+  	width: 222px;
+  	height: 26px;
+}
+.stats {
+  	position: absolute;
+  	top: 194px;
+  	left: 40px;
+  	font-size: 15px;
+  	display: inline-block;
+  	width: 40px;
+  	height: 20px;
+}
+.achievements {
+  	position: absolute;
+  	top: 418px;
+  	left: 40px;
+  	font-size: 15px;
+  	display: inline-block;
+  	width: 114px;
+  	height: 20px;
+}
+.profile-child12 {
+  	position: absolute;
+  	top: 468px;
+  	left: 60px;
+  	border-radius: 50%;
+  	background-color: #5787ff;
+  	width: 54px;
+  	height: 54px;
+}
+.profile-child13 {
+  	position: absolute;
+  	top: 468px;
+  	left: 167px;
+  	border-radius: 50%;
+  	background-color: #5787ff;
+  	width: 54px;
+  	height: 54px;
+}
+.profile-child14 {
+  	position: absolute;
+  	top: 468px;
+  	left: 274px;
+  	border-radius: 50%;
+  	background-color: #5787ff;
+  	width: 54px;
+  	height: 54px;
+}
+.profile-child15 {
+  	position: absolute;
+  	top: 556px;
+  	left: 60px;
+  	border-radius: 50%;
+  	background-color: rgba(217, 217, 217, 0.5);
+  	width: 54px;
+  	height: 54px;
+}
+.trophy-icon1 {
+  	position: absolute;
+  	top: 566px;
+  	left: 71px;
+  	width: 33px;
+  	height: 33px;
+}
+.profile-child16 {
+  	position: absolute;
+  	top: 556px;
+  	left: 167px;
+  	border-radius: 50%;
+  	background-color: #767780;
+  	width: 54px;
+  	height: 54px;
+}
+.profile-child17 {
+  	position: absolute;
+  	top: 556px;
+  	left: 274px;
+  	border-radius: 50%;
+  	background-color: #767780;
+  	width: 54px;
+  	height: 54px;
+}
+.cyber-ninja {
+  	position: absolute;
+  	top: 103px;
+  	left: 97px;
+  	font-size: 14px;
+  	display: inline-block;
+  	width: 81px;
+  	height: 18px;
+}
+.b4 {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+  	font-size: 8px;
+}
+.book-open-icon {
+  	position: absolute;
+  	top: 483px;
+  	left: 73px;
+  	width: 28px;
+  	height: 28px;
+}
+.done-ring-round-icon {
+  	position: absolute;
+  	top: 481px;
+  	left: 180px;
+  	width: 28px;
+  	height: 28px;
+}
+.fire-icon {
+  	position: absolute;
+  	top: 478px;
+  	left: 284px;
+  	width: 34px;
+  	height: 34px;
+}
+.chield-icon {
+  	position: absolute;
+  	top: 568px;
+  	left: 179px;
+  	width: 30px;
+  	height: 30px;
+}
+.mortarboard-icon {
+  	position: absolute;
+  	top: 570px;
+  	left: 289px;
+  	width: 24px;
+  	height: 24px;
+}
+

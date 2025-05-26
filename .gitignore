@@ -1,0 +1,24 @@
+# Firebase related
+.firebase/
+firebase-debug.log
+.firebaserc
+
+# Node dependencies
+node_modules/
+functions/node_modules/
+
+# Build folder
+dist/
+build/
+
+# Editor & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env & Secret
+.env
+*.key
+*.pem
+ 
