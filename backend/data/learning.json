@@ -51,334 +51,55 @@
         "id": "inadequate-supply-chain-security",
         "title": "Inadequate Supply Chain Security",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "supply-chain-security-content",
-            "title": "Understanding Supply Chain Security",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Inadequate Supply Chain Security mengacu pada kurangnya perlindungan terhadap komponen pihak ketiga yang digunakan dalam aplikasi, yang dapat menyebabkan kerentanan jika tidak dikelola dengan baik."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Supply Chain"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Menggunakan pustaka open-source tanpa audit keamanan",
-                  "Tidak memperbarui dependensi secara berkala",
-                  "Mengandalkan vendor tanpa melakukan penilaian risiko"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Keamanan Supply Chain"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Lakukan audit keamanan pada semua pustaka pihak ketiga",
-                  "Gunakan alat manajemen dependensi yang aman",
-                  "Terapkan kebijakan pembaruan rutin untuk semua komponen"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insecure-authentication-authorization",
         "title": "Insecure Authentication/Authorization",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "authentication-authorization-content",
-            "title": "Understanding Insecure Authentication and Authorization",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insecure Authentication/Authorization terjadi ketika aplikasi tidak mengimplementasikan mekanisme autentikasi dan otorisasi yang aman, seperti penggunaan token yang lemah atau tidak adanya kontrol akses yang tepat."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Autentikasi/Otorisasi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Penggunaan token statis tanpa masa berlaku",
-                  "Tidak ada pembatasan pada jumlah percobaan login",
-                  "Tidak memvalidasi peran pengguna sebelum mengakses data sensitif"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Autentikasi/Otorisasi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Gunakan token JWT dengan masa berlaku terbatas",
-                  "Implementasikan rate limiting pada endpoint login",
-                  "Pastikan validasi peran pengguna sebelum akses data"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insufficient-io-validation",
         "title": "Insufficient Input/Output Validation",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "input-output-validation-content",
-            "title": "Understanding Insufficient Input/Output Validation",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insufficient Input/Output Validation terjadi ketika aplikasi tidak memvalidasi data yang masuk atau keluar dengan benar, yang dapat menyebabkan serangan seperti injeksi SQL atau XSS."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Validasi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Tidak memvalidasi input pengguna sebelum diproses",
-                  "Mengizinkan karakter berbahaya dalam input",
-                  "Tidak melakukan sanitasi output sebelum ditampilkan"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Validasi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Gunakan whitelist untuk validasi input",
-                  "Sanitasi semua output yang ditampilkan ke pengguna",
-                  "Implementasikan validasi sisi server dan klien"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insecure-communication",
         "title": "Insecure Communication",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "insecure-communication-content",
-            "title": "Understanding Insecure Communication",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insecure Communication terjadi ketika data dikirim tanpa enkripsi atau menggunakan protokol yang tidak aman, sehingga rentan terhadap penyadapan dan serangan."
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "inadequate-privacy-controls",
         "title": "Inadequate Privacy Controls",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "inadequate-privacy-controls-content",
-            "title": "Understanding Inadequate Privacy Controls",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Inadequate Privacy Controls terjadi ketika aplikasi tidak menerapkan langkah-langkah yang memadai untuk melindungi data pribadi pengguna, seperti pengumpulan data yang berlebihan atau kurangnya transparansi dalam penggunaan data."
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insufficient-binary-protections",
         "title": "Insufficient Binary Protections",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "insufficient-binary-protections-content",
-            "title": "Understanding Insufficient Binary Protections",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insufficient Binary Protections terjadi ketika aplikasi tidak melindungi kode biner dari reverse engineering atau modifikasi, yang dapat mengakibatkan kebocoran informasi sensitif."
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "security-misconfiguration",
         "title": "Security Misconfiguration",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "security-misconfiguration-content",
-            "title": "Understanding Security Misconfiguration",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Security Misconfiguration terjadi ketika aplikasi atau server tidak dikonfigurasi dengan benar, sehingga membuka celah keamanan yang dapat dimanfaatkan oleh penyerang."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Konfigurasi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Penggunaan kredensial default pada server",
-                  "Tidak menghapus layanan yang tidak digunakan",
-                  "Pengaturan izin file yang terlalu longgar"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Konfigurasi Keamanan"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Audit konfigurasi secara berkala",
-                  "Gunakan template konfigurasi yang aman",
-                  "Terapkan prinsip least privilege pada izin akses"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insecure-data-storage",
         "title": "Insecure Data Storage",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "insecure-data-storage-content",
-            "title": "Understanding Insecure Data Storage",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insecure Data Storage terjadi ketika aplikasi tidak melindungi data sensitif yang disimpan, seperti menyimpan data tanpa enkripsi atau menggunakan algoritma enkripsi yang lemah."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Penyimpanan Data"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Menyimpan kata sandi dalam format teks biasa",
-                  "Tidak mengenkripsi data sensitif di perangkat",
-                  "Menggunakan algoritma enkripsi yang sudah usang"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Penyimpanan Data Aman"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Gunakan enkripsi kuat untuk semua data sensitif",
-                  "Implementasikan kontrol akses yang ketat pada penyimpanan data",
-                  "Lakukan audit keamanan secara berkala pada penyimpanan data"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "insufficient-cryptography",
         "title": "Insufficient Cryptography",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "insufficient-cryptography-content",
-            "title": "Understanding Insufficient Cryptography",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Insufficient Cryptography terjadi ketika aplikasi tidak menggunakan algoritma kriptografi yang kuat atau tidak menerapkan praktik terbaik dalam penggunaan kriptografi, sehingga data rentan terhadap serangan."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Masalah Kriptografi"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Menggunakan algoritma enkripsi yang lemah seperti MD5 atau SHA-1",
-                  "Tidak mengimplementasikan salting pada penyimpanan kata sandi",
-                  "Tidak menggunakan TLS untuk komunikasi data"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Praktik Terbaik untuk Kriptografi Aman"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Gunakan algoritma enkripsi modern seperti AES-256",
-                  "Implementasikan salting dan hashing yang aman untuk kata sandi",
-                  "Pastikan semua komunikasi data dienkripsi dengan TLS"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       }
     ]
   },
@@ -435,89 +156,19 @@
         "id": "people-controls",
         "title": "People Controls",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "people-controls-content",
-            "title": "Understanding People Controls",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Kontrol orang dalam ISO/IEC 27001 mencakup langkah-langkah untuk memastikan bahwa karyawan dan pihak ketiga memahami dan mematuhi kebijakan keamanan informasi."
-              },
-              {
-                "type": "heading",
-                "text": "Contoh Kontrol Orang"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Perekrutan dan seleksi yang aman",
-                  "Pelatihan keamanan informasi untuk karyawan baru",
-                  "Penilaian risiko terhadap akses pengguna",
-                  "Prosedur disiplin untuk pelanggaran kebijakan"
-                ]
-              },
-              {
-                "type": "heading",
-                "text": "Manfaat Penerapan Kontrol Orang"
-              },
-              {
-                "type": "list",
-                "text": [
-                  "Meningkatkan kesadaran keamanan di tingkat individu",
-                  "Mengurangi risiko kesalahan manusia yang dapat menyebabkan pelanggaran data",
-                  "Membangun budaya keamanan yang kuat dalam organisasi"
-                ]
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "physical-controls",
         "title": "Physical Controls",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "physical-controls-content",
-            "title": "Understanding Physical Controls",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Kontrol fisik dalam ISO/IEC 27001 mencakup langkah-langkah untuk melindungi aset fisik dan lingkungan dari ancaman keamanan."
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       },
       {
         "id": "technological-controls",
         "title": "Technological Controls",
         "description": "Konten belum tersedia.",
-<<<<<<< HEAD
         "lessons": []
-=======
-        "lessons": [
-          {
-            "id": "technological-controls-content",
-            "title": "Understanding Technological Controls",
-            "content": [
-              {
-                "type": "paragraph",
-                "text": "Kontrol teknologi dalam ISO/IEC 27001 mencakup penggunaan alat dan teknologi untuk melindungi informasi dan sistem dari ancaman keamanan."
-              }
-            ]
-          }
-        ]
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
       }
     ]
   }

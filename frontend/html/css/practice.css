@@ -121,11 +121,7 @@ body {
 .learn {
   	position: absolute;
   	top: 845px;
-<<<<<<< HEAD
   	left: 120px;
-=======
-  	left: 116px;
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	color: #acc0ff;
   	display: inline-block;
   	width: 31px;
@@ -169,11 +165,7 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 822px;
-<<<<<<< HEAD
   	left: 122px;
-=======
-  	left: 118px;
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;
@@ -243,19 +235,12 @@ body {
   	top: 338px;
   	left: 33px;
   	border-radius: 10px;
-<<<<<<< HEAD
   	background: linear-gradient(90deg, #444fc3, #9519ce);
-=======
-  	background-color: #151628;
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	border: 1px solid rgba(132, 162, 255, 0.37);
   	box-sizing: border-box;
   	width: 324px;
   	height: 37px;
-<<<<<<< HEAD
   	cursor: pointer;
-=======
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .start-quiz1 {
   	position: absolute;
@@ -277,17 +262,10 @@ body {
 .practice-child3 {
   	position: absolute;
   	top: 291px;
-<<<<<<< HEAD
   	left: 144px;
   	border-radius: 16px;
   	background-color: #0b7e48;
   	width: 61px;
-=======
-  	left: 137px;
-  	border-radius: 16px;
-  	background-color: #dd8126;
-  	width: 78px;
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	height: 16px;
 }
 .questions-intermediate {

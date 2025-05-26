@@ -13,7 +13,6 @@ const learningRoutes = require('./routes/learningRoutes'); // ✅ Untuk modul be
 // === Middleware ===
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-<<<<<<< HEAD
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -26,16 +25,12 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Serve HTML files specifically
 app.use('/html', express.static(path.join(__dirname, '../frontend/html')));
-=======
-app.use(express.static(path.join(__dirname, 'public'))); // serve file static
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 
 // === API Routing ===
 app.use('/api/quiz', quizRoutes);          // endpoint quiz
 app.use('/user', userRoutes);              // endpoint user
 app.use('/api/modules', learningRoutes);   // endpoint modul belajar
 
-<<<<<<< HEAD
 // === Specific HTML Routes ===
 app.get('/sign-in.html', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/html/sign-in.html'));
@@ -112,24 +107,10 @@ function isValidPassword(password) {
       hasSymbol
     }
   };
-=======
-// === Helper functions ===
-function getUsers() {
-  const data = fs.readFileSync(path.join(__dirname, 'data', 'users.json'), 'utf-8');
-  return JSON.parse(data);
-}
-
-function saveUsers(users) {
-  fs.writeFileSync(
-    path.join(__dirname, 'data', 'users.json'),
-    JSON.stringify(users, null, 2)
-  );
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 
 // === Login Route ===
 app.post('/login', async (req, res) => {
-<<<<<<< HEAD
   try {
     console.log('Login attempt received:', { email: req.body.email, timestamp: req.body.timestamp });
     
@@ -199,23 +180,10 @@ app.post('/login', async (req, res) => {
       message: 'Server error. Please try again later.' 
     });
   }
-=======
-  const { email, password } = req.body;
-  const users = getUsers();
-
-  const user = users.find(u => u.email === email);
-  if (!user) return res.status(401).send('Email tidak ditemukan.');
-
-  const isPasswordMatch = await bcrypt.compare(password, user.password);
-  if (!isPasswordMatch) return res.status(401).send('Password salah.');
-
-  res.send('Login berhasil!');
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 });
 
 // === Register Route ===
 app.post('/register', async (req, res) => {
-<<<<<<< HEAD
   try {
     console.log('Registration attempt received:', { 
       username: req.body.username, 
@@ -308,35 +276,11 @@ app.post('/register', async (req, res) => {
   const newUser = {
       username: username.trim(),
       email: email.toLowerCase().trim(),
-=======
-  const { username, email, password, confirmPassword } = req.body;
-
-  if (!username || !email || !password || !confirmPassword) {
-    return res.status(400).send('Semua field wajib diisi.');
-  }
-
-  if (password !== confirmPassword) {
-    return res.status(400).send('Password dan konfirmasi tidak cocok.');
-  }
-
-  const users = getUsers();
-  const userExists = users.find(u => u.email === email);
-  if (userExists) {
-    return res.status(400).send('Email sudah terdaftar.');
-  }
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  const newUser = {
-    username,
-    email,
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
     password: hashedPassword,
     xp: 0,
     streak: 0,
     completedLessons: [],
     completedQuizzes: [],
-<<<<<<< HEAD
       achievements: [],
       createdAt: new Date().toISOString()
   };
@@ -557,21 +501,11 @@ app.post('/api/users/:username/progress', (req, res) => {
         console.error('Error updating progress:', error);
         res.status(500).json({ error: 'Failed to update progress' });
     }
-=======
-    achievements: []
-  };
-
-  users.push(newUser);
-  saveUsers(users);
-
-  res.redirect('/login.html');
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 });
 
 // === Start Server ===
 app.listen(port, () => {
   console.log(`🚀 Server running at http://localhost:${port}`);
-<<<<<<< HEAD
   console.log(`📊 Test users endpoint: http://localhost:${port}/api/users/test`);
   
   // Test database connection on startup
@@ -582,6 +516,3 @@ app.listen(port, () => {
     console.error('❌ Database connection failed:', error);
   }
 }); 
-=======
-});
->>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
