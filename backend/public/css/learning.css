@@ -1,0 +1,584 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Optional: background for framing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone-frame {
+  width: 402px;       /* iPhone 12-style width */
+  height: 874px;      /* iPhone 12-style height */
+  background: #1c1c1c; /* or any background you want */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #333;
+  border-radius: 20px; /* Optional slight rounding for visual niceness */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+.learning-child {
+  	position: absolute;
+  	top: 60px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+  	cursor: pointer;
+}
+.learning-item {
+  	position: absolute;
+  	top: 145px;
+  	left: 39px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 317px;
+  	height: 9px;
+}
+.learning-inner {
+  	position: absolute;
+  	top: 145px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #af52de;
+  	width: 198px;
+  	height: 9px;
+}
+.password-security {
+  	position: absolute;
+  	top: 72px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lessons {
+  	position: absolute;
+  	top: 89px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete {
+  	position: absolute;
+  	top: 129px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.learn-how-to {
+  	position: absolute;
+  	top: 107px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 116px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	color: #acc0ff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.learning-modules {
+  	position: absolute;
+  	top: 16px;
+  	left: 18px;
+  	font-size: 24px;
+  	display: inline-block;
+  	width: 222px;
+  	height: 26px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 75px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.learning-child1 {
+  	position: absolute;
+  	top: 183px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+}
+.learning-child2 {
+  	position: absolute;
+  	top: 268px;
+  	left: 39px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 317px;
+  	height: 9px;
+}
+.learning-child3 {
+  	position: absolute;
+  	top: 268px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #af52de;
+  	width: 121px;
+  	height: 9px;
+}
+.phishing-awareness {
+  	position: absolute;
+  	top: 195px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 141px;
+  	height: 26px;
+}
+.lessons1 {
+  	position: absolute;
+  	top: 212px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete1 {
+  	position: absolute;
+  	top: 252px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.identify-and-avoid {
+  	position: absolute;
+  	top: 230px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.learning-child4 {
+  	position: absolute;
+  	top: 198px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.learning-child5 {
+  	position: absolute;
+  	top: 306px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+}
+.learning-child6 {
+  	position: absolute;
+  	top: 391px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 323px;
+  	height: 9px;
+}
+.public-wifi-safety {
+  	position: absolute;
+  	top: 318px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lessons2 {
+  	position: absolute;
+  	top: 335px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete2 {
+  	position: absolute;
+  	top: 375px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.stay-secure-when {
+  	position: absolute;
+  	top: 353px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.learning-child7 {
+  	position: absolute;
+  	top: 321px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.learning-child8 {
+  	position: absolute;
+  	top: 429px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+}
+.learning-child9 {
+  	position: absolute;
+  	top: 514px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 323px;
+  	height: 9px;
+}
+.data-protection {
+  	position: absolute;
+  	top: 441px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lessons3 {
+  	position: absolute;
+  	top: 458px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete3 {
+  	position: absolute;
+  	top: 498px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.safeguard-your-sensitive {
+  	position: absolute;
+  	top: 476px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.learning-child10 {
+  	position: absolute;
+  	top: 444px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.database-icon {
+  	position: absolute;
+  	top: 447px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.learning-child11 {
+  	position: absolute;
+  	top: 552px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+}
+.learning-child12 {
+  	position: absolute;
+  	top: 637px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 323px;
+  	height: 9px;
+}
+.two-factor-authentication {
+  	position: absolute;
+  	top: 564px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 182px;
+  	height: 26px;
+}
+.lessons4 {
+  	position: absolute;
+  	top: 581px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete4 {
+  	position: absolute;
+  	top: 621px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.add-an-extra {
+  	position: absolute;
+  	top: 599px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.learning-child13 {
+  	position: absolute;
+  	top: 567px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.learning-child14 {
+  	position: absolute;
+  	top: 675px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 105px;
+}
+.learning-child15 {
+  	position: absolute;
+  	top: 760px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 323px;
+  	height: 9px;
+}
+.malware {
+  	position: absolute;
+  	top: 687px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lessons5 {
+  	position: absolute;
+  	top: 704px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.complete5 {
+  	position: absolute;
+  	top: 744px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.learn-how-malware {
+  	position: absolute;
+  	top: 722px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.learning-child16 {
+  	position: absolute;
+  	top: 690px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #94aeff;
+  	width: 27px;
+  	height: 27px;
+}
+.view-light-icon {
+  	position: absolute;
+  	top: 202px;
+  	left: 37px;
+  	width: 19px;
+  	height: 19px;
+}
+.wifi-icon {
+  	position: absolute;
+  	top: 326px;
+  	left: 38px;
+  	width: 17px;
+  	height: 17px;
+  	overflow: hidden;
+}
+.passcode-lock-icon {
+  	position: absolute;
+  	top: 81px;
+  	left: 38px;
+  	width: 16px;
+  	height: 16px;
+  	overflow: hidden;
+}
+.shield-tick-icon {
+  	position: absolute;
+  	top: 571px;
+  	left: 37px;
+  	width: 19px;
+  	height: 19px;
+  	overflow: hidden;
+}
+.bug-light-icon {
+  	position: absolute;
+  	top: 693px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.learning-child17 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.learning {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+

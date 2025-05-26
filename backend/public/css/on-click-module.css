@@ -1,0 +1,560 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Optional: background for framing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone-frame {
+  width: 402px;       /* iPhone 12-style width */
+  height: 874px;      /* iPhone 12-style height */
+  background: #1c1c1c; /* or any background you want */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #333;
+  border-radius: 20px; /* Optional slight rounding for visual niceness */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+.on-click-module-child {
+  	position: absolute;
+  	top: 60px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 82px;
+}
+.on-click-module-item {
+  	position: absolute;
+  	top: 117px;
+  	left: 39px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 329px;
+  	height: 9px;
+}
+.on-click-module-inner {
+  	position: absolute;
+  	top: 117px;
+  	left: 33px;
+  	border-radius: 6px;
+  	background-color: #af52de;
+  	width: 198px;
+  	height: 9px;
+}
+.complete {
+  	position: absolute;
+  	top: 101px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 100px;
+  	height: 26px;
+}
+.lessons {
+  	position: absolute;
+  	top: 101px;
+  	left: 308px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.learn-how-to {
+  	position: absolute;
+  	top: 73px;
+  	left: 33px;
+  	display: inline-block;
+  	width: 335px;
+  	height: 26px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 116px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	color: #acc0ff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.password-security {
+  	position: absolute;
+  	top: 16px;
+  	left: 50px;
+  	font-size: 16px;
+  	display: inline-block;
+  	width: 147px;
+  	height: 26px;
+}
+.on-click-module-child1 {
+  	position: absolute;
+  	top: 180px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+  	cursor: pointer;
+}
+.password-security1 {
+  	position: absolute;
+  	top: 192px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lesson {
+  	position: absolute;
+  	top: 209px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 195px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #bfffbc;
+  	width: 27px;
+  	height: 27px;
+}
+.check-ring-icon {
+  	position: absolute;
+  	top: 198px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module-child2 {
+  	position: absolute;
+  	top: 242px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.common-password-mistakes {
+  	position: absolute;
+  	top: 254px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 185px;
+  	height: 26px;
+}
+.lesson1 {
+  	position: absolute;
+  	top: 271px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child3 {
+  	position: absolute;
+  	top: 257px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #bfffbc;
+  	width: 27px;
+  	height: 27px;
+}
+.check-ring-icon1 {
+  	position: absolute;
+  	top: 260px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module-child4 {
+  	position: absolute;
+  	top: 304px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.password-strength-quiz {
+  	position: absolute;
+  	top: 316px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 166px;
+  	height: 26px;
+}
+.quiz {
+  	position: absolute;
+  	top: 333px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child5 {
+  	position: absolute;
+  	top: 319px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #bfffbc;
+  	width: 27px;
+  	height: 27px;
+}
+.check-ring-icon2 {
+  	position: absolute;
+  	top: 322px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module-child6 {
+  	position: absolute;
+  	top: 366px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.password-managers {
+  	position: absolute;
+  	top: 378px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 162px;
+  	height: 26px;
+}
+.lesson2 {
+  	position: absolute;
+  	top: 395px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child7 {
+  	position: absolute;
+  	top: 381px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #bfffbc;
+  	width: 27px;
+  	height: 27px;
+}
+.check-ring-icon3 {
+  	position: absolute;
+  	top: 384px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module-child8 {
+  	position: absolute;
+  	top: 428px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.creating-strong-passwords {
+  	position: absolute;
+  	top: 440px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 174px;
+  	height: 26px;
+}
+.lesson3 {
+  	position: absolute;
+  	top: 457px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child9 {
+  	position: absolute;
+  	top: 443px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #bfffbc;
+  	width: 27px;
+  	height: 27px;
+}
+.check-ring-icon4 {
+  	position: absolute;
+  	top: 446px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module-child10 {
+  	position: absolute;
+  	top: 490px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.password-security2 {
+  	position: absolute;
+  	top: 502px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lesson4 {
+  	position: absolute;
+  	top: 519px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child11 {
+  	position: absolute;
+  	top: 505px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #5c90ff;
+  	width: 27px;
+  	height: 27px;
+}
+.on-click-module-child12 {
+  	position: absolute;
+  	top: 552px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.password-security3 {
+  	position: absolute;
+  	top: 564px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lesson5 {
+  	position: absolute;
+  	top: 581px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child13 {
+  	position: absolute;
+  	top: 567px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: rgba(255, 255, 255, 0.96);
+  	width: 27px;
+  	height: 27px;
+}
+.on-click-module-child14 {
+  	position: absolute;
+  	top: 614px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 60px;
+}
+.password-security4 {
+  	position: absolute;
+  	top: 626px;
+  	left: 70px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 116px;
+  	height: 26px;
+}
+.lesson6 {
+  	position: absolute;
+  	top: 643px;
+  	left: 70px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+}
+.on-click-module-child15 {
+  	position: absolute;
+  	top: 629px;
+  	left: 33px;
+  	border-radius: 50%;
+  	background-color: #f6f6f7;
+  	width: 27px;
+  	height: 27px;
+}
+.on-click-module-child16 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.arrow-left-icon {
+  	position: absolute;
+  	top: 15px;
+  	left: 15px;
+  	width: 24px;
+  	height: 24px;
+}
+.lock-icon {
+  	position: absolute;
+  	top: 508px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.lock-icon1 {
+  	position: absolute;
+  	top: 570px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.lock-icon2 {
+  	position: absolute;
+  	top: 632px;
+  	left: 36px;
+  	width: 21px;
+  	height: 21px;
+}
+.on-click-module {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+

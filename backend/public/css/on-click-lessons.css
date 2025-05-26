@@ -1,0 +1,331 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Optional: background for framing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone-frame {
+  width: 402px;       /* iPhone 12-style width */
+  height: 874px;      /* iPhone 12-style height */
+  background: #1c1c1c; /* or any background you want */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #333;
+  border-radius: 20px; /* Optional slight rounding for visual niceness */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+.on-click-lesson-child {
+  	position: absolute;
+  	top: 60px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 362px;
+  	height: 669px;
+}
+.on-click-lesson-item {
+  	position: absolute;
+  	top: 680px;
+  	left: 42px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 119px;
+  	height: 37px;
+}
+.on-click-lesson-inner {
+  	position: absolute;
+  	top: 680px;
+  	left: 232px;
+  	border-radius: 10px;
+  	background-color: #0418f4;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 119px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.back-to-module {
+  	position: absolute;
+  	top: 691px;
+  	left: 63px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 84px;
+  	height: 21px;
+  	cursor: pointer;
+}
+.mark-as-complete {
+  	position: absolute;
+  	top: 691px;
+  	left: 244px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 94px;
+  	height: 21px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.home {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 116px;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 118px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.password-security {
+  	position: absolute;
+  	top: 16px;
+  	left: 50px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 147px;
+  	height: 26px;
+}
+.on-click-lesson-child1 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+.arrow-left-icon {
+  	position: absolute;
+  	top: 15px;
+  	left: 15px;
+  	width: 24px;
+  	height: 24px;
+}
+.passwords-are-the {
+  	margin: 0;
+  	/* white-space: pre-wrap; */
+}
+.blank-line {
+  	margin: 0;
+}
+.why-passwords-matter {
+  	margin: 0;
+  	/* white-space: pre-wrap; */
+  	font-size: 20px;
+}
+.at-least-12-characters-long {
+  	margin-bottom: 0px;
+  	/* white-space: pre-wrap; */
+}
+.at-least-12-characters-long-mi {
+  	margin: 0;
+  	padding-left: 20px;
+}
+.passwords-are-the-container {
+  	position: absolute;
+  	top: 84px;
+  	left: 42px;
+  	color: #fff;
+  	display: inline-block;
+  	width: 319px;
+  	font-size: 15px;
+}
+.on-click-lesson {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #acc0ff;
+  	font-family: 'IBM Plex Sans';
+}
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 0;
+}
+
+.password-container {
+  background: #232a43;
+  color: #fff;
+  font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+  padding: 28px 24px 24px 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  max-width: 370px;
+  width: 100%;
+  margin: 24px auto 0 auto;
+  position: relative;
+  z-index: 10;
+  overflow-y: auto;
+  max-height: 670px;
+}
+
+.password-container .intro,
+.password-container .reminder {
+  font-size: 15px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.password-container .reminder {
+  margin-top: 18px;
+}
+
+.password-container .section-heading {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 22px 0 10px 0;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.password-container ul.requirements {
+  margin: 0 0 0 18px;
+  padding: 0 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.password-container ul.requirements li {
+  margin-bottom: 7px;
+  list-style: disc;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.back-btn,
+.complete-btn {
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.back-btn {
+  background: #23243a;
+  color: #fff;
+  border: 1.5px solid #545297;
+}
+
+.complete-btn {
+  background: #3b47ff;
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 430px) {
+  .password-container {
+    max-width: 98vw;
+    padding: 16px 6vw;
+  }
+}
+

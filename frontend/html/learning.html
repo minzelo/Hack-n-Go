@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet" href="/html/css/learning.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" />
+  	<title>Learning Modules - HacknGo</title>
+</head>
+<body>
+  	<div class="phone-frame">
+  		<div class="learning">
+    			<div class="learning-child" id="owaspModule">
+    			</div>
+    			<div class="learning-item">
+    			</div>
+    			<div class="learning-inner">
+    			</div>
+    			<b class="password-security">OWASP Top 10</b>
+    			<div class="lessons">10 modules</div>
+    			<div class="complete">10% Complete</div>
+    			<div class="learn-how-to">Learn about the most common mobile application vulnerabilities</div>
+    			<div class="rectangle-div">
+    			</div>
+    			<div class="home">Home</div>
+    			<div class="learn">Learn</div>
+    			<div class="practice">Practice</div>
+    			<div class="profile">Profile</div>
+    			<div class="leaderboard">Leaderboard</div>
+    			<img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+    			
+    			<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+    			
+    			<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+    			
+    			<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+    			
+    			<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+    			
+    			<b class="learning-modules">Learning Modules</b>
+    			<div class="ellipse-div">
+    			</div>
+    			<div class="learning-child1" id="iso27001Module">
+    			</div>
+    			<div class="learning-child2">
+    			</div>
+    			<div class="learning-child3">
+    			</div>
+    			<b class="phishing-awareness">ISO/IEC 27001</b>
+    			<div class="lessons1">4 modules</div>
+    			<div class="complete1">25% Complete</div>
+    			<div class="identify-and-avoid">Information security management systems (ISMS)</div>
+    			<div class="learning-child4">
+    			</div>
+    			<div class="learning-child5">
+    			</div>
+    			<div class="learning-child6">
+    			</div>
+    			<b class="public-wifi-safety">Password Security</b>
+    			<div class="lessons2">5 lessons</div>
+    			<div class="complete2">0% Complete</div>
+    			<div class="stay-secure-when">Learn how to create and manage secure passwords</div>
+    			<div class="learning-child7">
+    			</div>
+    			<div class="learning-child8">
+    			</div>
+    			<div class="learning-child9">
+    			</div>
+    			<b class="data-protection">Data Protection</b>
+    			<div class="lessons3">7 lessons</div>
+    			<div class="complete3">0% Complete</div>
+    			<div class="safeguard-your-sensitive">Safeguard your sensitive information</div>
+    			<div class="learning-child10">
+    			</div>
+    			<img class="database-icon" alt="" src="/html/icons/Database.svg">
+    			
+    			<div class="learning-child11">
+    			</div>
+    			<div class="learning-child12">
+    			</div>
+    			<b class="two-factor-authentication">Two-Factor Authentication</b>
+    			<div class="lessons4">4 lessons</div>
+    			<div class="complete4">0% Complete</div>
+    			<div class="add-an-extra">Add an extra layer of security to your accounts</div>
+    			<div class="learning-child13">
+    			</div>
+    			<div class="learning-child14">
+    			</div>
+    			<div class="learning-child15">
+    			</div>
+    			<b class="malware">Phishing Awareness</b>
+    			<div class="lessons5">6 lessons</div>
+    			<div class="complete5">0% Complete</div>
+    			<div class="learn-how-malware">Identify and avoid phishing attempts</div>
+    			<div class="learning-child16">
+    			</div>
+    			<img class="view-light-icon" alt="" src="/html/icons/View_lightblue.svg">
+    			
+    			<img class="wifi-icon" alt="" src="/html/icons/wifi.svg">
+    			
+    			<img class="passcode-lock-icon" alt="" src="/html/icons/passcode-lockblue.svg">
+    			
+    			<img class="shield-tick-icon" alt="" src="/html/icons/shield-tick.svg">
+    			
+    			<img class="bug-light-icon" alt="" src="/html/icons/Bug_light.svg">
+    			
+    			<div class="learning-child17">
+    			</div>
+  		</div>
+  	</div>
+  	
+  	<!-- Navigation JavaScript -->
+  	<script>
+  	    document.addEventListener('DOMContentLoaded', function() {
+  	        // OWASP Top 10 module navigation
+  	        document.getElementById('owaspModule').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/owasp-module.html';
+  	        });
+  	        
+  	        // ISO/IEC 27001 module navigation
+  	        document.getElementById('iso27001Module').addEventListener('click', () => {
+  	            window.location.href = '/html/materials/iso27001-module.html';
+  	        });
+  	        
+  	        // Other modules - Coming soon alerts
+  	        const comingSoonModules = [
+  	            { element: document.querySelector('.learning-child5'), name: 'Password Security' },
+  	            { element: document.querySelector('.learning-child8'), name: 'Data Protection' },
+  	            { element: document.querySelector('.learning-child11'), name: 'Two-Factor Authentication' },
+  	            { element: document.querySelector('.learning-child14'), name: 'Phishing Awareness' }
+  	        ];
+  	        
+  	        comingSoonModules.forEach(module => {
+  	            if (module.element) {
+  	                module.element.addEventListener('click', () => {
+  	                    alert(`${module.name} module is coming soon! Stay tuned for more content.`);
+  	                });
+  	            }
+  	        });
+  	        
+  	        // Navigation clicks
+  	        document.getElementById('homeIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/home.html';
+  	        });
+  	        
+  	        document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/learning.html';
+  	        });
+  	        
+  	        document.getElementById('atomAltIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/practice.html';
+  	        });
+  	        
+  	        document.getElementById('trophyIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/leaderboard.html';
+  	        });
+  	        
+  	        document.getElementById('userIcon').addEventListener('click', () => {
+  	            window.location.href = '/html/profile.html';
+  	        });
+  	    });
+  	</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Optional: background for framing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone-frame {
+  width: 402px;       /* iPhone 12-style width */
+  height: 874px;      /* iPhone 12-style height */
+  background: #1c1c1c; /* or any background you want */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #333;
+  border-radius: 20px; /* Optional slight rounding for visual niceness */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 391px) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+.chield-icon {
+  	position: absolute;
+  	top: 18px;
+  	left: 15px;
+  	width: 35px;
+  	height: 36px;
+}
+.hackngo {
+  	position: absolute;
+  	top: 16px;
+  	left: 55px;
+  	font-size: 32px;
+  	display: inline-block;
+  	font-family: 'Inria Sans';
+  	width: 154px;
+  	height: 36px;
+}
+.home-child {
+  	position: absolute;
+  	top: 114px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 51px;
+}
+.home-item {
+  	position: absolute;
+  	top: 145px;
+  	left: 39px;
+  	border-radius: 6px;
+  	background-color: #374778;
+  	width: 311px;
+  	height: 9px;
+}
+.home-inner {
+  	position: absolute;
+  	top: 145px;
+  	left: 39px;
+  	border-radius: 6px;
+  	background-color: #af52de;
+  	width: 192px;
+  	height: 9px;
+}
+.daily-goal {
+  	position: absolute;
+  	top: 124px;
+  	left: 39px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 71px;
+  	height: 26px;
+}
+.day-streak {
+  	position: absolute;
+  	top: 26px;
+  	left: 280px;
+  	font-size: 15px;
+  	display: inline-block;
+  	width: 90px;
+  	height: 26px;
+}
+.xp {
+  	position: absolute;
+  	top: 124px;
+  	left: 292px;
+  	font-size: 13px;
+  	display: inline-block;
+  	width: 63px;
+  	height: 26px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 183px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 178px;
+}
+.home-child1 {
+  	position: absolute;
+  	top: 251px;
+  	left: 32px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.home-child2 {
+  	position: absolute;
+  	top: 295px;
+  	left: 32px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+}
+.password-basics {
+  	position: absolute;
+  	top: 257px;
+  	left: 69px;
+  	display: inline-block;
+  	width: 213px;
+  	height: 13px;
+}
+.pick-up-where {
+  	position: absolute;
+  	top: 223px;
+  	left: 32px;
+  	font-size: 12px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 261px;
+  	height: 16px;
+}
+.password-security- {
+  	position: absolute;
+  	top: 271px;
+  	left: 69px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 260px;
+  	height: 15px;
+}
+.common-phishing-techniques {
+  	position: absolute;
+  	top: 301px;
+  	left: 69px;
+  	display: inline-block;
+  	width: 173px;
+  	height: 12px;
+}
+.phishing-awareness- {
+  	position: absolute;
+  	top: 314px;
+  	left: 69px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 260px;
+  	height: 16px;
+}
+.continue-learning {
+  	position: absolute;
+  	top: 198px;
+  	left: 32px;
+  	font-size: 20px;
+  	display: inline-block;
+  	width: 223px;
+  	height: 16px;
+}
+.home-child3 {
+  	position: absolute;
+  	top: 389px;
+  	left: 18px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background: linear-gradient(180deg, #147aff, #022fc4);
+  	width: 352px;
+  	height: 202px;
+}
+.home-child4 {
+  	position: absolute;
+  	top: 531px;
+  	left: 32px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 310px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.view-all-challenges {
+  	position: absolute;
+  	top: 542px;
+  	left: 133px;
+  	display: inline-block;
+  	width: 224px;
+  	height: 21px;
+}
+.home-child5 {
+  	position: absolute;
+  	top: 443px;
+  	left: 32px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+}
+.xp1 {
+  	position: absolute;
+  	top: 455px;
+  	left: 289px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 53px;
+  	height: 20px;
+}
+.home-child6 {
+  	position: absolute;
+  	top: 487px;
+  	left: 32px;
+  	border-radius: 10px;
+  	background-color: #151628;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+  	cursor: pointer;
+}
+.phishing-detection {
+  	position: absolute;
+  	top: 449px;
+  	left: 69px;
+  	display: inline-block;
+  	width: 213px;
+  	height: 13px;
+}
+.xp2 {
+  	position: absolute;
+  	top: 499px;
+  	left: 289px;
+  	display: inline-block;
+  	color: #af52de;
+  	width: 53px;
+  	height: 20px;
+}
+.questions-intermediate {
+  	position: absolute;
+  	top: 463px;
+  	left: 69px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 260px;
+  	height: 15px;
+}
+.password-security {
+  	position: absolute;
+  	top: 493px;
+  	left: 69px;
+  	display: inline-block;
+  	width: 173px;
+  	height: 12px;
+}
+.questions-beginner {
+  	position: absolute;
+  	top: 506px;
+  	left: 69px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 260px;
+  	height: 16px;
+}
+.daily-challenges {
+  	position: absolute;
+  	top: 404px;
+  	left: 32px;
+  	font-size: 20px;
+  	display: inline-block;
+  	width: 223px;
+  	height: 16px;
+}
+.ellipse-div {
+  	position: absolute;
+  	top: 259px;
+  	left: 40px;
+  	border-radius: 50%;
+  	background-color: #d7befa;
+  	width: 22px;
+  	height: 21px;
+}
+.passcode-lock-icon {
+  	position: absolute;
+  	top: 262px;
+  	left: 43px;
+  	width: 16px;
+  	height: 16px;
+  	overflow: hidden;
+}
+.home-child7 {
+  	position: absolute;
+  	top: 303px;
+  	left: 40px;
+  	border-radius: 50%;
+  	background-color: #98c1ff;
+  	width: 22px;
+  	height: 22px;
+}
+.view-light-icon {
+  	position: absolute;
+  	top: 305px;
+  	left: 42px;
+  	width: 18px;
+  	height: 18px;
+}
+.home-child8 {
+  	position: absolute;
+  	top: 451px;
+  	left: 40px;
+  	border-radius: 50%;
+  	background-color: #c5ff92;
+  	width: 22px;
+  	height: 21px;
+}
+.home-child9 {
+  	position: absolute;
+  	top: 495px;
+  	left: 40px;
+  	border-radius: 50%;
+  	background-color: #ff9d68;
+  	width: 22px;
+  	height: 22px;
+}
+.fire-alt-light-icon {
+  	position: absolute;
+  	top: 25px;
+  	left: 258px;
+  	width: 21px;
+  	height: 24px;
+}
+.passcode-lock-icon1 {
+  	position: absolute;
+  	top: 498px;
+  	left: 43px;
+  	width: 16px;
+  	height: 16px;
+  	overflow: hidden;
+}
+.view-light-icon1 {
+  	position: absolute;
+  	top: 453px;
+  	left: 42px;
+  	width: 18px;
+  	height: 18px;
+}
+.home-child10 {
+  	position: absolute;
+  	top: 813px;
+  	right: 16px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 20px;
+  	background-color: #2a365c;
+  	width: 371px;
+  	height: 54px;
+}
+.expand-right-icon {
+  	position: absolute;
+  	top: 263px;
+  	left: 320px;
+  	width: 15px;
+  	height: 15px;
+}
+.expand-right-icon1 {
+  	position: absolute;
+  	top: 307px;
+  	left: 320px;
+  	width: 15px;
+  	height: 15px;
+}
+.line-div {
+  	position: absolute;
+  	top: 67.5px;
+  	left: -0.5px;
+  	border-top: 1px solid #545297;
+  	box-sizing: border-box;
+  	width: 403px;
+  	height: 1px;
+}
+.home1 {
+  	position: absolute;
+  	top: 845px;
+  	left: 60px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.learn {
+  	position: absolute;
+  	top: 845px;
+  	left: 120px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 31px;
+  	height: 15px;
+}
+.practice {
+  	position: absolute;
+  	top: 845px;
+  	left: 173px;
+  	color: #acc0ff;
+  	text-align: center;
+  	display: inline-block;
+  	width: 42px;
+  	height: 15px;
+}
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+.profile {
+  	position: absolute;
+  	top: 845px;
+  	left: 311px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 32px;
+  	height: 15px;
+}
+.home-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 63px;
+  	width: 24px;
+  	height: 24px;
+}
+.book-open-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 122px;
+  	width: 20px;
+  	height: 20px;
+  	cursor: pointer;
+}
+.atom-alt-icon {
+  	position: absolute;
+  	top: 822px;
+  	left: 182px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.trophy-icon {
+  	position: absolute;
+  	top: 821px;
+  	left: 249px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.user-icon {
+  	position: absolute;
+  	top: 820px;
+  	left: 315px;
+  	width: 24px;
+  	height: 24px;
+  	cursor: pointer;
+}
+.home {
+  	width: 100%;
+  	position: relative;
+  	background-color: #20273d;
+  	height: 874px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 11px;
+  	color: #fff;
+  	font-family: 'IBM Plex Sans';
+}
+

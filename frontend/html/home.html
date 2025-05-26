@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/home.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+  	
+  	<!-- Home Navigation Script -->
+  	<script src="/html/js/home-navigation.js"></script>
+  	
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="home">
+    		<img class="chield-icon" alt="" src="/html/icons/Chield.svg">
+    		
+    		<b class="hackngo">HacknGo</b>
+    		<div class="home-child">
+    		</div>
+    		<div class="home-item">
+    		</div>
+    		<div class="home-inner">
+    		</div>
+    		<b class="daily-goal">Daily Goal</b>
+    		<b class="day-streak" id="userStreak">5 day Streak</b>
+    		<div class="xp">15/20 XP</div>
+    		<div class="rectangle-div">
+    		</div>
+    		<div class="home-child1" id="rectangle4">
+    		</div>
+    		<div class="home-child2">
+    		</div>
+    		<b class="password-basics">Password Basics</b>
+    		<div class="pick-up-where">Pick up where you left off</div>
+    		<div class="password-security-">Password Security - Lesson 1 of 8</div>
+    		<b class="common-phishing-techniques">Common Phishing Techniques</b>
+    		<div class="phishing-awareness-">Phishing Awareness - Lesson 2 of 6</div>
+    		<b class="continue-learning">Continue Learning </b>
+    		<div class="home-child3">
+    		</div>
+    		<div class="home-child4" id="rectangle7">
+    		</div>
+    		<b class="view-all-challenges">View All Challenges</b>
+    		<div class="home-child5">
+    		</div>
+    		<b class="xp1">+20 XP</b>
+    		<div class="home-child6" id="rectangle9">
+    		</div>
+    		<b class="phishing-detection">Phishing Detection</b>
+    		<b class="xp2">+20 XP</b>
+    		<div class="questions-intermediate">8 Questions - Intermediate</div>
+    		<b class="password-security">Password Security</b>
+    		<div class="questions-beginner">10 Questions - Beginner</div>
+    		<b class="daily-challenges">Daily Challenges</b>
+    		<div class="ellipse-div">
+    		</div>
+    		<img class="passcode-lock-icon" alt="" src="/html/icons/passcode-lock.svg">
+    		
+    		<div class="home-child7">
+    		</div>
+    		<img class="view-light-icon" alt="" src="/html/icons/View_light.svg">
+    		
+    		<div class="home-child8">
+    		</div>
+    		<div class="home-child9">
+    		</div>
+    		<img class="fire-alt-light-icon" alt="" src="/html/icons/Fire_alt_light.svg">
+    		
+    		<img class="passcode-lock-icon1" alt="" src="/html/icons/passcode-lock.svg">
+    		
+    		<img class="view-light-icon1" alt="" src="/html/icons/View_light.svg">
+    		
+    		<div class="home-child10">
+    		</div>
+    		<img class="expand-right-icon" alt="" src="/html/icons/Expand_right.svg">
+    		
+    		<img class="expand-right-icon1" alt="" src="/html/icons/Expand_right.svg">
+    		
+    		<div class="line-div">
+    		</div>
+    		<div class="home1">Home</div>
+    		<div class="learn">Learn</div>
+    		<div class="practice">Practice</div>
+    		<div class="profile">Profile</div>
+    		<div class="leaderboard">Leaderboard</div>
+    		<img class="home-icon" alt="" src="/html/icons/Home.svg">
+    		
+    		<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_alt.svg" id="bookOpenAltIcon">
+    		
+    		<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+    		
+    		<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+    		
+    		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+    		
+  	</div>
+  </div>
+  	
+  	
+  	
+  	
+  	<script>
+    		// Enhanced navigation is now handled by home-navigation.js
+    		// The following click handlers are integrated into the navigation manager
+    		
+    		// Load user data and update streak display
+    		document.addEventListener('DOMContentLoaded', function() {
+    		    console.log('HacknGo Home page loaded successfully');
+    		    
+    		    // Load user data from localStorage
+    		    const userData = localStorage.getItem('userData');
+    		    const userEmail = localStorage.getItem('userEmail');
+    		    
+    		    if (userData) {
+    		        try {
+    		            const user = JSON.parse(userData);
+    		            
+    		            // Update streak display
+    		            const streakElement = document.getElementById('userStreak');
+    		            if (streakElement && user.streak !== undefined) {
+    		                streakElement.textContent = user.streak + ' day Streak';
+    		            }
+    		            
+    		            console.log('Home page updated with user data:', {
+    		                username: user.username,
+    		                streak: user.streak,
+    		                xp: user.xp
+    		            });
+    		            
+    		        } catch (error) {
+    		            console.error('Error parsing user data:', error);
+    		            // Keep default streak display if error occurs
+    		        }
+    		    } else if (userEmail) {
+    		        console.log('User email found but no full user data:', userEmail);
+    		        // Keep default streak display
+    		    } else {
+    		        console.log('No user data found, redirecting to login');
+    		        // Redirect to login if no user data
+    		        window.location.href = '/html/sign-in.html';
+    		    }
+    		    
+    		    // Page initialization complete
+    		    console.log('Home page navigation system initialized');
+    		});
+    		</script></body>
+</html>

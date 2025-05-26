@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/sign-up.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@700&display=swap" />
+    <script src="/html/js/page-transitions.js"></script>
+</head>
+<body>
+    <div class="phone-frame">
+  	<div class="signin-new-account">
+    		<img class="chield-icon" alt="" src="/html/icons/Chield.svg">
+    		
+    		<b class="hackngo">HacknGo</b>
+    		<div class="signin-new-account-child">
+    		</div>
+    		<b class="already-have-an">Already Have an account?                </b>
+    		<b class="sign-in" id="signInText">Sign in</b>
+    		
+    		<form id="registerForm" action="/register" method="POST">
+    		    <div class="signin-new-account-item" id="signUpButton">
+    		    </div>
+    		    <b class="create-account">Create account</b>
+    		    <b class="sign-up">Sign up</b>
+    		    <div class="signin-new-account-inner"></div>
+    		    <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+    		    <div class="rectangle-div"></div>
+    		    <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+    		    <div class="signin-new-account-child1"></div>
+    		    <input type="password" id="password" name="password" placeholder="Min 8 chars, 1 capital, 1 number, 1 symbol" required>
+    		    <div class="confirm-password-field"></div>
+    		    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your Password" required>
+    		    <div id="errorMessage" style="display: none;"></div>
+    		</form>
+  	</div>
+  	</div>
+  	
+  	
+  	<script>
+    		var signUpButton = document.getElementById("signUpButton");
+    		if(signUpButton) {
+      			signUpButton.addEventListener("click", function (e) {
+        			e.preventDefault();
+        			
+        			// Clear any previous error messages
+        			document.getElementById("errorMessage").style.display = "none";
+        			
+        			// Get form data with trim
+        			const username = document.getElementById("username").value.trim();
+        			const email = document.getElementById("email").value.trim();
+        			const password = document.getElementById("password").value;
+        			const confirmPassword = document.getElementById("confirmPassword").value;
+        			
+        			// Basic validation
+        			if (!username || !email || !password || !confirmPassword) {
+        			    document.getElementById("errorMessage").textContent = "Please fill in all fields";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Username validation (minimum 3 characters)
+        			if (username.length < 3) {
+        			    document.getElementById("errorMessage").textContent = "Username must be at least 3 characters long";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Email validation
+        			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        			if (!emailRegex.test(email)) {
+        			    document.getElementById("errorMessage").textContent = "Please enter a valid email address";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Password validation (minimum 8 characters with capital letters, numbers, and symbols)
+        			if (password.length < 8) {
+        			    document.getElementById("errorMessage").textContent = "Password must be at least 8 characters long";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Check for capital letters
+        			if (!/[A-Z]/.test(password)) {
+        			    document.getElementById("errorMessage").textContent = "Password must contain at least one capital letter";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Check for numbers
+        			if (!/[0-9]/.test(password)) {
+        			    document.getElementById("errorMessage").textContent = "Password must contain at least one number";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Check for symbols
+        			if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+        			    document.getElementById("errorMessage").textContent = "Password must contain at least one symbol (!@#$%^&*()_+-=[]{}|;':\",./<>?)";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Password match validation
+        			if (password !== confirmPassword) {
+        			    document.getElementById("errorMessage").textContent = "Passwords do not match";
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    return;
+        			}
+        			
+        			// Prepare data for backend JSON storage
+        			const userData = {
+        			    username: username,
+        			    email: email,
+        			    password: password,
+        			    confirmPassword: confirmPassword,
+        			    timestamp: new Date().toISOString(),
+        			    status: 'pending'
+        			};
+        			
+        			console.log('Sending user registration data:', userData);
+        			
+        			// Send registration request to backend
+        			fetch('/register', {
+        			    method: 'POST',
+        			    headers: {
+        			        'Content-Type': 'application/json',
+        			        'Accept': 'application/json'
+        			    },
+        			    body: JSON.stringify(userData),
+        			})
+        			.then(response => {
+        			    console.log('Response status:', response.status);
+        			    if (response.ok) {
+        			        return response.json();
+        			    } else {
+        			        // Handle error responses properly
+        			        return response.json().then(errorData => {
+        			            throw new Error(errorData.message || 'Registration failed');
+        			        }).catch(() => {
+        			            // If JSON parsing fails, use status-based message
+        			            if (response.status === 400) {
+        			                throw new Error('Please check your input and try again.');
+        			            } else if (response.status === 409) {
+        			                throw new Error('Email or username already exists.');
+        			            } else {
+        			                throw new Error('Registration failed. Please try again.');
+        			            }
+        			        });
+        			    }
+        			})
+        			.then(data => {
+        			    console.log('Registration successful:', data);
+        			    // Store success message for sign-in page
+        			    localStorage.setItem('registrationSuccess', 'true');
+        			    localStorage.setItem('registeredEmail', email);
+        			    // Use transition manager for smooth navigation
+        			    if (window.pageTransitionManager) {
+        			        window.pageTransitionManager.navigateToPage('/html/sign-in.html');
+        			    } else {
+        			        window.location.href = '/html/sign-in.html';
+        			    }
+        			})
+        			.catch(error => {
+        			    console.error('Registration error:', error);
+        			    // Display user-friendly error messages
+        			    let errorMessage = error.message;
+        			    
+        			    // Convert any remaining Indonesian messages to English
+        			    if (errorMessage.includes('Email sudah terdaftar')) {
+        			        errorMessage = 'Email already registered. Please use a different email or sign in.';
+        			    } else if (errorMessage.includes('Username sudah digunakan')) {
+        			        errorMessage = 'Username already taken. Please choose a different username.';
+        			    }
+        			    
+        			    document.getElementById("errorMessage").textContent = errorMessage;
+        			    document.getElementById("errorMessage").style.display = "block";
+        			    document.getElementById("errorMessage").style.color = "#ff4444";
+        			    document.getElementById("errorMessage").style.backgroundColor = "rgba(255, 68, 68, 0.1)";
+        			    document.getElementById("errorMessage").style.padding = "10px";
+        			    document.getElementById("errorMessage").style.borderRadius = "5px";
+        			    document.getElementById("errorMessage").style.marginTop = "10px";
+        			});
+      			});
+    		}
+    		
+    		// Password strength indicator
+    		function checkPasswordStrength(password) {
+    		    const requirements = {
+    		        length: password.length >= 8,
+    		        capital: /[A-Z]/.test(password),
+    		        number: /[0-9]/.test(password),
+    		        symbol: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+    		    };
+    		    
+    		    const strength = Object.values(requirements).filter(Boolean).length;
+    		    return { requirements, strength };
+    		}
+    		
+    		// Add real-time password validation feedback
+    		document.getElementById("password").addEventListener("input", function() {
+    		    const password = this.value;
+    		    const errorMessage = document.getElementById("errorMessage");
+    		    
+    		    if (password.length === 0) {
+    		        errorMessage.style.display = "none";
+    		        return;
+    		    }
+    		    
+    		    const { requirements, strength } = checkPasswordStrength(password);
+    		    
+    		    if (strength < 4) {
+    		        const missing = [];
+    		        if (!requirements.length) missing.push("8+ characters");
+    		        if (!requirements.capital) missing.push("capital letter");
+    		        if (!requirements.number) missing.push("number");
+    		        if (!requirements.symbol) missing.push("symbol");
+    		        
+    		        errorMessage.textContent = `Password needs: ${missing.join(", ")}`;
+    		        errorMessage.style.color = "#ff8844";
+    		        errorMessage.style.display = "block";
+    		    } else {
+    		        errorMessage.textContent = "✓ Strong password";
+    		        errorMessage.style.color = "#44ff88";
+    		        errorMessage.style.display = "block";
+    		    }
+    		});
+    		
+    		// Clear password feedback when field is empty
+    		document.getElementById("password").addEventListener("blur", function() {
+    		    if (!this.value) {
+    		        document.getElementById("errorMessage").style.display = "none";
+    		    }
+    		});
+    		
+    		// Reset error message color for form submission
+    		document.getElementById("signUpButton").addEventListener("click", function() {
+    		    document.getElementById("errorMessage").style.color = "#ff4444";
+    		});
+    	</script></body>
+</html>

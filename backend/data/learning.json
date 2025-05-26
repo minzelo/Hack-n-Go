@@ -1,0 +1,175 @@
+[
+  {
+    "id": "owasp",
+    "categoryTitle": "OWASP Top 10",
+    "description": "Sepuluh jenis kerentanan paling umum di aplikasi mobile.",
+    "modules": [
+      {
+        "id": "improper-credential-usage",
+        "title": "Improper Credential Usage",
+        "description": "Pelajari kesalahan umum dalam penggunaan kredensial.",
+        "lessons":  [
+          {
+            "id": "improper-usage-content",
+            "title": "Understanding Improper Credential Usage",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Improper Credential Usage adalah kesalahan umum dalam menyimpan, membagikan, atau menggunakan kredensial secara tidak aman, seperti menyimpan kata sandi di kode sumber, menggunakan kredensial default, atau membagikan kredensial lewat email."
+              },
+              {
+                "type": "heading",
+                "text": "Contoh Improper Credential Usage"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Menyimpan kredensial langsung di dalam kode (hardcoded)",
+                  "Menggunakan kredensial default (admin/admin)",
+                  "Menyimpan file konfigurasi tanpa enkripsi",
+                  "Mengirim kata sandi lewat email"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Cara Aman Mengelola Kredensial"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Gunakan password manager",
+                  "Implementasikan autentikasi dua faktor (2FA)",
+                  "Gunakan environment variables dan credential vault",
+                  "Enkripsi semua kredensial saat penyimpanan"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inadequate-supply-chain-security",
+        "title": "Inadequate Supply Chain Security",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-authentication-authorization",
+        "title": "Insecure Authentication/Authorization",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-io-validation",
+        "title": "Insufficient Input/Output Validation",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-communication",
+        "title": "Insecure Communication",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "inadequate-privacy-controls",
+        "title": "Inadequate Privacy Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-binary-protections",
+        "title": "Insufficient Binary Protections",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "security-misconfiguration",
+        "title": "Security Misconfiguration",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insecure-data-storage",
+        "title": "Insecure Data Storage",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "insufficient-cryptography",
+        "title": "Insufficient Cryptography",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "id": "iso27001",
+    "categoryTitle": "ISO/IEC 27001",
+    "description": "Standar internasional untuk sistem manajemen keamanan informasi (ISMS).",
+    "modules": [
+      {
+        "id": "organizational-controls",
+        "title": "Organizational Controls",
+        "description": "Pelajari pengelolaan kontrol organisasi dalam konteks keamanan informasi.",
+        "lessons": [
+          {
+            "id": "organizational-controls-content",
+            "title": "Introduction to Organizational Controls",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Kontrol organisasi dalam ISO/IEC 27001 mencakup kebijakan, peran, dan proses yang digunakan untuk menjaga keamanan informasi dalam suatu organisasi."
+              },
+              {
+                "type": "heading",
+                "text": "Contoh Kontrol Organisasi"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Penetapan kebijakan keamanan informasi",
+                  "Penunjukan peran dan tanggung jawab",
+                  "Pelaksanaan pelatihan kesadaran keamanan",
+                  "Proses manajemen insiden",
+                  "Audit internal berkala"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Manfaat Penerapan Kontrol"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Meningkatkan kesadaran keamanan di seluruh organisasi",
+                  "Membantu dalam kepatuhan terhadap standar dan regulasi",
+                  "Mengurangi risiko pelanggaran data",
+                  "Meningkatkan kepercayaan mitra dan pelanggan"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "people-controls",
+        "title": "People Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "physical-controls",
+        "title": "Physical Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      },
+      {
+        "id": "technological-controls",
+        "title": "Technological Controls",
+        "description": "Konten belum tersedia.",
+        "lessons": []
+      }
+    ]
+  }
+]

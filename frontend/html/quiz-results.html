@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="/html/css/quiz-results.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+  	
+  	<title>Quiz Results - HacknGo</title>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="quiz-results">
+        		<div class="quiz-results-child">
+        		</div>
+        		<div class="home">Home</div>
+        		<div class="learn">Learn</div>
+        		<div class="practice">Practice</div>
+        		<div class="profile">Profile</div>
+        		<div class="leaderboard">Leaderboard</div>
+        		<img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+        		
+        		<img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_alt.svg" id="bookOpenAltIcon">
+        		
+        		<img class="atom-alt-icon" alt="" src="/html/icons/Atom_altred.svg" id="atomAltIcon">
+        		
+        		<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+        		
+        		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+        		
+        		<b class="quiz-results1" id="resultsTitle">Quiz Results</b>
+        		<div class="quiz-results-item">
+        		</div>
+        		<div class="quiz-results-inner">
+        		</div>
+        		<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+        		
+        		<b class="good-job" id="congratsMessage">Keep Learning!</b>
+        		<div class="you-answered-1" id="scoreText">You answered 0 out of 0 questions correctly!</div>
+        		<b class="xp" id="xpText">+0 XP</b>
+        		<div class="ellipse-div"></div>
+        		<img class="book-open-icon" alt="" src="/html/icons/Book_openblue.svg">
+        		
+        		<div class="rectangle-parent">
+            <div class="frame-child" id="backToPracticeBtn">
+                <span class="back-to-practice">Back to Practice</span>
+            </div>
+            <div class="frame-item" id="tryAgainBtn">
+                <span class="try-again">Try Again</span>
+            </div>
+        </div>
+        
+        <div class="rectangle-div" id="continueBtn">
+            <span class="next-question">Continue Learning</span>
+        </div>
+      	</div>
+    </div>
+  	
+  	
+  	
+  	
+  	<script>
+        // Sound effects for quiz results
+        class ResultsSoundEffects {
+            constructor() {
+                this.audioContext = null;
+                this.initAudio();
+            }
+            
+            initAudio() {
+                try {
+                    this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                } catch (error) {
+                    console.log('Web Audio API not supported');
+                }
+            }
+            
+            // Play excellent performance jingle (90%+)
+            playExcellentJingle() {
+                if (!this.audioContext) return;
+                
+                // Victory fanfare: C-E-G-C (major chord progression)
+                const notes = [
+                    { freq: 523.25, time: 0.0, duration: 0.3 }, // C5
+                    { freq: 659.25, time: 0.2, duration: 0.3 }, // E5
+                    { freq: 783.99, time: 0.4, duration: 0.3 }, // G5
+                    { freq: 1046.50, time: 0.6, duration: 0.5 } // C6
+                ];
+                
+                this.playMelody(notes, 'sine', 0.4);
+            }
+            
+            // Play good performance jingle (70-89%)
+            playGoodJingle() {
+                if (!this.audioContext) return;
+                
+                // Cheerful melody: C-E-G-E
+                const notes = [
+                    { freq: 523.25, time: 0.0, duration: 0.25 }, // C5
+                    { freq: 659.25, time: 0.2, duration: 0.25 }, // E5
+                    { freq: 783.99, time: 0.4, duration: 0.25 }, // G5
+                    { freq: 659.25, time: 0.6, duration: 0.4 }   // E5
+                ];
+                
+                this.playMelody(notes, 'sine', 0.35);
+            }
+            
+            // Play okay performance jingle (50-69%)
+            playOkayJingle() {
+                if (!this.audioContext) return;
+                
+                // Encouraging melody: C-D-E
+                const notes = [
+                    { freq: 523.25, time: 0.0, duration: 0.3 }, // C5
+                    { freq: 587.33, time: 0.25, duration: 0.3 }, // D5
+                    { freq: 659.25, time: 0.5, duration: 0.4 }   // E5
+                ];
+                
+                this.playMelody(notes, 'sine', 0.3);
+            }
+            
+            // Play encouraging jingle (below 50%)
+            playEncouragingJingle() {
+                if (!this.audioContext) return;
+                
+                // Gentle encouraging melody: C-G-C
+                const notes = [
+                    { freq: 523.25, time: 0.0, duration: 0.3 }, // C5
+                    { freq: 783.99, time: 0.3, duration: 0.3 }, // G5
+                    { freq: 523.25, time: 0.6, duration: 0.5 }  // C5
+                ];
+                
+                this.playMelody(notes, 'sine', 0.25);
+            }
+            
+            // Helper method to play a melody
+            playMelody(notes, waveType = 'sine', volume = 0.3) {
+                notes.forEach(note => {
+                    const oscillator = this.audioContext.createOscillator();
+                    const gainNode = this.audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(this.audioContext.destination);
+                    
+                    oscillator.frequency.setValueAtTime(note.freq, this.audioContext.currentTime + note.time);
+                    gainNode.gain.setValueAtTime(volume, this.audioContext.currentTime + note.time);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + note.time + note.duration);
+                    
+                    oscillator.type = waveType;
+                    oscillator.start(this.audioContext.currentTime + note.time);
+                    oscillator.stop(this.audioContext.currentTime + note.time + note.duration);
+                });
+            }
+            
+            // Play jingle based on performance percentage
+            playResultsJingle(percentage) {
+                // Small delay to let the page load
+                setTimeout(() => {
+                    if (percentage >= 90) {
+                        this.playExcellentJingle();
+                    } else if (percentage >= 70) {
+                        this.playGoodJingle();
+                    } else if (percentage >= 50) {
+                        this.playOkayJingle();
+                    } else {
+                        this.playEncouragingJingle();
+                    }
+                }, 500);
+            }
+        }
+        
+        // Initialize sound effects
+        const resultsSounds = new ResultsSoundEffects();
+        
+        // Load quiz results from localStorage
+        function loadResults() {
+            try {
+                const resultsData = JSON.parse(localStorage.getItem('quizResults'));
+                
+                if (resultsData) {
+                    // Update title - make it single line for long titles
+                    let titleText = `${resultsData.quizTitle} Results`;
+                    if (resultsData.quizTitle.includes('Organizational')) {
+                        titleText = 'Organizational Controls Results';
+                    } else if (resultsData.quizTitle.includes('Improper')) {
+                        titleText = 'Credential Usage Results';
+                    }
+                    document.getElementById('resultsTitle').textContent = titleText;
+                    
+                    // Update score text
+                    document.getElementById('scoreText').textContent = 
+                        `You answered ${resultsData.score} out of ${resultsData.total} questions correctly!`;
+                    
+                    // Update XP text
+                    document.getElementById('xpText').textContent = `+${resultsData.xpEarned} XP`;
+                    
+                    // Update congratulations message based on performance
+                    const percentage = resultsData.percentage;
+                    let message = "Keep Learning!";
+                    
+                    if (percentage >= 90) {
+                        message = "Excellent!";
+                    } else if (percentage >= 70) {
+                        message = "Well Done!";
+                    } else if (percentage >= 50) {
+                        message = "Good Effort!";
+                    } else {
+                        message = "Keep Learning!";
+                    }
+                    
+                    document.getElementById('congratsMessage').textContent = message;
+                    
+                    // Play results jingle based on performance
+                    resultsSounds.playResultsJingle(percentage);
+                    
+                    // Store quiz ID for retry functionality
+                    localStorage.setItem('lastQuizId', resultsData.quizTitle);
+                } else {
+                    // Default values if no results found
+                    document.getElementById('scoreText').textContent = "No quiz results found.";
+                    document.getElementById('xpText').textContent = "+0 XP";
+                }
+            } catch (error) {
+                console.log('Error loading quiz results:', error);
+                document.getElementById('scoreText').textContent = "Error loading results.";
+                document.getElementById('xpText').textContent = "+0 XP";
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Back button
+            document.getElementById('backButton').addEventListener('click', () => {
+                window.location.href = '/html/practice.html';
+            });
+            
+            // Back to Practice button
+            document.getElementById('backToPracticeBtn').addEventListener('click', () => {
+                window.location.href = '/html/practice.html';
+            });
+            
+            // Try Again button
+            document.getElementById('tryAgainBtn').addEventListener('click', () => {
+                const lastQuizId = localStorage.getItem('lastQuizId');
+                if (lastQuizId) {
+                    // Determine which quiz to retry
+                    if (lastQuizId.includes('Improper Credential')) {
+                        window.location.href = '/html/quizzes/improper-credential-usage-quiz.html';
+                    } else if (lastQuizId.includes('Organizational Controls')) {
+                        window.location.href = '/html/quizzes/organizational-controls-quiz.html';
+                    } else {
+                        // Default to practice page if quiz not found
+                        window.location.href = '/html/practice.html';
+                    }
+                } else {
+                    window.location.href = '/html/practice.html';
+                }
+            });
+            
+            // Continue Learning button
+            document.getElementById('continueBtn').addEventListener('click', () => {
+                window.location.href = '/html/learning.html';
+            });
+            
+            // Navigation clicks
+            document.getElementById('homeIcon').addEventListener('click', () => {
+                window.location.href = '/html/home.html';
+            });
+            
+            document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/learning.html';
+            });
+            
+            document.getElementById('atomAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/practice.html';
+            });
+            
+            document.getElementById('trophyIcon').addEventListener('click', () => {
+                window.location.href = '/html/leaderboard.html';
+            });
+            
+            document.getElementById('userIcon').addEventListener('click', () => {
+                window.location.href = '/html/profile.html';
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadResults();
+            setupEventListeners();
+        });
+    </script></body>
+</html>
