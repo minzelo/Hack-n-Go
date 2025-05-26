@@ -92,6 +92,7 @@ body {
   	width: 311px;
   	height: 37px;
 }
+<<<<<<< HEAD
 .rectangle-div {
     position: absolute;
     top: 332px;
@@ -102,6 +103,34 @@ body {
     box-sizing: border-box;
     width: 311px;
     height: 37px;
+=======
+.enter-your-email {
+  	position: absolute;
+  	top: 293px;
+  	left: 67px;
+  	display: inline-block;
+  	width: 142px;
+  	height: 13px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 332px;
+  	left: 45px;
+  	border-radius: 10px;
+  	background-color: #333a8e;
+  	border: 1px solid rgba(132, 162, 255, 0.37);
+  	box-sizing: border-box;
+  	width: 311px;
+  	height: 37px;
+}
+.enter-your-password {
+  	position: absolute;
+  	top: 343px;
+  	left: 67px;
+  	display: inline-block;
+  	width: 142px;
+  	height: 13px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .dont-have-an {
   	position: absolute;
@@ -134,6 +163,7 @@ body {
   	font-family: 'IBM Plex Sans';
 }
 
+<<<<<<< HEAD
 /* Input field positioning */
 #email {
     position: absolute;
@@ -191,3 +221,5 @@ body {
     z-index: 15;
 }
 
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799

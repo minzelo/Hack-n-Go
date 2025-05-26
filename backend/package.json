@@ -13,7 +13,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^6.0.0",
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
     "express": "^5.1.0"
   },
   "devDependencies": {

@@ -46,8 +46,12 @@ body {
 .learn {
   	position: absolute;
   	top: 845px;
+<<<<<<< HEAD
   	left: 120px;
   	color: #acc0ff;
+=======
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	display: inline-block;
   	width: 31px;
   	height: 15px;
@@ -87,7 +91,11 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 822px;
+<<<<<<< HEAD
   	left: 122px;
+=======
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;
@@ -119,6 +127,7 @@ body {
 .quiz-results1 {
   	position: absolute;
   	top: 14px;
+<<<<<<< HEAD
   	left: 50px;
   	font-size: 16px;
   	display: inline-block;
@@ -131,6 +140,14 @@ body {
   	text-overflow: ellipsis;
   	font-family: 'IBM Plex Sans';
   	font-weight: 600;
+=======
+  	left: 151px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 100px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .quiz-results-item {
   	position: absolute;
@@ -162,6 +179,7 @@ body {
 .good-job {
   	position: absolute;
   	top: 147px;
+<<<<<<< HEAD
   	left: 140px;
   	font-size: 16px;
   	display: inline-block;
@@ -170,17 +188,31 @@ body {
   	text-align: center;
   	font-family: 'IBM Plex Sans';
   	font-weight: 600;
+=======
+  	left: 162px;
+  	font-size: 16px;
+  	display: inline-block;
+  	color: #fff;
+  	width: 81px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .you-answered-1 {
   	position: absolute;
   	top: 177px;
   	left: 73px;
+<<<<<<< HEAD
   	font-size: 14px;
+=======
+  	font-size: 16px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	color: #fff;
   	text-align: center;
   	display: inline-block;
   	width: 260px;
+<<<<<<< HEAD
   	font-family: 'IBM Plex Sans';
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .xp {
   	position: absolute;
@@ -191,8 +223,11 @@ body {
   	color: #a127ff;
   	text-align: center;
   	width: 260px;
+<<<<<<< HEAD
   	font-family: 'IBM Plex Sans';
   	font-weight: 600;
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .ellipse-div {
   	position: absolute;
@@ -221,6 +256,7 @@ body {
   	width: 250px;
   	height: 37px;
   	cursor: pointer;
+<<<<<<< HEAD
   	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -233,6 +269,17 @@ body {
   	text-align: center;
   	white-space: nowrap;
   	font-weight: 700;
+=======
+}
+.next-question {
+  	position: absolute;
+  	top: 330px;
+  	left: 161px;
+  	display: inline-block;
+  	color: #000;
+  	width: 74px;
+  	height: 21px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .quiz-results {
   	width: 100%;
@@ -256,9 +303,12 @@ body {
     width: 117px;
     height: 37px;
     cursor: pointer;
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     justify-content: center;
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 
 .frame-item {
@@ -272,6 +322,7 @@ body {
     width: 111px;
     height: 37px;
     cursor: pointer;
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,6 +346,28 @@ body {
     text-align: center;
     white-space: nowrap;
     font-weight: 700;
+=======
+}
+
+.try-again {
+    position: absolute;
+    top: 281px;
+    left: 240px;
+    display: inline-block;
+    width: 53px;
+    height: 21px;
+    color: #fff;
+}
+
+.back-to-practice {
+    position: absolute;
+    top: 281px;
+    left: 89px;
+    display: inline-block;
+    color: #000;
+    width: 85px;
+    height: 21px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 
 .rectangle-parent {

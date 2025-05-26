@@ -5,7 +5,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     height: 100vh;
+=======
+    min-height: 100vh;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 
 .phone-frame {
@@ -16,12 +20,26 @@ body {
     border: 1px solid #333;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+<<<<<<< HEAD
     overflow: hidden;
+=======
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.phone-frame::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 
 .on-click-mark-as-complete {
   	width: 100%;
+<<<<<<< HEAD
   	height: 874px;
+=======
+  	min-height: 921px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	position: relative;
   	background-color: #20273d;
   	text-align: left;
@@ -44,11 +62,19 @@ body {
   	border-radius: 10px;
   	background-color: #151628;
   	width: 362px;
+<<<<<<< HEAD
   	height: 655px;
 }
 .on-click-mark-as-complete-item {
   	position: absolute;
   	top: 730px;
+=======
+  	height: 669px;
+}
+.on-click-mark-as-complete-item {
+  	position: absolute;
+  	top: 753px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 18px;
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   	border-radius: 10px;
@@ -56,11 +82,19 @@ body {
   	border: 2px solid #0065c3;
   	box-sizing: border-box;
   	width: 362px;
+<<<<<<< HEAD
   	height: 55px;
 }
 .on-click-mark-as-complete-inner {
   	position: absolute;
   	top: 665px;
+=======
+  	height: 79px;
+}
+.on-click-mark-as-complete-inner {
+  	position: absolute;
+  	top: 680px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 42px;
   	border-radius: 10px;
   	background-color: #151628;
@@ -72,7 +106,11 @@ body {
 }
 .back-to-module {
   	position: absolute;
+<<<<<<< HEAD
   	top: 676px;
+=======
+  	top: 691px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 63px;
   	display: inline-block;
   	color: #fff;
@@ -81,7 +119,11 @@ body {
 }
 .rectangle-div {
   	position: absolute;
+<<<<<<< HEAD
   	top: 741px;
+=======
+  	top: 774px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 245px;
   	border-radius: 10px;
   	background-color: #224eff;
@@ -92,7 +134,11 @@ body {
 }
 .next-lesson {
   	position: absolute;
+<<<<<<< HEAD
   	top: 752px;
+=======
+  	top: 785px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 260px;
   	display: inline-block;
   	color: #fff;
@@ -101,7 +147,11 @@ body {
 }
 .completed {
   	position: absolute;
+<<<<<<< HEAD
   	top: 671px;
+=======
+  	top: 686px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 269px;
   	font-size: 15px;
   	display: inline-block;
@@ -111,7 +161,11 @@ body {
 }
 .on-click-mark-as-complete-child1 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 813px;
+=======
+  	top: 859px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	right: 16px;
   	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   	border-radius: 20px;
@@ -121,7 +175,11 @@ body {
 }
 .home {
   	position: absolute;
+<<<<<<< HEAD
   	top: 845px;
+=======
+  	top: 891px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 60px;
   	display: inline-block;
   	width: 31px;
@@ -129,16 +187,25 @@ body {
 }
 .learn {
   	position: absolute;
+<<<<<<< HEAD
   	top: 845px;
   	left: 120px;
   	color: #acc0ff;
+=======
+  	top: 891px;
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	display: inline-block;
   	width: 31px;
   	height: 15px;
 }
 .practice {
   	position: absolute;
+<<<<<<< HEAD
   	top: 845px;
+=======
+  	top: 891px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 173px;
   	text-align: center;
   	display: inline-block;
@@ -147,7 +214,11 @@ body {
 }
 .profile {
   	position: absolute;
+<<<<<<< HEAD
   	top: 845px;
+=======
+  	top: 891px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 311px;
   	display: inline-block;
   	width: 32px;
@@ -155,7 +226,11 @@ body {
 }
 .leaderboard {
   	position: absolute;
+<<<<<<< HEAD
   	top: 845px;
+=======
+  	top: 891px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 231px;
   	display: inline-block;
   	width: 71px;
@@ -163,22 +238,35 @@ body {
 }
 .home-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 820px;
+=======
+  	top: 866px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 63px;
   	width: 24px;
   	height: 24px;
 }
 .book-open-alt-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 822px;
   	left: 122px;
+=======
+  	top: 868px;
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;
 }
 .atom-alt-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 822px;
+=======
+  	top: 868px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 182px;
   	width: 24px;
   	height: 24px;
@@ -186,7 +274,11 @@ body {
 }
 .trophy-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 821px;
+=======
+  	top: 867px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 249px;
   	width: 24px;
   	height: 24px;
@@ -194,7 +286,11 @@ body {
 }
 .user-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 820px;
+=======
+  	top: 866px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 315px;
   	width: 24px;
   	height: 24px;
@@ -258,24 +354,40 @@ body {
 }
 .done-ring-round-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 670px;
+=======
+  	top: 685px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 238px;
   	width: 24px;
   	height: 24px;
 }
 .continue-learning {
   	position: absolute;
+<<<<<<< HEAD
   	top: 738px;
   	left: 75px;
   	font-size: 13px;
+=======
+  	top: 765px;
+  	left: 75px;
+  	font-size: 15px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	font-weight: 600;
   	color: #313131;
 }
 .move-on-to {
   	position: absolute;
+<<<<<<< HEAD
   	top: 753px;
   	left: 75px;
   	font-size: 10px;
+=======
+  	top: 785px;
+  	left: 75px;
+  	font-size: 12px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	font-weight: 500;
   	color: #323232;
   	display: inline-block;
@@ -283,6 +395,7 @@ body {
 }
 .ellipse-div {
   	position: absolute;
+<<<<<<< HEAD
   	top: 740px;
   	left: 31px;
   	border-radius: 50%;
@@ -296,6 +409,21 @@ body {
   	left: 330px;
   	width: 16px;
   	height: 16px;
+=======
+  	top: 774px;
+  	left: 31px;
+  	border-radius: 50%;
+  	background-color: #3d8bff;
+  	width: 37px;
+  	height: 37px;
+}
+.arrow-right-icon {
+  	position: absolute;
+  	top: 784px;
+  	left: 330px;
+  	width: 18px;
+  	height: 18px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .book-open-alt-icon1 {
   	position: absolute;

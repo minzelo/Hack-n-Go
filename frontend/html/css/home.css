@@ -27,15 +27,24 @@ body {
 
 .chield-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 18px;
   	left: 15px;
+=======
+  	top: 16px;
+  	left: 11px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 35px;
   	height: 36px;
 }
 .hackngo {
   	position: absolute;
   	top: 16px;
+<<<<<<< HEAD
   	left: 55px;
+=======
+  	left: 50px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	font-size: 32px;
   	display: inline-block;
   	font-family: 'Inria Sans';
@@ -415,7 +424,11 @@ body {
 .learn {
   	position: absolute;
   	top: 845px;
+<<<<<<< HEAD
   	left: 120px;
+=======
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	color: #acc0ff;
   	display: inline-block;
   	width: 31px;
@@ -431,6 +444,7 @@ body {
   	width: 42px;
   	height: 15px;
 }
+<<<<<<< HEAD
 .leaderboard {
   	position: absolute;
   	top: 845px;
@@ -440,6 +454,8 @@ body {
   	width: 71px;
   	height: 15px;
 }
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 .profile {
   	position: absolute;
   	top: 845px;
@@ -449,6 +465,18 @@ body {
   	width: 32px;
   	height: 15px;
 }
+<<<<<<< HEAD
+=======
+.leaderboard {
+  	position: absolute;
+  	top: 845px;
+  	left: 231px;
+  	color: #acc0ff;
+  	display: inline-block;
+  	width: 71px;
+  	height: 15px;
+}
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 .home-icon {
   	position: absolute;
   	top: 820px;
@@ -459,7 +487,11 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 822px;
+<<<<<<< HEAD
   	left: 122px;
+=======
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;

@@ -98,8 +98,12 @@ body {
 .learn {
   	position: absolute;
   	top: 845px;
+<<<<<<< HEAD
   	left: 120px;
   	color: #acc0ff;
+=======
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	display: inline-block;
   	width: 31px;
   	height: 15px;
@@ -139,7 +143,11 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 822px;
+<<<<<<< HEAD
   	left: 122px;
+=======
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;

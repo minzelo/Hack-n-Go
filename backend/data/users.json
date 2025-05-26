@@ -16,6 +16,7 @@
     "achievements": [
       "first_lesson",
       "3_day_streak"
+<<<<<<< HEAD
     ],
     "moduleProgress": {
       "owasp": {
@@ -31,12 +32,19 @@
         "progressPercentage": 0
       }
     }
+=======
+    ]
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   },
   {
     "username": "minzelo",
     "email": "amogus@sugoma.com",
     "password": "$2b$10$5XClCWRnw897u/.oUgwGVOP5mbynhfJKr0F7rz.dI4jm9TeaVlYsi",
+<<<<<<< HEAD
     "xp": 270,
+=======
+    "xp": 170,
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
     "streak": 5,
     "completedLessons": [
       "password_security_lesson1",
@@ -48,12 +56,17 @@
       "password-security",
       "phishing-detection",
       "injection",
+<<<<<<< HEAD
       "improper-credential-usage",
       "organizational-controls"
+=======
+      "improper-credential-usage"
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
     ],
     "achievements": [
       "first_lesson",
       "3_day_streak"
+<<<<<<< HEAD
     ],
     "moduleProgress": {
       "owasp": {
@@ -71,6 +84,9 @@
         "progressPercentage": 25
       }
     }
+=======
+    ]
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   },
   {
     "username": "Raihan",
@@ -80,6 +96,7 @@
     "streak": 0,
     "completedLessons": [],
     "completedQuizzes": [],
+<<<<<<< HEAD
     "achievements": [],
     "moduleProgress": {
       "owasp": {
@@ -172,5 +189,8 @@
         "progressPercentage": 0
       }
     }
+=======
+    "achievements": []
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   }
 ]

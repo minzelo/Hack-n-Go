@@ -358,13 +358,21 @@ body {
 .b3 {
   	position: absolute;
   	top: 302px;
+<<<<<<< HEAD
   	left: 264px;
+=======
+  	left: 244px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	font-size: 32px;
   	color: #009dff;
 }
 .level-5 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 115px;
+=======
+  	top: 130px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 97px;
   	font-size: 10px;
   	display: inline-block;
@@ -373,7 +381,11 @@ body {
 }
 .div3 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 130px;
+=======
+  	top: 145px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 319px;
   	font-size: 8px;
   	display: inline-block;
@@ -382,7 +394,11 @@ body {
 }
 .profile-child8 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 132px;
+=======
+  	top: 147px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 97px;
   	border-radius: 6px;
   	background-color: #374778;
@@ -391,7 +407,11 @@ body {
 }
 .profile-child9 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 132px;
+=======
+  	top: 147px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 97px;
   	border-radius: 6px;
   	background: linear-gradient(90deg, #ff82d9 1.92%, #af52de 48.08%, #a900ff);
@@ -448,7 +468,11 @@ body {
 .learn {
   	position: absolute;
   	top: 1033px;
+<<<<<<< HEAD
   	left: 120px;
+=======
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	font-size: 11px;
   	color: #acc0ff;
   	display: inline-block;
@@ -496,7 +520,11 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 1010px;
+<<<<<<< HEAD
   	left: 122px;
+=======
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;
@@ -615,7 +643,11 @@ body {
 }
 .cyber-ninja {
   	position: absolute;
+<<<<<<< HEAD
   	top: 95px;
+=======
+  	top: 103px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 97px;
   	font-size: 14px;
   	display: inline-block;

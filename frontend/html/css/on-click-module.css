@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 body {
   margin: 0;
   padding: 0;
@@ -38,7 +43,11 @@ body {
 .on-click-module-item {
   	position: absolute;
   	top: 117px;
+<<<<<<< HEAD
   	left: 33px;
+=======
+  	left: 39px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	border-radius: 6px;
   	background-color: #374778;
   	width: 329px;
@@ -58,17 +67,28 @@ body {
   	top: 101px;
   	left: 33px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 120px;
+=======
+  	width: 100px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	height: 26px;
 }
 .lessons {
   	position: absolute;
   	top: 101px;
+<<<<<<< HEAD
   	left: 280px;
   	display: inline-block;
   	width: 85px;
   	height: 26px;
   	white-space: nowrap;
+=======
+  	left: 308px;
+  	display: inline-block;
+  	width: 60px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .learn-how-to {
   	position: absolute;
@@ -100,7 +120,11 @@ body {
 .learn {
   	position: absolute;
   	top: 845px;
+<<<<<<< HEAD
   	left: 120px;
+=======
+  	left: 116px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	color: #acc0ff;
   	display: inline-block;
   	width: 31px;
@@ -145,7 +169,11 @@ body {
 .book-open-alt-icon {
   	position: absolute;
   	top: 822px;
+<<<<<<< HEAD
   	left: 122px;
+=======
+  	left: 118px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	width: 20px;
   	height: 20px;
   	cursor: pointer;
@@ -200,11 +228,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 116px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson {
   	position: absolute;
@@ -246,11 +279,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 185px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson1 {
   	position: absolute;
@@ -292,11 +330,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 166px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .quiz {
   	position: absolute;
@@ -338,11 +381,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 162px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson2 {
   	position: absolute;
@@ -384,11 +432,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 174px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson3 {
   	position: absolute;
@@ -430,11 +483,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 116px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson4 {
   	position: absolute;
@@ -469,11 +527,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 116px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson5 {
   	position: absolute;
@@ -508,11 +571,16 @@ body {
   	left: 70px;
   	font-size: 13px;
   	display: inline-block;
+<<<<<<< HEAD
   	width: 280px;
   	height: 26px;
   	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
+=======
+  	width: 116px;
+  	height: 26px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 }
 .lesson6 {
   	position: absolute;
@@ -531,6 +599,19 @@ body {
   	width: 27px;
   	height: 27px;
 }
+<<<<<<< HEAD
+=======
+.on-click-module-child16 {
+  	position: absolute;
+  	top: 407px;
+  	left: 1344px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+  	background-color: #151628;
+  	width: 352px;
+  	height: 251px;
+}
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 .arrow-left-icon {
   	position: absolute;
   	top: 15px;
@@ -540,20 +621,29 @@ body {
 }
 .lock-icon {
   	position: absolute;
+<<<<<<< HEAD
   	top: 260px;
+=======
+  	top: 508px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 36px;
   	width: 21px;
   	height: 21px;
 }
 .lock-icon1 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 322px;
+=======
+  	top: 570px;
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	left: 36px;
   	width: 21px;
   	height: 21px;
 }
 .lock-icon2 {
   	position: absolute;
+<<<<<<< HEAD
   	top: 384px;
   	left: 36px;
   	width: 21px;
@@ -582,11 +672,14 @@ body {
 }
 .lock-icon6 {
   	position: absolute;
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
   	top: 632px;
   	left: 36px;
   	width: 21px;
   	height: 21px;
 }
+<<<<<<< HEAD
 .lock-icon7 {
   	position: absolute;
   	top: 694px;
@@ -601,6 +694,8 @@ body {
   	width: 21px;
   	height: 21px;
 }
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
 .on-click-module {
   	width: 100%;
   	position: relative;
@@ -613,6 +708,7 @@ body {
   	font-family: 'IBM Plex Sans';
 }
 
+<<<<<<< HEAD
 /* Add missing CSS rules for lessons 9 and 10 */
 .on-click-module-child16 {
   	position: absolute;
@@ -700,3 +796,5 @@ body {
   	height: 27px;
 }
 
+=======
+>>>>>>> e25feb4ad0d09c7eccc7b35fd751061585675799
