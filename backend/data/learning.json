@@ -195,49 +195,292 @@
   ]
 },
       {
-        "id": "insufficient-io-validation",
-        "title": "Insufficient Input/Output Validation",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "insecure-communication",
-        "title": "Insecure Communication",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "inadequate-privacy-controls",
-        "title": "Inadequate Privacy Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "insufficient-binary-protections",
-        "title": "Insufficient Binary Protections",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "security-misconfiguration",
-        "title": "Security Misconfiguration",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "insecure-data-storage",
-        "title": "Insecure Data Storage",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "insufficient-cryptography",
-        "title": "Insufficient Cryptography",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      }
-    ]
-  },
+  "id": "insufficient-io-validation",
+  "title": "Insufficient Input/Output Validation",
+  "description": "Pelajari risiko dan mitigasi terkait validasi input/output yang tidak memadai.",
+  "lessons": [
+    {
+      "id": "understanding-io-validation",
+      "title": "Understanding Input/Output Validation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Validasi input/output yang tidak memadai dapat menyebabkan serangan seperti injection, cross-site scripting (XSS), atau buffer overflow."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kelemahan Validasi I/O"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Tidak melakukan sanitasi input dari pengguna",
+            "Menerima input tanpa batasan panjang",
+            "Tidak memvalidasi data sebelum diproses"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Praktik Terbaik Validasi I/O"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan whitelist untuk memvalidasi input",
+            "Sanitasi semua data sebelum diproses",
+            "Gunakan library yang aman untuk menangani input/output"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "insecure-communication",
+  "title": "Insecure Communication",
+  "description": "Pelajari bagaimana melindungi komunikasi data dari ancaman.",
+  "lessons": [
+    {
+      "id": "understanding-insecure-communication",
+      "title": "Understanding Insecure Communication",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Komunikasi yang tidak aman dapat menyebabkan pencurian data, serangan man-in-the-middle (MITM), atau kebocoran informasi sensitif."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Komunikasi Tidak Aman"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Mengirim data tanpa enkripsi",
+            "Menggunakan protokol yang tidak aman seperti HTTP",
+            "Menyimpan data sensitif dalam teks biasa"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cara Mengamankan Komunikasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan protokol HTTPS untuk komunikasi web",
+            "Enkripsi data saat transit menggunakan TLS",
+            "Validasi sertifikat server untuk mencegah MITM"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "inadequate-privacy-controls",
+  "title": "Inadequate Privacy Controls",
+  "description": "Pelajari bagaimana menjaga privasi data pengguna.",
+  "lessons": [
+    {
+      "id": "understanding-privacy-controls",
+      "title": "Understanding Privacy Controls",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kontrol privasi yang tidak memadai dapat menyebabkan pelanggaran data dan melanggar regulasi seperti GDPR atau CCPA."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Masalah Privasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Menyimpan data pengguna tanpa izin",
+            "Tidak memberikan opsi bagi pengguna untuk menghapus data mereka",
+            "Membagikan data pengguna tanpa anonimisasi"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Praktik Terbaik untuk Privasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan prinsip data minimization",
+            "Berikan kontrol privasi kepada pengguna",
+            "Anonimkan data sebelum membagikannya"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "insufficient-binary-protections",
+  "title": "Insufficient Binary Protections",
+  "description": "Pelajari cara melindungi aplikasi dari serangan pada level biner.",
+  "lessons": [
+    {
+      "id": "understanding-binary-protections",
+      "title": "Understanding Binary Protections",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Proteksi biner yang tidak memadai dapat menyebabkan reverse engineering, modifikasi aplikasi, atau eksploitasi kerentanan."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kelemahan Proteksi Biner"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Tidak menggunakan obfuscation pada kode",
+            "Tidak memeriksa integritas aplikasi",
+            "Menyediakan debug symbols dalam rilis"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cara Meningkatkan Proteksi Biner"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan obfuscation untuk menyembunyikan logika bisnis",
+            "Gunakan signature verification untuk memeriksa integritas",
+            "Hapus debug symbols dalam rilis produksi"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "security-misconfiguration",
+  "title": "Security Misconfiguration",
+  "description": "Pelajari risiko yang muncul akibat salah konfigurasi keamanan.",
+  "lessons": [
+    {
+      "id": "understanding-security-misconfiguration",
+      "title": "Understanding Security Misconfiguration",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Salah konfigurasi keamanan dapat memberikan celah bagi penyerang untuk mengeksploitasi sistem."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Salah Konfigurasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Menggunakan pengaturan default pada server",
+            "Tidak menonaktifkan fitur yang tidak digunakan",
+            "Menyimpan file konfigurasi tanpa enkripsi"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cara Mencegah Salah Konfigurasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan prinsip least privilege",
+            "Audit konfigurasi secara berkala",
+            "Nonaktifkan fitur yang tidak diperlukan"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "insecure-data-storage",
+  "title": "Insecure Data Storage",
+  "description": "Pelajari cara melindungi data yang disimpan dari ancaman.",
+  "lessons": [
+    {
+      "id": "understanding-data-storage-risks",
+      "title": "Understanding Data Storage Risks",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Penyimpanan data yang tidak aman dapat menyebabkan pencurian atau kehilangan data sensitif."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Penyimpanan Data Tidak Aman"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Menyimpan data tanpa enkripsi",
+            "Menyimpan data sensitif di perangkat klien",
+            "Tidak memvalidasi izin akses ke data"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Praktik Terbaik Penyimpanan Data"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan enkripsi untuk semua data sensitif",
+            "Simpan data hanya di server yang aman",
+            "Batasi akses ke data berdasarkan kebutuhan"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "insufficient-cryptography",
+  "title": "Insufficient Cryptography",
+  "description": "Pelajari kelemahan dalam implementasi kriptografi dan cara memperbaikinya.",
+  "lessons": [
+    {
+      "id": "understanding-cryptography-risks",
+      "title": "Understanding Cryptography Risks",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kriptografi yang tidak memadai dapat menyebabkan kebocoran data atau eksploitasi oleh penyerang."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kelemahan Kriptografi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Menggunakan algoritma yang sudah usang",
+            "Tidak menggunakan kunci dengan panjang yang cukup",
+            "Menyimpan kunci enkripsi dalam teks biasa"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Praktik Terbaik Kriptografi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan algoritma enkripsi modern seperti AES",
+            "Gunakan kunci dengan panjang minimal 256 bit",
+            "Simpan kunci enkripsi di key vault yang aman"
+          ]
+        }
+      ]
+    }
+  ]
+}
   {
     "id": "iso27001",
     "categoryTitle": "ISO/IEC 27001",
