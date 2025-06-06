@@ -48,11 +48,84 @@
         ]
       },
       {
-        "id": "inadequate-supply-chain-security",
-        "title": "Inadequate Supply Chain Security",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
+  "id": "inadequate-supply-chain-security",
+  "title": "Inadequate Supply Chain Security",
+  "description": "Pelajari bagaimana mengamankan rantai pasokan perangkat lunak.",
+  "lessons": [
+    {
+      "id": "understanding-supply-chain-risks",
+      "title": "Understanding Supply Chain Risks",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Rantai pasokan perangkat lunak melibatkan banyak pihak yang berkontribusi pada pengembangan aplikasi. Risiko muncul ketika salah satu elemen rantai tidak aman."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Risiko Rantai Pasokan"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Menggunakan dependensi yang sudah tidak didukung",
+            "Mengunduh library dari sumber tidak terpercaya",
+            "Tidak memverifikasi integritas komponen pihak ketiga",
+            "Kurangnya audit keamanan pada vendor"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cara Mengurangi Risiko"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan pengelola dependensi dengan validasi keamanan",
+            "Lakukan audit keamanan secara berkala",
+            "Gunakan alat seperti Software Composition Analysis (SCA)",
+            "Pastikan setiap komponen pihak ketiga memiliki lisensi yang jelas dan aman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tools-for-supply-chain-security",
+      "title": "Tools for Supply Chain Security",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Berbagai alat dapat digunakan untuk membantu mengamankan rantai pasokan perangkat lunak. Alat ini dapat membantu mendeteksi kerentanan dan memastikan komponen yang digunakan aman."
+        },
+        {
+          "type": "heading",
+          "text": "Alat Populer untuk Keamanan Rantai Pasokan"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Dependabot: Memantau dan memperbarui dependensi secara otomatis.",
+            "Snyk: Mendeteksi kerentanan dalam dependensi dan kontainer.",
+            "OWASP Dependency-Check: Menganalisis dependensi untuk kerentanan yang diketahui.",
+            "CycloneDX: Membuat Bill of Materials (SBOM) untuk memantau komponen perangkat lunak."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Keuntungan Menggunakan Alat"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Mendeteksi kerentanan lebih awal",
+            "Mengurangi risiko eksploitasi",
+            "Memastikan keamanan komponen pihak ketiga",
+            "Mempermudah audit keamanan"
+          ]
+        }
+      ]
+    }
+  ]
+},
       {
         "id": "insecure-authentication-authorization",
         "title": "Insecure Authentication/Authorization",
