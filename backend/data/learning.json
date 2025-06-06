@@ -288,23 +288,134 @@
         ]
       },
       {
-        "id": "people-controls",
-        "title": "People Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "physical-controls",
-        "title": "Physical Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
-      {
-        "id": "technological-controls",
-        "title": "Technological Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      }
+  "id": "people-controls",
+  "title": "People Controls",
+  "description": "Pelajari kontrol yang melibatkan sumber daya manusia dalam menjaga keamanan informasi.",
+  "lessons": [
+    {
+      "id": "understanding-people-controls",
+      "title": "Understanding People Controls",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sumber daya manusia sering menjadi titik lemah dalam keamanan informasi. Kontrol sumber daya manusia bertujuan untuk meningkatkan kesadaran dan kepatuhan terhadap kebijakan keamanan."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kontrol pada Sumber Daya Manusia"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Pelatihan kesadaran keamanan informasi",
+            "Proses onboarding dan offboarding yang aman",
+            "Perjanjian kerahasiaan (NDA) untuk karyawan",
+            "Pemeriksaan latar belakang sebelum perekrutan",
+            "Penunjukan peran dan tanggung jawab keamanan"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Manfaat People Controls"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Mengurangi risiko human error",
+            "Meningkatkan kesadaran keamanan di seluruh organisasi",
+            "Memastikan kepatuhan terhadap kebijakan dan regulasi"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "physical-controls",
+  "title": "Physical Controls",
+  "description": "Pelajari kontrol fisik untuk melindungi aset informasi.",
+  "lessons": [
+    {
+      "id": "understanding-physical-controls",
+      "title": "Understanding Physical Controls",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kontrol fisik bertujuan untuk melindungi aset informasi dari akses tidak sah secara fisik, seperti melalui pencurian atau sabotase."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kontrol Fisik"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Penggunaan sistem akses berbasis kartu atau biometrik",
+            "Pengawasan CCTV di area sensitif",
+            "Penguncian perangkat keras seperti server dan workstation",
+            "Pengelolaan akses tamu ke area terbatas",
+            "Penempatan perangkat keras di lingkungan yang terkendali (contoh: data center)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Manfaat Physical Controls"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Mencegah akses fisik tidak sah ke aset informasi",
+            "Mengurangi risiko pencurian atau kerusakan perangkat keras",
+            "Memberikan perlindungan tambahan terhadap ancaman fisik"
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "technological-controls",
+  "title": "Technological Controls",
+  "description": "Pelajari kontrol teknologi untuk mendukung keamanan informasi.",
+  "lessons": [
+    {
+      "id": "understanding-technological-controls",
+      "title": "Understanding Technological Controls",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Kontrol teknologi mencakup alat dan sistem yang digunakan untuk melindungi informasi digital dari ancaman siber."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kontrol Teknologi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Firewall untuk mencegah akses tidak sah",
+            "Intrusion Detection Systems (IDS) dan Intrusion Prevention Systems (IPS)",
+            "Enkripsi data saat transit dan saat penyimpanan",
+            "Multi-Factor Authentication (MFA) untuk akses pengguna",
+            "Sistem manajemen patch untuk menjaga perangkat tetap up-to-date"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Manfaat Technological Controls"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Melindungi aset digital dari ancaman siber",
+            "Mendukung pemantauan dan deteksi ancaman secara real-time",
+            "Memastikan keamanan data selama proses pengolahan dan penyimpanan"
+          ]
+        }
+      ]
+    }
+  ]
+}
     ]
   }
 ]
