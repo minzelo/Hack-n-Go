@@ -127,11 +127,73 @@
   ]
 },
       {
-        "id": "insecure-authentication-authorization",
-        "title": "Insecure Authentication/Authorization",
-        "description": "Konten belum tersedia.",
-        "lessons": []
-      },
+  "id": "insecure-authentication-authorization",
+  "title": "Insecure Authentication/Authorization",
+  "description": "Pelajari kelemahan dalam autentikasi dan otorisasi.",
+  "lessons": [
+    {
+      "id": "understanding-authentication-authorization-risks",
+      "title": "Understanding Authentication and Authorization Risks",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Autentikasi dan otorisasi yang tidak aman dapat membuka celah bagi aktor jahat untuk mendapatkan akses tidak sah ke sistem atau data sensitif."
+        },
+        {
+          "type": "heading",
+          "text": "Contoh Kelemahan Autentikasi dan Otorisasi"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Tidak membatasi jumlah percobaan login (brute-force attack)",
+            "Menggunakan kredensial default (misalnya admin/admin)",
+            "Tidak menerapkan session timeout",
+            "Mengizinkan akses ke API tanpa autentikasi",
+            "Tidak melakukan validasi token autentikasi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "best-practices-authentication-authorization",
+      "title": "Best Practices for Authentication and Authorization",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Untuk memastikan autentikasi dan otorisasi yang aman, diperlukan implementasi praktik terbaik yang dapat mencegah serangan dan melindungi data pengguna."
+        },
+        {
+          "type": "heading",
+          "text": "Praktik Terbaik"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Gunakan autentikasi berbasis token seperti JSON Web Tokens (JWT)",
+            "Terapkan autentikasi dua faktor (2FA)",
+            "Implementasikan Single Sign-On (SSO) untuk mengurangi risiko",
+            "Batasi jumlah percobaan login untuk mencegah brute-force attack",
+            "Gunakan protokol keamanan seperti OAuth 2.0"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Keuntungan Menerapkan Praktik Terbaik"
+        },
+        {
+          "type": "list",
+          "text": [
+            "Melindungi sistem dari akses tidak sah",
+            "Meningkatkan kepercayaan pengguna terhadap keamanan aplikasi",
+            "Mengurangi risiko pelanggaran data",
+            "Mematuhi standar dan regulasi keamanan"
+          ]
+        }
+      ]
+    }
+  ]
+},
       {
         "id": "insufficient-io-validation",
         "title": "Insufficient Input/Output Validation",
