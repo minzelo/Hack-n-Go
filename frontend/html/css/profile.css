@@ -358,9 +358,11 @@ body {
 .b3 {
   	position: absolute;
   	top: 302px;
-  	left: 264px;
+  	left: 234px;
   	font-size: 32px;
   	color: #009dff;
+  	width: 80px;
+  	text-align: center;
 }
 .level-5 {
   	position: absolute;

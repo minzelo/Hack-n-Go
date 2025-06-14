@@ -258,7 +258,7 @@ body {
 }
 .done-ring-round-icon {
   	position: absolute;
-  	top: 670px;
+  	top: 655px;
   	left: 238px;
   	width: 24px;
   	height: 24px;
@@ -270,6 +270,11 @@ body {
   	font-size: 13px;
   	font-weight: 600;
   	color: #313131;
+  	background: #fff;
+  	border-radius: 8px;
+  	padding: 8px 24px;
+  	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  	display: inline-block;
 }
 .move-on-to {
   	position: absolute;

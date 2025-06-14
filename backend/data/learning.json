@@ -2,12 +2,12 @@
   {
     "id": "owasp",
     "categoryTitle": "OWASP Top 10",
-    "description": "Sepuluh jenis kerentanan paling umum di aplikasi mobile.",
+    "description": "The ten most common mobile application vulnerabilities.",
     "modules": [
       {
         "id": "improper-credential-usage",
         "title": "Improper Credential Usage",
-        "description": "Pelajari kesalahan umum dalam penggunaan kredensial.",
+        "description": "Learn common mistakes in credential usage.",
         "lessons":  [
           {
             "id": "improper-usage-content",
@@ -15,32 +15,32 @@
             "content": [
               {
                 "type": "paragraph",
-                "text": "Improper Credential Usage adalah kesalahan umum dalam menyimpan, membagikan, atau menggunakan kredensial secara tidak aman, seperti menyimpan kata sandi di kode sumber, menggunakan kredensial default, atau membagikan kredensial lewat email."
+                "text": "Improper Credential Usage is a common mistake in storing, sharing, or using credentials insecurely, such as storing passwords in source code, using default credentials, or sharing credentials via email."
               },
               {
                 "type": "heading",
-                "text": "Contoh Improper Credential Usage"
+                "text": "Examples of Improper Credential Usage"
               },
               {
                 "type": "list",
                 "text": [
-                  "Menyimpan kredensial langsung di dalam kode (hardcoded)",
-                  "Menggunakan kredensial default (admin/admin)",
-                  "Menyimpan file konfigurasi tanpa enkripsi",
-                  "Mengirim kata sandi lewat email"
+                  "Storing credentials directly in code (hardcoded)",
+                  "Using default credentials (admin/admin)",
+                  "Storing configuration files without encryption",
+                  "Sending passwords via email"
                 ]
               },
               {
                 "type": "heading",
-                "text": "Cara Aman Mengelola Kredensial"
+                "text": "Secure Credential Management"
               },
               {
                 "type": "list",
                 "text": [
-                  "Gunakan password manager",
-                  "Implementasikan autentikasi dua faktor (2FA)",
-                  "Gunakan environment variables dan credential vault",
-                  "Enkripsi semua kredensial saat penyimpanan"
+                  "Use password managers",
+                  "Implement two-factor authentication (2FA)",
+                  "Use environment variables and credential vaults",
+                  "Encrypt all credentials during storage"
                 ]
               }
             ]
@@ -50,68 +50,448 @@
       {
         "id": "inadequate-supply-chain-security",
         "title": "Inadequate Supply Chain Security",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn how to secure the software supply chain.",
+        "lessons": [
+          {
+            "id": "understanding-supply-chain-risks",
+            "title": "Understanding Supply Chain Risks",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "The software supply chain involves many parties contributing to application development. Risks arise when any element in the chain is insecure."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Supply Chain Risks"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Using dependencies that are no longer supported",
+                  "Downloading libraries from untrusted sources",
+                  "Not verifying integrity of third-party components",
+                  "Lack of security audits on vendors"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Risk Mitigation Strategies"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use dependency managers with security validation",
+                  "Conduct regular security audits",
+                  "Use tools like Software Composition Analysis (SCA)",
+                  "Ensure all third-party components have clear and secure licenses"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "tools-for-supply-chain-security",
+            "title": "Tools for Supply Chain Security",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Various tools can help secure the software supply chain. These tools can help detect vulnerabilities and ensure used components are safe."
+              },
+              {
+                "type": "heading",
+                "text": "Popular Supply Chain Security Tools"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Dependabot: Monitors and automatically updates dependencies.",
+                  "Snyk: Detects vulnerabilities in dependencies and containers.",
+                  "OWASP Dependency-Check: Analyzes dependencies for known vulnerabilities.",
+                  "CycloneDX: Creates Bill of Materials (SBOM) to monitor software components."
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Benefits of Using Tools"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Detect vulnerabilities early",
+                  "Reduce exploitation risks",
+                  "Ensure third-party component security",
+                  "Simplify security audits"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insecure-authentication-authorization",
         "title": "Insecure Authentication/Authorization",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about weaknesses in authentication and authorization.",
+        "lessons": [
+          {
+            "id": "understanding-authentication-authorization-risks",
+            "title": "Understanding Authentication and Authorization Risks",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Insecure authentication and authorization can open pathways for malicious actors to gain unauthorized access to systems or sensitive data."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Authentication and Authorization Weaknesses"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Not limiting login attempts (brute-force attacks)",
+                  "Using default credentials (e.g., admin/admin)",
+                  "Not implementing session timeouts",
+                  "Allowing API access without authentication",
+                  "Not validating authentication tokens"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "best-practices-authentication-authorization",
+            "title": "Best Practices for Authentication and Authorization",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "To ensure secure authentication and authorization, best practices must be implemented to prevent attacks and protect user data."
+              },
+              {
+                "type": "heading",
+                "text": "Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use token-based authentication like JSON Web Tokens (JWT)",
+                  "Implement two-factor authentication (2FA)",
+                  "Implement Single Sign-On (SSO) to reduce risks",
+                  "Limit login attempts to prevent brute-force attacks",
+                  "Use security protocols like OAuth 2.0"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Benefits of Implementing Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Protect systems from unauthorized access",
+                  "Increase user trust in application security",
+                  "Reduce data breach risks",
+                  "Comply with security standards and regulations"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insufficient-io-validation",
         "title": "Insufficient Input/Output Validation",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about risks and mitigation related to inadequate input/output validation.",
+        "lessons": [
+          {
+            "id": "understanding-io-validation",
+            "title": "Understanding Input/Output Validation",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Inadequate input/output validation can lead to attacks like injection, cross-site scripting (XSS), or buffer overflow."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of I/O Validation Weaknesses"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Not sanitizing user input",
+                  "Accepting input without length restrictions",
+                  "Not validating data before processing"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "I/O Validation Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use whitelists to validate input",
+                  "Sanitize all data before processing",
+                  "Use secure libraries for input/output handling"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insecure-communication",
         "title": "Insecure Communication",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn how to protect data communication from threats.",
+        "lessons": [
+          {
+            "id": "understanding-insecure-communication",
+            "title": "Understanding Insecure Communication",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Insecure communication can lead to data theft, man-in-the-middle (MITM) attacks, or sensitive information leaks."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Insecure Communication"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Sending data without encryption",
+                  "Using insecure protocols like HTTP",
+                  "Storing sensitive data in plain text"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Securing Communication"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use HTTPS protocol for web communication",
+                  "Encrypt data in transit using TLS",
+                  "Validate server certificates to prevent MITM"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "inadequate-privacy-controls",
         "title": "Inadequate Privacy Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn how to maintain user data privacy.",
+        "lessons": [
+          {
+            "id": "understanding-privacy-controls",
+            "title": "Understanding Privacy Controls",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Inadequate privacy controls can lead to data breaches and violations of regulations like GDPR or CCPA."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Privacy Issues"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Storing user data without permission",
+                  "Not providing users the option to delete their data",
+                  "Sharing user data without anonymization"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Privacy Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use data minimization principles",
+                  "Provide privacy controls to users",
+                  "Anonymize data before sharing"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insufficient-binary-protections",
         "title": "Insufficient Binary Protections",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn how to protect applications from binary-level attacks.",
+        "lessons": [
+          {
+            "id": "understanding-binary-protections",
+            "title": "Understanding Binary Protections",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Inadequate binary protections can lead to reverse engineering, application modification, or vulnerability exploitation."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Binary Protection Weaknesses"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Not using code obfuscation",
+                  "Not checking application integrity",
+                  "Providing debug symbols in releases"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Improving Binary Protections"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use obfuscation to hide business logic",
+                  "Use signature verification to check integrity",
+                  "Remove debug symbols in production releases"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "security-misconfiguration",
         "title": "Security Misconfiguration",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about risks from security misconfigurations.",
+        "lessons": [
+          {
+            "id": "understanding-security-misconfiguration",
+            "title": "Understanding Security Misconfiguration",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Security misconfigurations can provide openings for attackers to exploit systems."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Misconfigurations"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Using default server settings",
+                  "Not disabling unused features",
+                  "Storing configuration files without encryption"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Preventing Misconfigurations"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use least privilege principles",
+                  "Audit configurations regularly",
+                  "Disable unnecessary features"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insecure-data-storage",
         "title": "Insecure Data Storage",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn how to protect stored data from threats.",
+        "lessons": [
+          {
+            "id": "understanding-data-storage-risks",
+            "title": "Understanding Data Storage Risks",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Insecure data storage can lead to theft or loss of sensitive data."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Insecure Data Storage"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Storing data without encryption",
+                  "Storing sensitive data on client devices",
+                  "Not validating data access permissions"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Data Storage Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use encryption for all sensitive data",
+                  "Store data only on secure servers",
+                  "Limit data access based on need"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "insufficient-cryptography",
         "title": "Insufficient Cryptography",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about weaknesses in cryptography implementation and how to fix them.",
+        "lessons": [
+          {
+            "id": "understanding-cryptography-risks",
+            "title": "Understanding Cryptography Risks",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Inadequate cryptography can lead to data breaches or exploitation by attackers."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Cryptography Weaknesses"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Using outdated algorithms",
+                  "Not using sufficiently long keys",
+                  "Storing encryption keys in plain text"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Cryptography Best Practices"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Use modern encryption algorithms like AES",
+                  "Use keys with minimum 256-bit length",
+                  "Store encryption keys in secure key vaults"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   {
     "id": "iso27001",
     "categoryTitle": "ISO/IEC 27001",
-    "description": "Standar internasional untuk sistem manajemen keamanan informasi (ISMS).",
+    "description": "International standard for information security management systems (ISMS).",
     "modules": [
       {
         "id": "organizational-controls",
         "title": "Organizational Controls",
-        "description": "Pelajari pengelolaan kontrol organisasi dalam konteks keamanan informasi.",
+        "description": "Learn about managing organizational controls in information security context.",
         "lessons": [
           {
             "id": "organizational-controls-content",
@@ -119,33 +499,33 @@
             "content": [
               {
                 "type": "paragraph",
-                "text": "Kontrol organisasi dalam ISO/IEC 27001 mencakup kebijakan, peran, dan proses yang digunakan untuk menjaga keamanan informasi dalam suatu organisasi."
+                "text": "Organizational controls in ISO/IEC 27001 include policies, roles, and processes used to maintain information security within an organization."
               },
               {
                 "type": "heading",
-                "text": "Contoh Kontrol Organisasi"
+                "text": "Examples of Organizational Controls"
               },
               {
                 "type": "list",
                 "text": [
-                  "Penetapan kebijakan keamanan informasi",
-                  "Penunjukan peran dan tanggung jawab",
-                  "Pelaksanaan pelatihan kesadaran keamanan",
-                  "Proses manajemen insiden",
-                  "Audit internal berkala"
+                  "Establishing information security policies",
+                  "Assigning roles and responsibilities",
+                  "Conducting security awareness training",
+                  "Incident management processes",
+                  "Regular internal audits"
                 ]
               },
               {
                 "type": "heading",
-                "text": "Manfaat Penerapan Kontrol"
+                "text": "Benefits of Implementing Controls"
               },
               {
                 "type": "list",
                 "text": [
-                  "Meningkatkan kesadaran keamanan di seluruh organisasi",
-                  "Membantu dalam kepatuhan terhadap standar dan regulasi",
-                  "Mengurangi risiko pelanggaran data",
-                  "Meningkatkan kepercayaan mitra dan pelanggan"
+                  "Increase security awareness across the organization",
+                  "Help with compliance to standards and regulations",
+                  "Reduce data breach risks",
+                  "Increase partner and customer trust"
                 ]
               }
             ]
@@ -155,20 +535,131 @@
       {
         "id": "people-controls",
         "title": "People Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about controls involving human resources in maintaining information security.",
+        "lessons": [
+          {
+            "id": "understanding-people-controls",
+            "title": "Understanding People Controls",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Human resources often become weak points in information security. People controls aim to increase awareness and compliance with security policies."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of People Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Information security awareness training",
+                  "Secure onboarding and offboarding processes",
+                  "Non-disclosure agreements (NDAs) for employees",
+                  "Background checks before recruitment",
+                  "Assigning security roles and responsibilities"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Benefits of People Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Reduce human error risks",
+                  "Increase security awareness across the organization",
+                  "Ensure compliance with policies and regulations"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "physical-controls",
         "title": "Physical Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about physical controls to protect information assets.",
+        "lessons": [
+          {
+            "id": "understanding-physical-controls",
+            "title": "Understanding Physical Controls",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Physical controls aim to protect information assets from unauthorized physical access, such as through theft or sabotage."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Physical Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Using card-based or biometric access systems",
+                  "CCTV surveillance in sensitive areas",
+                  "Locking hardware such as servers and workstations",
+                  "Managing guest access to restricted areas",
+                  "Placing hardware in controlled environments (e.g., data centers)"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Benefits of Physical Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Prevent unauthorized physical access to information assets",
+                  "Reduce risks of theft or hardware damage",
+                  "Provide additional protection against physical threats"
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "id": "technological-controls",
         "title": "Technological Controls",
-        "description": "Konten belum tersedia.",
-        "lessons": []
+        "description": "Learn about technology controls to support information security.",
+        "lessons": [
+          {
+            "id": "understanding-technological-controls",
+            "title": "Understanding Technological Controls",
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Technology controls include tools and systems used to protect digital information from cyber threats."
+              },
+              {
+                "type": "heading",
+                "text": "Examples of Technology Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Firewalls to prevent unauthorized access",
+                  "Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)",
+                  "Data encryption in transit and at rest",
+                  "Multi-Factor Authentication (MFA) for user access",
+                  "Patch management systems to keep devices up-to-date"
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "Benefits of Technology Controls"
+              },
+              {
+                "type": "list",
+                "text": [
+                  "Protect digital assets from cyber threats",
+                  "Support real-time threat monitoring and detection",
+                  "Ensure data security during processing and storage"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

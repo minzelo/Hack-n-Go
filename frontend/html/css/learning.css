@@ -68,8 +68,9 @@ body {
   	top: 89px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete {
   	position: absolute;
@@ -243,8 +244,9 @@ body {
   	top: 212px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete1 {
   	position: absolute;
@@ -304,8 +306,9 @@ body {
   	top: 335px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete2 {
   	position: absolute;
@@ -365,8 +368,9 @@ body {
   	top: 458px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete3 {
   	position: absolute;
@@ -433,8 +437,9 @@ body {
   	top: 581px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete4 {
   	position: absolute;
@@ -494,8 +499,9 @@ body {
   	top: 704px;
   	left: 70px;
   	display: inline-block;
-  	width: 60px;
+  	width: 80px;
   	height: 26px;
+  	white-space: nowrap;
 }
 .complete5 {
   	position: absolute;

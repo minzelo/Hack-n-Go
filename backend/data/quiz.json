@@ -11,7 +11,7 @@
         "description": "Uji pemahaman kamu tentang kesalahan umum dalam penggunaan kredensial.",
         "questions": [
           {
-            "question": "Apa yang dimaksud dengan “improper Credential Usage”?",
+            "question": "Apa yang dimaksud dengan "improper Credential Usage"?",
             "options": [
               "Penggunaan kredensial yang kuat dan unik",
               "Penggunaan kredensial default atau mudah ditebak",
@@ -21,7 +21,7 @@
             "answer": 1
           },
           {
-            "question": "Mengapa penggunaan kata sandi seperti “123456” berisiko?",
+            "question": "Mengapa penggunaan kata sandi seperti "123456" berisiko?",
             "options": [
               "Sulit diingat",
               "Mudah ditebak oleh penyerang",
@@ -31,7 +31,7 @@
             "answer": 1
           },
           {
-            "question": "Apa itu “credential stuffing”?",
+            "question": "Apa itu "credential stuffing"?",
             "options": [
               "Mengisi formulir pendaftaran dengan data palsu",
               "Menggunakan kredensial yang sama di banyak situs",
@@ -116,8 +116,109 @@
         "id": "inadequate-supply-chain-security",
         "title": "Inadequate Supply Chain Security",
         "level": "Beginner",
-        "description": "Belum tersedia.",
-        "questions": []
+        "description": "Test your knowledge of securing software supply chains from threats.",
+        "questions": [
+          {
+            "question": "What is supply chain security in software development?",
+            "options": [
+              "Managing physical delivery of products",
+              "Securing all components and dependencies in software",
+              "Organizing development teams",
+              "Marketing software products"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is a common risk of using third-party libraries?",
+            "options": [
+              "They make code run slower",
+              "They may contain vulnerabilities or malicious code",
+              "They are always expensive",
+              "They require special licenses"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What should you do before using a third-party dependency?",
+            "options": [
+              "Use it immediately without checking",
+              "Verify its authenticity and security",
+              "Only use it in production",
+              "Ignore its documentation"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is dependency confusion attack?",
+            "options": [
+              "When developers don't understand dependencies",
+              "When attackers upload malicious packages with similar names",
+              "When dependencies have poor documentation",
+              "When there are too many dependencies"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Why is it important to regularly update dependencies?",
+            "options": [
+              "To get new features only",
+              "To fix security vulnerabilities and bugs",
+              "To make the code longer",
+              "To increase file size"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is software composition analysis (SCA)?",
+            "options": [
+              "A tool to analyze code performance",
+              "A method to identify security risks in dependencies",
+              "A way to compress software",
+              "A design pattern"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What should you check in a package before using it?",
+            "options": [
+              "Only the file size",
+              "Maintainer reputation, security history, and reviews",
+              "Only the download count",
+              "Just the name"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is typosquatting in the context of packages?",
+            "options": [
+              "Fixing typing errors in code",
+              "Creating packages with names similar to popular ones",
+              "Writing documentation",
+              "Testing software"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "How can you verify package integrity?",
+            "options": [
+              "By checking file size only",
+              "Using cryptographic checksums and signatures",
+              "By reading reviews only",
+              "By checking the package name"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is the principle of least privilege in dependency management?",
+            "options": [
+              "Using the most popular packages",
+              "Only giving dependencies the minimum permissions needed",
+              "Installing all available packages",
+              "Using the newest versions always"
+            ],
+            "answer": 1
+          }
+        ]
       },
       {
         "id": "insecure-authentication-authorization",
@@ -165,15 +266,217 @@
         "id": "insecure-data-storage",
         "title": "Insecure Data Storage",
         "level": "Beginner",
-        "description": "Belum tersedia.",
-        "questions": []
+        "description": "Learn about secure data storage practices and common vulnerabilities.",
+        "questions": [
+          {
+            "question": "What is the primary risk of storing sensitive data in plain text on a mobile device?",
+            "options": [
+              "It improves app performance",
+              "Data can be easily accessed if device is compromised",
+              "It reduces storage space",
+              "There are no risks"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Which of the following is considered secure data storage practice?",
+            "options": [
+              "Storing passwords in shared preferences",
+              "Using encryption for sensitive data",
+              "Saving data in external storage without protection",
+              "Storing data in log files"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is SQLite database encryption used for?",
+            "options": [
+              "To make queries faster",
+              "To reduce database size",
+              "To protect data from unauthorized access",
+              "To improve app design"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Which storage location is most vulnerable on Android devices?",
+            "options": [
+              "Internal storage with proper permissions",
+              "External storage (SD card)",
+              "Encrypted databases",
+              "Secure keystore"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What should you avoid storing in application logs?",
+            "options": [
+              "Error messages",
+              "Debug information",
+              "Passwords and API keys",
+              "App version numbers"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "Which technique helps protect data if a device is rooted/jailbroken?",
+            "options": [
+              "Storing data in plain text",
+              "Using strong encryption algorithms",
+              "Saving data in shared folders",
+              "Disabling app security"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is the Android Keystore system primarily used for?",
+            "options": [
+              "Storing app preferences",
+              "Managing cryptographic keys securely",
+              "Caching images",
+              "Storing user interface data"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Why should sensitive data not be stored in SharedPreferences?",
+            "options": [
+              "It's too slow",
+              "It's not easily accessible",
+              "It stores data in plain text",
+              "It has limited storage space"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "What is data leakage in mobile applications?",
+            "options": [
+              "When app uses too much memory",
+              "When sensitive data is unintentionally exposed",
+              "When app crashes frequently",
+              "When UI elements overlap"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Which approach provides the strongest data protection?",
+            "options": [
+              "Encoding data in Base64",
+              "Obfuscating variable names",
+              "Using AES encryption with secure key management",
+              "Hiding files in deep directory structures"
+            ],
+            "answer": 2
+          }
+        ]
       },
       {
         "id": "insufficient-cryptography",
         "title": "Insufficient Cryptography",
         "level": "Beginner",
-        "description": "Belum tersedia.",
-        "questions": []
+        "description": "Test your knowledge about cryptographic security implementations.",
+        "questions": [
+          {
+            "question": "What is the main purpose of cryptography in mobile applications?",
+            "options": [
+              "To make apps run faster",
+              "To protect data confidentiality and integrity",
+              "To reduce app size",
+              "To improve user interface"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Which encryption algorithm is considered strong and widely recommended?",
+            "options": [
+              "DES (Data Encryption Standard)",
+              "MD5",
+              "AES (Advanced Encryption Standard)",
+              "ROT13"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "What is a cryptographic key?",
+            "options": [
+              "A physical device for unlocking phones",
+              "A secret value used in encryption and decryption",
+              "A type of mobile app",
+              "A user password"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Why is it dangerous to use weak encryption algorithms?",
+            "options": [
+              "They consume too much battery",
+              "They can be easily broken by attackers",
+              "They make apps crash",
+              "They are incompatible with mobile devices"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is the difference between encryption and hashing?",
+            "options": [
+              "There is no difference",
+              "Encryption is reversible, hashing is one-way",
+              "Hashing is reversible, encryption is one-way",
+              "Both are exactly the same process"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Which of the following is NOT a secure practice for key management?",
+            "options": [
+              "Using hardware security modules",
+              "Storing keys in source code",
+              "Using key derivation functions",
+              "Rotating keys regularly"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is a salt in cryptography?",
+            "options": [
+              "A seasoning for food",
+              "A random value added to data before hashing",
+              "A type of encryption algorithm",
+              "A network protocol"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Why should you avoid creating custom encryption algorithms?",
+            "options": [
+              "They are too complex to implement",
+              "They are likely to have security flaws",
+              "They are not compatible with mobile devices",
+              "They are too expensive"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "What is the purpose of digital signatures?",
+            "options": [
+              "To make documents look official",
+              "To verify authenticity and integrity of data",
+              "To compress files",
+              "To encrypt passwords"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "Which practice helps protect against cryptographic attacks?",
+            "options": [
+              "Using deprecated algorithms",
+              "Hardcoding encryption keys",
+              "Implementing proper key rotation",
+              "Disabling encryption entirely"
+            ],
+            "answer": 2
+          }
+        ]
       }
     ]
   },

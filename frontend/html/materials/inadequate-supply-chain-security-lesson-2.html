@@ -5,44 +5,14 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	<link rel="stylesheet" href="/html/css/on-click-lessons.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
-  	<title>Organizational Controls - HacknGo</title>
+  	<title>Inadequate Supply Chain Security (Page 2) - HacknGo</title>
   	<style>
   	    /* Custom CSS to make title fit on one line */
   	    .password-security {
-  	        width: 250px !important;
+  	        width: 300px !important;
   	        white-space: nowrap !important;
-  	    }
-  	    
-  	    /* Make the main content box taller to fit all content */
-  	    .on-click-lesson-child {
-  	        height: 700px !important;
-  	    }
-  	    
-  	    /* Move text content up within the box */
-  	    .passwords-are-the-container {
-  	        top: 84px !important;
-  	    }
-  	    
-  	    /* Move button backgrounds inside the content box - moved up */
-  	    .on-click-lesson-item {
-  	        top: 715px !important;
-  	    }
-  	    
-  	    .on-click-lesson-inner {
-  	        top: 715px !important;
-  	    }
-  	    
-  	    /* Move button text inside the content box - back to module lowered */
-  	    .back-to-module {
-  	        top: 726px !important;
-  	    }
-  	    
-  	    .mark-as-complete {
-  	        display: flex !important;
-  	        align-items: center !important;
-  	        justify-content: center !important;
-  	        margin-top: -4px !important;
-  	        top: 726px !important;
+  	        font-size: 14px !important;
+  	        margin-top: 3px;
   	    }
   	</style>
 </head>
@@ -52,7 +22,7 @@
 			<div class="on-click-lesson-child"></div>
 			<div class="on-click-lesson-item"></div>
 			<div class="on-click-lesson-inner" id="rectangle2"></div>
-			<b class="back-to-module" id="backToModule">Back to Module</b>
+			<b class="back-to-module" id="backToModule">Back to Page 1</b>
 			<b class="mark-as-complete">Mark as Complete</b>
 			<div class="rectangle-div"></div>
 			<div class="home">Home</div>
@@ -65,34 +35,33 @@
 			<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
 			<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
 			<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
-			<b class="password-security">Organizational Controls</b>
+			<b class="password-security">Inadequate Supply Chain Security</b>
 			<div class="on-click-lesson-child1"></div>
 			<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
 			<div class="passwords-are-the-container">
 				<p class="passwords-are-the">
-					Organizational controls in ISO/IEC 27001 include policies, roles, and processes used to maintain information security within an organization.
+					Now let's explore the practical tools and techniques you can use to secure your software supply chain effectively.
 				</p>
 				<p class="blank-line">&nbsp;</p>
-				<p class="why-passwords-matter"><b>Examples of Organizational Controls</b></p>
+				<p class="why-passwords-matter"><b>Popular Supply Chain Security Tools</b></p>
 				<p class="passwords-are-the"><b>&nbsp;</b></p>
 				<ul class="at-least-12-characters-long-mi">
-					<li class="at-least-12-characters-long"><span>Establishing information security policies</span></li>
-					<li class="at-least-12-characters-long"><span>Assigning roles and responsibilities</span></li>
-					<li class="at-least-12-characters-long"><span>Conducting security awareness training</span></li>
-					<li class="at-least-12-characters-long"><span>Incident management processes</span></li>
-					<li class="at-least-12-characters-long"><span>Regular internal audits</span></li>
+					<li class="at-least-12-characters-long"><span>Dependabot: Monitors and automatically updates dependencies</span></li>
+					<li class="at-least-12-characters-long"><span>Snyk: Detects vulnerabilities in dependencies and containers</span></li>
+					<li class="at-least-12-characters-long"><span>OWASP Dependency-Check: Analyzes dependencies for known vulnerabilities</span></li>
+					<li class="at-least-12-characters-long"><span>CycloneDX: Creates Bill of Materials (SBOM) to monitor software components</span></li>
 				</ul>
 				<p class="blank-line">&nbsp;</p>
-				<p class="why-passwords-matter"><b>Benefits of Control Implementation</b></p>
+				<p class="why-passwords-matter"><b>Best Practices Summary</b></p>
 				<p class="passwords-are-the"><b>&nbsp;</b></p>
 				<ul class="at-least-12-characters-long-mi">
-					<li class="at-least-12-characters-long"><span>Increases security awareness across the organization</span></li>
-					<li class="at-least-12-characters-long"><span>Helps with compliance to standards and regulations</span></li>
-					<li class="at-least-12-characters-long"><span>Reduces the risk of data breaches</span></li>
-					<li class="at-least-12-characters-long"><span>Increases trust from partners and customers</span></li>
+					<li class="at-least-12-characters-long"><span>Regularly audit your dependencies</span></li>
+					<li class="at-least-12-characters-long"><span>Use automated tools for vulnerability scanning</span></li>
+					<li class="at-least-12-characters-long"><span>Maintain an inventory of all components</span></li>
+					<li class="at-least-12-characters-long"><span>Establish secure development guidelines</span></li>
 				</ul>
 				<p class="passwords-are-the">
-					Implementing proper organizational controls creates a strong foundation for information security management and helps organizations meet their security objectives while maintaining compliance with relevant standards.
+					Remember, securing your supply chain is crucial for maintaining application security. Always verify the integrity and security of third-party components before using them in your projects.
 				</p>
 			</div>
 		</div>
@@ -100,18 +69,17 @@
   	
   	<!-- Navigation JavaScript -->
   	<script>
-  	    // Navigation event listeners
   	    document.addEventListener('DOMContentLoaded', function() {
   	        checkLessonCompletion();
   	        
-  	        // Back to module button
+  	        // Back to page 1 button
   	        document.getElementById('backToModule').addEventListener('click', () => {
-  	            window.location.href = '/html/materials/iso27001-module.html';
+  	            window.location.href = '/html/materials/inadequate-supply-chain-security-lesson.html';
   	        });
   	        
-  	        // Back button (arrow)
+  	        // Back button (arrow) - go to page 1
   	        document.getElementById('backButton').addEventListener('click', () => {
-  	            window.location.href = '/html/materials/iso27001-module.html';
+  	            window.location.href = '/html/materials/inadequate-supply-chain-security-lesson.html';
   	        });
   	        
   	        // Navigation clicks
@@ -148,9 +116,9 @@
   	            
   	            const response = await fetch(`/api/users/${userData.username}/progress`);
   	            const progressData = await response.json();
-  	            const iso27001Progress = progressData.moduleProgress.iso27001 || { completedLessons: [] };
+  	            const owaspProgress = progressData.moduleProgress['owasp'] || { completedLessons: [] };
   	            
-  	            if (iso27001Progress.completedLessons.includes('organizational-controls')) {
+  	            if (owaspProgress.completedLessons.includes('inadequate-supply-chain-security')) {
   	                transformToCompletionPage();
   	            }
   	        } catch (error) {
@@ -174,8 +142,8 @@
   	                    'Content-Type': 'application/json'
   	                },
   	                body: JSON.stringify({
-  	                    module: 'iso27001',
-  	                    lessonId: 'organizational-controls'
+  	                    module: 'owasp',
+  	                    lessonId: 'inadequate-supply-chain-security'
   	                })
   	            });
   	            
@@ -215,33 +183,55 @@
   	            markCompleteBg.style.display = 'none';
   	        }
   	        
-  	        // Add "Completed" text with checkmark (positioned to align with back to module button)
+  	        // Change "Back to Page 1" to "Back to Module"
+  	        const backToModuleBtn = document.getElementById('backToModule');
+  	        if (backToModuleBtn) {
+  	            backToModuleBtn.textContent = 'Back to Module';
+  	            backToModuleBtn.onclick = function() {
+  	                window.location.href = '/html/materials/owasp-module.html';
+  	            };
+  	            backToModuleBtn.style.position = 'absolute';
+  	            backToModuleBtn.style.top = '691px';
+  	            backToModuleBtn.style.left = '63px';
+  	            backToModuleBtn.style.width = '84px';
+  	            backToModuleBtn.style.height = '21px';
+  	            backToModuleBtn.style.display = 'inline-block';
+  	            backToModuleBtn.style.color = '#fff';
+  	        }
+  	        
+  	        // Add "Completed" text with checkmark (positioned to the right side)
+  	        const completedContainer = document.createElement('div');
+  	        completedContainer.style.cssText = `
+  	            position: absolute;
+  	            top: 665px;
+  	            left: 238px;
+  	            display: flex;
+  	            align-items: center;
+  	            z-index: 1000;
+  	            margin-top: 20px;
+  	        `;
+  	        // Checkmark icon
+  	        const checkIcon = document.createElement('img');
+  	        checkIcon.src = '/html/icons/Done_ring_round.svg';
+  	        checkIcon.style.cssText = `
+  	            width: 24px;
+  	            height: 24px;
+  	            margin-right: 8px;
+  	        `;
+  	        completedContainer.appendChild(checkIcon);
+  	        // Completed text
   	        const completedText = document.createElement('b');
   	        completedText.textContent = 'Completed';
   	        completedText.style.cssText = `
-  	            position: absolute;
-  	            top: 721px;
-  	            left: 275px;
   	            font-size: 15px;
   	            color: #32de07;
   	            width: 94px;
   	            height: 21px;
+  	            display: inline-block;
   	        `;
-  	        document.querySelector('.on-click-lesson').appendChild(completedText);
-  	        
-  	        // Add checkmark icon (positioned to align with back to module button)
-  	        const checkIcon = document.createElement('img');
-  	        checkIcon.src = '/html/icons/Done_ring_round.svg';
-  	        checkIcon.style.cssText = `
-  	            position: absolute;
-  	            top: 721px;
-  	            left: 245px;
-  	            width: 24px;
-  	            height: 24px;
-  	        `;
-  	        document.querySelector('.on-click-lesson').appendChild(checkIcon);
-  	        
-  	        // Create "Continue Learning" section (moved up closer to lesson box)
+  	        completedContainer.appendChild(completedText);
+  	        document.querySelector('.on-click-lesson').appendChild(completedContainer);
+  	        // Create "Continue Learning" section
   	        const continueSection = document.createElement('div');
   	        continueSection.style.cssText = `
   	            position: absolute;
@@ -257,35 +247,32 @@
   	            cursor: pointer;
   	        `;
   	        continueSection.onclick = () => {
-  	            // Navigate to next lesson in the ISO27001 module: People Controls
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/insecure-authentication-authorization-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(continueSection);
-  	        
-  	        // Add continue learning text (lowered to align with book icon)
+  	        // Add continue learning text
   	        const continueText = document.createElement('div');
   	        continueText.textContent = 'Continue Learning';
   	        continueText.style.cssText = `
   	            position: absolute;
-  	            top: 751px;
-  	            left: 70px;
+  	            top: 748px;
+  	            left: 75px;
   	            font-size: 13px;
   	            font-weight: 600;
   	            color: #313131;
   	            cursor: pointer;
   	        `;
   	        continueText.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/insecure-authentication-authorization-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(continueText);
-  	        
-  	        // Add "Move on to next lesson" text (lowered to align with book icon)
+  	        // Add "Move on to next lesson" text
   	        const moveOnText = document.createElement('div');
   	        moveOnText.textContent = 'Move on to the next lesson';
   	        moveOnText.style.cssText = `
   	            position: absolute;
-  	            top: 766px;
-  	            left: 70px;
+  	            top: 763px;
+  	            left: 75px;
   	            font-size: 10px;
   	            font-weight: 500;
   	            color: #323232;
@@ -293,11 +280,10 @@
   	            cursor: pointer;
   	        `;
   	        moveOnText.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/insecure-authentication-authorization-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(moveOnText);
-  	        
-  	        // Add book icon for continue learning (adjusted position)
+  	        // Add book icon for continue learning
   	        const bookIconContainer = document.createElement('div');
   	        bookIconContainer.style.cssText = `
   	            position: absolute;
@@ -310,9 +296,8 @@
   	            cursor: pointer;
   	        `;
   	        bookIconContainer.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/insecure-authentication-authorization-lesson.html';
   	        };
-  	        
   	        const bookIcon = document.createElement('img');
   	        bookIcon.src = '/html/icons/Book_open_altdarkb.svg';
   	        bookIcon.style.cssText = `
@@ -325,8 +310,7 @@
   	        `;
   	        bookIconContainer.appendChild(bookIcon);
   	        document.querySelector('.on-click-lesson').appendChild(bookIconContainer);
-  	        
-  	        // Add arrow right icon (adjusted position)
+  	        // Add arrow right icon
   	        const arrowRight = document.createElement('img');
   	        arrowRight.src = '/html/icons/Arrow_right.svg';
   	        arrowRight.style.cssText = `
@@ -338,7 +322,7 @@
   	            cursor: pointer;
   	        `;
   	        arrowRight.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/insecure-authentication-authorization-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(arrowRight);
   	    }

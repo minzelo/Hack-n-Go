@@ -6,6 +6,67 @@
   	<link rel="stylesheet" href="/html/css/learning.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" />
   	<title>Learning Modules - HacknGo</title>
+  	<style>
+  	    /* Fix Phishing Awareness title to display on one line */
+  	    .malware {
+  	        white-space: nowrap !important;
+  	        font-size: 12px !important;
+  	        width: auto !important;
+  	        overflow: hidden !important;
+  	        text-overflow: ellipsis !important;
+  	    }
+  	    
+  	    /* Add progress bar styles for missing modules */
+  	    .learning-child6-progress {
+  	        position: absolute;
+  	        top: 391px;
+  	        left: 33px;
+  	        border-radius: 6px;
+  	        background-color: #af52de;
+  	        width: 0px;
+  	        height: 9px;
+  	    }
+  	    
+  	    .learning-child9-progress {
+  	        position: absolute;
+  	        top: 514px;
+  	        left: 33px;
+  	        border-radius: 6px;
+  	        background-color: #af52de;
+  	        width: 0px;
+  	        height: 9px;
+  	    }
+  	    
+  	    .learning-child12-progress {
+  	        position: absolute;
+  	        top: 637px;
+  	        left: 33px;
+  	        border-radius: 6px;
+  	        background-color: #af52de;
+  	        width: 0px;
+  	        height: 9px;
+  	    }
+  	    
+  	    .learning-child15-progress {
+  	        position: absolute;
+  	        top: 760px;
+  	        left: 33px;
+  	        border-radius: 6px;
+  	        background-color: #af52de;
+  	        width: 0px;
+  	        height: 9px;
+  	    }
+  	    
+  	    /* Fix OWASP progress bar alignment - align with background */
+  	    .learning-inner {
+  	        left: 39px !important;
+  	    }
+  	    
+  	    /* Fix ISO/IEC 27001 progress bar alignment */
+  	    .learning-child3 {
+  	        left: 39px !important;
+  	    }
+  	</style>
 </head>
 <body>
   	<div class="phone-frame">
@@ -18,7 +79,7 @@
     			</div>
     			<b class="password-security">OWASP Top 10</b>
     			<div class="lessons">10 modules</div>
-    			<div class="complete">10% Complete</div>
+    			<div class="complete">0% Complete</div>
     			<div class="learn-how-to">Learn about the most common mobile application vulnerabilities</div>
     			<div class="rectangle-div">
     			</div>
@@ -48,13 +109,15 @@
     			</div>
     			<b class="phishing-awareness">ISO/IEC 27001</b>
     			<div class="lessons1">4 modules</div>
-    			<div class="complete1">25% Complete</div>
-    			<div class="identify-and-avoid">Information security management systems (ISMS)</div>
+    			<div class="complete1">0% Complete</div>
+    			<div class="identify-and-avoid">Learn about information security management standard</div>
     			<div class="learning-child4">
     			</div>
     			<div class="learning-child5">
     			</div>
     			<div class="learning-child6">
+    			</div>
+    			<div class="learning-child6-progress">
     			</div>
     			<b class="public-wifi-safety">Password Security</b>
     			<div class="lessons2">5 lessons</div>
@@ -62,14 +125,18 @@
     			<div class="stay-secure-when">Learn how to create and manage secure passwords</div>
     			<div class="learning-child7">
     			</div>
+    			<img class="database-icon" alt="" src="/html/icons/Database.svg">
+    			
     			<div class="learning-child8">
     			</div>
     			<div class="learning-child9">
     			</div>
+    			<div class="learning-child9-progress">
+    			</div>
     			<b class="data-protection">Data Protection</b>
     			<div class="lessons3">7 lessons</div>
     			<div class="complete3">0% Complete</div>
-    			<div class="safeguard-your-sensitive">Safeguard your sensitive information</div>
+    			<div class="safeguard-your-sensitive">Learn how to safeguard your sensitive information</div>
     			<div class="learning-child10">
     			</div>
     			<img class="database-icon" alt="" src="/html/icons/Database.svg">
@@ -78,20 +145,24 @@
     			</div>
     			<div class="learning-child12">
     			</div>
+    			<div class="learning-child12-progress">
+    			</div>
     			<b class="two-factor-authentication">Two-Factor Authentication</b>
     			<div class="lessons4">4 lessons</div>
     			<div class="complete4">0% Complete</div>
-    			<div class="add-an-extra">Add an extra layer of security to your accounts</div>
+    			<div class="add-an-extra">Learn how to add an extra layer of security to your accounts</div>
     			<div class="learning-child13">
     			</div>
     			<div class="learning-child14">
     			</div>
     			<div class="learning-child15">
     			</div>
+    			<div class="learning-child15-progress">
+    			</div>
     			<b class="malware">Phishing Awareness</b>
     			<div class="lessons5">6 lessons</div>
     			<div class="complete5">0% Complete</div>
-    			<div class="learn-how-malware">Identify and avoid phishing attempts</div>
+    			<div class="learn-how-malware">Learn how to identify and avoid phishing attempts</div>
     			<div class="learning-child16">
     			</div>
     			<img class="view-light-icon" alt="" src="/html/icons/View_lightblue.svg">
@@ -112,6 +183,9 @@
   	<!-- Navigation JavaScript -->
   	<script>
   	    document.addEventListener('DOMContentLoaded', function() {
+  	        // Load user progress on page load
+  	        loadUserProgress();
+  	        
   	        // OWASP Top 10 module navigation
   	        document.getElementById('owaspModule').addEventListener('click', () => {
   	            window.location.href = '/html/materials/owasp-module.html';
@@ -124,10 +198,6 @@
   	        
   	        // Other modules - Coming soon alerts
   	        const comingSoonModules = [
-  	            { element: document.querySelector('.learning-child5'), name: 'Password Security' },
-  	            { element: document.querySelector('.learning-child8'), name: 'Data Protection' },
-  	            { element: document.querySelector('.learning-child11'), name: 'Two-Factor Authentication' },
-  	            { element: document.querySelector('.learning-child14'), name: 'Phishing Awareness' }
   	        ];
   	        
   	        comingSoonModules.forEach(module => {
@@ -137,6 +207,39 @@
   	                });
   	            }
   	        });
+  	        
+  	        // Clickable modules
+  	        // Password Security module
+  	        const passwordSecurityModule = document.querySelector('.learning-child5');
+  	        if (passwordSecurityModule) {
+  	            passwordSecurityModule.addEventListener('click', () => {
+  	                window.location.href = '/html/materials/password-security-module.html';
+  	            });
+  	        }
+  	        
+  	        // Data Protection module
+  	        const dataProtectionModule = document.querySelector('.learning-child8');
+  	        if (dataProtectionModule) {
+  	            dataProtectionModule.addEventListener('click', () => {
+  	                window.location.href = '/html/materials/data-protection-module.html';
+  	            });
+  	        }
+  	        
+  	        // Two-Factor Authentication module
+  	        const tfaModule = document.querySelector('.learning-child11');
+  	        if (tfaModule) {
+  	            tfaModule.addEventListener('click', () => {
+  	                window.location.href = '/html/materials/two-factor-authentication-module.html';
+  	            });
+  	        }
+  	        
+  	        // Phishing Awareness module
+  	        const phishingModule = document.querySelector('.learning-child14');
+  	        if (phishingModule) {
+  	            phishingModule.addEventListener('click', () => {
+  	                window.location.href = '/html/materials/phishing-awareness-module.html';
+  	            });
+  	        }
   	        
   	        // Navigation clicks
   	        document.getElementById('homeIcon').addEventListener('click', () => {
@@ -159,6 +262,184 @@
   	            window.location.href = '/html/profile.html';
   	        });
   	    });
+  	    
+  	    // Function to load user progress
+  	    async function loadUserProgress() {
+  	        try {
+  	            const userData = JSON.parse(localStorage.getItem('userData'));
+  	            if (!userData || !userData.username) {
+  	                console.log('No user data found');
+  	                return;
+  	            }
+  	            
+  	            // Fetch user progress from backend
+  	            const response = await fetch(`/api/users/${userData.username}/progress`);
+  	            if (!response.ok) {
+  	                throw new Error('Failed to fetch user progress');
+  	            }
+  	            
+  	            const progressData = await response.json();
+  	            
+  	            // Update OWASP Top 10 progress
+  	            updateOwaspProgress(progressData.moduleProgress.owasp || { progressPercentage: 0, completedLessons: [], totalLessons: 10 });
+  	            
+  	            // Update ISO/IEC 27001 progress
+  	            updateIso27001Progress(progressData.moduleProgress.iso27001 || { progressPercentage: 0, completedLessons: [], totalLessons: 4 });
+  	            
+  	            // Update Password Security progress
+  	            updatePasswordSecurityProgress(progressData.moduleProgress['password-security'] || { progressPercentage: 0, completedLessons: [], totalLessons: 5 });
+  	            
+  	            // Update Data Protection progress
+  	            updateDataProtectionProgress(progressData.moduleProgress['data-protection'] || { progressPercentage: 0, completedLessons: [], totalLessons: 7 });
+  	            
+  	            // Update Two-Factor Authentication progress
+  	            updateTwoFactorProgress(progressData.moduleProgress['two-factor-authentication'] || { progressPercentage: 0, completedLessons: [], totalLessons: 4 });
+  	            
+  	            // Update Phishing Awareness progress
+  	            updatePhishingProgress(progressData.moduleProgress['phishing-awareness'] || { progressPercentage: 0, completedLessons: [], totalLessons: 6 });
+  	            
+  	        } catch (error) {
+  	            console.error('Error loading user progress:', error);
+  	        }
+  	    }
+  	    
+  	    // Function to update OWASP Top 10 progress display
+  	    function updateOwaspProgress(owaspProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${owaspProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${owaspProgress.completedLessons.length}/10 modules`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-inner');
+  	        if (progressBar) {
+  	            const maxWidth = 317; // Same as background progress bar (.learning-item)
+  	            const newWidth = (owaspProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	    
+  	    // Function to update ISO/IEC 27001 progress display
+  	    function updateIso27001Progress(iso27001Progress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete1');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${iso27001Progress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons1');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${iso27001Progress.completedLessons.length}/4 modules`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-child3');
+  	        if (progressBar) {
+  	            const maxWidth = 317; // Same as background progress bar (.learning-child2)
+  	            const newWidth = (iso27001Progress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	    
+  	    // Function to update Password Security progress display
+  	    function updatePasswordSecurityProgress(passwordProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete2');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${passwordProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons2');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${passwordProgress.completedLessons.length}/5 lessons`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-child6-progress');
+  	        if (progressBar) {
+  	            const maxWidth = 323; // Same as background progress bar (.learning-child6)
+  	            const newWidth = (passwordProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	    
+  	    // Function to update Data Protection progress display
+  	    function updateDataProtectionProgress(dataProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete3');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${dataProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons3');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${dataProgress.completedLessons.length}/7 lessons`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-child9-progress');
+  	        if (progressBar) {
+  	            const maxWidth = 323; // Same as background progress bar (.learning-child9)
+  	            const newWidth = (dataProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	    
+  	    // Function to update Two-Factor Authentication progress display
+  	    function updateTwoFactorProgress(tfaProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete4');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${tfaProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons4');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${tfaProgress.completedLessons.length}/4 lessons`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-child12-progress');
+  	        if (progressBar) {
+  	            const maxWidth = 323; // Same as background progress bar (.learning-child12)
+  	            const newWidth = (tfaProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
+  	    
+  	    // Function to update Phishing Awareness progress display
+  	    function updatePhishingProgress(phishingProgress) {
+  	        // Update progress percentage text
+  	        const completeElement = document.querySelector('.complete5');
+  	        if (completeElement) {
+  	            completeElement.textContent = `${phishingProgress.progressPercentage}% Complete`;
+  	        }
+  	        
+  	        // Update lesson counter
+  	        const lessonsElement = document.querySelector('.lessons5');
+  	        if (lessonsElement) {
+  	            lessonsElement.textContent = `${phishingProgress.completedLessons.length}/6 lessons`;
+  	        }
+  	        
+  	        // Update progress bar width
+  	        const progressBar = document.querySelector('.learning-child15-progress');
+  	        if (progressBar) {
+  	            const maxWidth = 323; // Same as background progress bar (.learning-child15)
+  	            const newWidth = (phishingProgress.progressPercentage / 100) * maxWidth;
+  	            progressBar.style.width = `${newWidth}px`;
+  	        }
+  	    }
   	</script>
 </body>
 </html>

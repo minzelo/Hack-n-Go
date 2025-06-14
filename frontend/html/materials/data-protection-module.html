@@ -7,20 +7,17 @@
   	<link rel="stylesheet" href="/html/css/on-click-module.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
   	
-  	<title>ISO/IEC 27001 - HacknGo</title>
+  	<title>Data Protection - HacknGo</title>
   	
   	<style>
-  	    /* More aggressive CSS resets and overrides */
-  	    .on-click-module div[class^="on-click-module-child"] {
-  	        margin: 0 !important;
-  	        padding: 0 !important;
-  	    }
-  	    
   	    /* Change blue/colored icon backgrounds to light green */
   	    .ellipse-div,
   	    .on-click-module-child3,
   	    .on-click-module-child5,
-  	    .on-click-module-child7 {
+  	    .on-click-module-child7,
+  	    .on-click-module-child9,
+  	    .on-click-module-child11,
+  	    .on-click-module-child13 {
   	        background-color: #f0f9f0 !important; /* Light green background */
   	        display: flex !important;
   	        align-items: center !important;
@@ -31,7 +28,10 @@
   	    .check-ring-icon,
   	    .lock-icon,
   	    .lock-icon1,
-  	    .lock-icon2 {
+  	    .lock-icon2,
+  	    .lock-icon3,
+  	    .lock-icon4,
+  	    .lock-icon5 {
   	        display: block;
   	        margin: auto;
   	    }
@@ -40,80 +40,181 @@
   	    .next-available-lesson {
   	        border: 2px solid #06AD0B !important;
   	        border-radius: 10px !important;
-  	        transform: translateY(-2px) !important; /* Move up 2px to fix spacing */
   	    }
   	    
-  	    /* Clean lesson layout - remove manual positioning like OWASP */
-  	    .on-click-module .on-click-module-child1,
-  	    .on-click-module .on-click-module-child2,
-  	    .on-click-module .on-click-module-child4,
-  	    .on-click-module .on-click-module-child6 {
-  	        margin-bottom: 40px !important;
+  	    /* Spacing between lessons - match OWASP layout */
+  	    .on-click-module-child1 { top: 150px !important; }
+  	    .on-click-module-child2 { top: 215px !important; }
+  	    .on-click-module-child4 { top: 280px !important; }
+  	    .on-click-module-child6 { top: 345px !important; }
+  	    .on-click-module-child8 { top: 410px !important; }
+  	    .on-click-module-child10 { top: 475px !important; }
+  	    .on-click-module-child12 { top: 540px !important; }
+  	    
+  	    /* Adjust lesson titles to match new box positions */
+  	    .password-security1 { 
+  	        position: absolute !important;
+  	        top: 162px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .common-password-mistakes { 
+  	        position: absolute !important;
+  	        top: 227px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .password-strength-quiz { 
+  	        position: absolute !important;
+  	        top: 292px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .password-managers { 
+  	        position: absolute !important;
+  	        top: 357px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .creating-strong-passwords { 
+  	        position: absolute !important;
+  	        top: 422px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .data-disposal { 
+  	        position: absolute !important;
+  	        top: 487px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
+  	    }
+  	    .compliance { 
+  	        position: absolute !important;
+  	        top: 552px !important; 
+  	        left: 70px !important;
+  	        font-size: 14px !important;
+  	        display: inline-block !important;
+  	        width: 280px !important;
+  	        height: 26px !important;
   	    }
   	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP spacing values */
-  	    .on-click-module .on-click-module-child1 { top: 150px !important; }
-  	    .on-click-module .on-click-module-child2 { top: 215px !important; }
-  	    .on-click-module .on-click-module-child4 { top: 280px !important; }
-  	    .on-click-module .on-click-module-child6 { top: 345px !important; }
-  	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP title positions */
-  	    .on-click-module .password-security1 { top: 162px !important; } /* Lesson 1 title: box + 12px */
-  	    .on-click-module .common-password-mistakes { top: 227px !important; } /* Lesson 2 title: box + 12px */
-  	    .on-click-module .password-strength-quiz { top: 292px !important; } /* Lesson 3 title: box + 12px */
-  	    .on-click-module .password-managers { top: 357px !important; } /* Lesson 4 title: box + 12px */
-  	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP lesson label positions */
-  	    .on-click-module .lesson { top: 179px !important; } /* Lesson 1 label: box + 29px */
-  	    .on-click-module .lesson1 { top: 244px !important; } /* Lesson 2 label: box + 29px */
-  	    .on-click-module .quiz { top: 309px !important; } /* Lesson 3 label: box + 29px */
-  	    .on-click-module .lesson2 { top: 374px !important; } /* Lesson 4 label: box + 29px */
-  	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP icon background positions */
-  	    .on-click-module .ellipse-div { top: 165px !important; } /* Lesson 1 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child3 { top: 230px !important; } /* Lesson 2 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child5 { top: 295px !important; } /* Lesson 3 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child7 { top: 360px !important; } /* Lesson 4 icon bg: box + 15px */
-  	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP icon positions */
-  	    .on-click-module .check-ring-icon { top: 168px !important; } /* Lesson 1 icon: box + 18px */
-  	    .on-click-module .lock-icon { top: 233px !important; } /* Lesson 2 icon: box + 18px */
-  	    .on-click-module .lock-icon1 { top: 298px !important; } /* Lesson 3 icon: box + 18px */
-  	    .on-click-module .lock-icon2 { top: 363px !important; } /* Lesson 4 icon: box + 18px */
-  	    
-  	    /* Improved hitbox styling - make all lesson elements clickable */
-  	    .lesson-clickable {
-  	        cursor: pointer !important;
+  	    /* Adjust "Lesson" labels to match new box positions */
+  	    .lesson { 
+  	        position: absolute !important;
+  	        top: 179px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .lesson1 { 
+  	        position: absolute !important;
+  	        top: 244px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .quiz { 
+  	        position: absolute !important;
+  	        top: 309px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .lesson2 { 
+  	        position: absolute !important;
+  	        top: 374px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .lesson3 { 
+  	        position: absolute !important;
+  	        top: 439px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .lesson4 { 
+  	        position: absolute !important;
+  	        top: 504px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
+  	    }
+  	    .lesson5 { 
+  	        position: absolute !important;
+  	        top: 569px !important; 
+  	        left: 70px !important;
+  	        font-size: 10px !important;
+  	        color: #acc0ff !important;
+  	        display: inline-block !important;
+  	        width: 31px !important;
+  	        height: 15px !important;
   	    }
   	    
-  	    .lesson-locked {
-  	        cursor: not-allowed !important;
-  	    }
+  	    /* Adjust icon backgrounds to match new box positions */
+  	    .ellipse-div { top: 165px !important; } /* Lesson 1 icon bg: box + 15px */
+  	    .on-click-module-child3 { top: 230px !important; } /* Lesson 2 icon bg: box + 15px */
+  	    .on-click-module-child5 { top: 295px !important; } /* Lesson 3 icon bg: box + 15px */
+  	    .on-click-module-child7 { top: 360px !important; } /* Lesson 4 icon bg: box + 15px */
+  	    .on-click-module-child9 { top: 425px !important; } /* Lesson 5 icon bg: box + 15px */
+  	    .on-click-module-child11 { top: 490px !important; } /* Lesson 6 icon bg: box + 15px */
+  	    .on-click-module-child13 { top: 555px !important; } /* Lesson 7 icon bg: box + 15px */
   	    
-  	    /* Make lesson titles, labels, and icons clickable */
-  	    .password-security1,
-  	    .common-password-mistakes,
-  	    .password-strength-quiz,
-  	    .password-managers,
-  	    .lesson,
-  	    .lesson1,
-  	    .quiz,
-  	    .lesson2,
-  	    .ellipse-div,
-  	    .on-click-module-child3,
-  	    .on-click-module-child5,
-  	    .on-click-module-child7,
-  	    .check-ring-icon,
-  	    .lock-icon,
-  	    .lock-icon1,
-  	    .lock-icon2 {
-  	        cursor: pointer;
-  	        transition: opacity 0.2s ease;
-  	    }
+  	    /* Adjust icons to match new positions */
+  	    .check-ring-icon { top: 168px !important; } /* Lesson 1 icon: box + 18px */
+  	    .lock-icon { top: 233px !important; } /* Lesson 2 icon: box + 18px */
+  	    .lock-icon1 { top: 298px !important; } /* Lesson 3 icon: box + 18px */
+  	    .lock-icon2 { top: 363px !important; } /* Lesson 4 icon: box + 18px */
+  	    .lock-icon3 { top: 428px !important; } /* Lesson 5 icon: box + 18px */
+  	    .lock-icon4 { top: 493px !important; } /* Lesson 6 icon: box + 18px */
+  	    .lock-icon5 { top: 558px !important; } /* Lesson 7 icon: box + 18px */
   	    
-  	    /* Hover effects for better user feedback */
-  	    .lesson-clickable:hover {
-  	        opacity: 0.8;
+  	    /* Improved hitbox styling */
+  	    .lesson-clickable { cursor: pointer !important; }
+  	    .lesson-locked { cursor: not-allowed !important; }
+  	    .password-security1, .common-password-mistakes, .password-strength-quiz, .password-managers,
+  	    .creating-strong-passwords, .password-security2, .lesson, .lesson1, .quiz, .lesson2, .lesson3, .lesson4,
+  	    .ellipse-div, .on-click-module-child3, .on-click-module-child5, .on-click-module-child7,
+  	    .on-click-module-child9, .on-click-module-child11, .check-ring-icon, .lock-icon, .lock-icon1,
+  	    .lock-icon2, .lock-icon3, .lock-icon4 {
+  	        cursor: pointer; transition: opacity 0.2s ease;
   	    }
   	    
   	    /* Hover effects for all accessible lesson elements */
@@ -121,18 +222,30 @@
   	    .common-password-mistakes:hover,
   	    .password-strength-quiz:hover,
   	    .password-managers:hover,
+  	    .creating-strong-passwords:hover,
+  	    .data-disposal:hover,
+  	    .compliance:hover,
   	    .lesson:hover,
   	    .lesson1:hover,
   	    .quiz:hover,
   	    .lesson2:hover,
+  	    .lesson3:hover,
+  	    .lesson4:hover,
+  	    .lesson5:hover,
   	    .ellipse-div:hover,
   	    .on-click-module-child3:hover,
   	    .on-click-module-child5:hover,
   	    .on-click-module-child7:hover,
+  	    .on-click-module-child9:hover,
+  	    .on-click-module-child11:hover,
+  	    .on-click-module-child13:hover,
   	    .check-ring-icon:hover,
   	    .lock-icon:hover,
   	    .lock-icon1:hover,
-  	    .lock-icon2:hover {
+  	    .lock-icon2:hover,
+  	    .lock-icon3:hover,
+  	    .lock-icon4:hover,
+  	    .lock-icon5:hover {
   	        opacity: 0.8 !important;
   	    }
   	    
@@ -152,8 +265,8 @@
     		<div class="on-click-module-inner">
     		</div>
     		<div class="complete">0% Complete</div>
-    		<div class="lessons">0/4</div>
-    		<div class="learn-how-to">Learn about information security management systems (ISMS)</div>
+    		<div class="lessons">0/7</div>
+    		<div class="learn-how-to">Learn how to safeguard your sensitive information</div>
     		<div class="rectangle-div">
     		</div>
     		<div class="home">Home</div>
@@ -171,38 +284,70 @@
     		
     		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
     		
-    		<b class="password-security">ISO/IEC 27001</b>
+    		<b class="password-security">Data Protection</b>
+    		
+    		<!-- Lesson 1: Data Classification -->
     		<div class="on-click-module-child1" id="lesson1">
     		</div>
-    		<b class="password-security1">Organizational Controls</b>
+    		<b class="password-security1">Data Classification</b>
     		<div class="lesson">Lesson</div>
     		<div class="ellipse-div">
     		</div>
     		<img class="check-ring-icon" alt="" src="/html/icons/Check_ring.svg">
     		
+    		<!-- Lesson 2: Data Encryption -->
     		<div class="on-click-module-child2" id="lesson2">
     		</div>
-    		<b class="common-password-mistakes">People Controls</b>
+    		<b class="common-password-mistakes">Data Encryption</b>
     		<div class="lesson1">Lesson</div>
     		<div class="on-click-module-child3">
     		</div>
     		<img class="lock-icon" alt="" src="/html/icons/Group 8grey.svg">
     		
+    		<!-- Lesson 3: Data Backup -->
     		<div class="on-click-module-child4" id="lesson3">
     		</div>
-    		<b class="password-strength-quiz">Physical Controls</b>
+    		<b class="password-strength-quiz">Data Backup</b>
     		<div class="quiz">Lesson</div>
     		<div class="on-click-module-child5">
     		</div>
     		<img class="lock-icon1" alt="" src="/html/icons/Group 8grey.svg">
     		
+    		<!-- Lesson 4: Access Controls -->
     		<div class="on-click-module-child6" id="lesson4">
     		</div>
-    		<b class="password-managers">Technological Controls</b>
+    		<b class="password-managers">Access Controls</b>
     		<div class="lesson2">Lesson</div>
     		<div class="on-click-module-child7">
     		</div>
     		<img class="lock-icon2" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<!-- Lesson 5: Data Sharing -->
+    		<div class="on-click-module-child8" id="lesson5">
+    		</div>
+    		<b class="creating-strong-passwords">Data Sharing</b>
+    		<div class="lesson3">Lesson</div>
+    		<div class="on-click-module-child9">
+    		</div>
+    		<img class="lock-icon3" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<!-- Lesson 6: Data Disposal -->
+    		<div class="on-click-module-child10" id="lesson6">
+    		</div>
+    		<b class="data-disposal">Data Disposal</b>
+    		<div class="lesson4">Lesson</div>
+    		<div class="on-click-module-child11">
+    		</div>
+    		<img class="lock-icon4" alt="" src="/html/icons/Group 8grey.svg">
+    		
+    		<!-- Lesson 7: Compliance -->
+    		<div class="on-click-module-child12" id="lesson7">
+    		</div>
+    		<b class="compliance">Compliance</b>
+    		<div class="lesson5">Lesson</div>
+    		<div class="on-click-module-child13">
+    		</div>
+    		<img class="lock-icon5" alt="" src="/html/icons/Group 8grey.svg">
     		
     		<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
     		
@@ -258,19 +403,15 @@
   	            }
   	            
   	            const progressData = await response.json();
-  	            console.log('Full progress data from backend:', progressData);
-  	            
-  	            const iso27001Progress = progressData.moduleProgress.iso27001 || {
-  	                progressPercentage: 0,
-  	                completedLessons: [],
-  	                totalLessons: 4
+  	            const dataProtectionProgress = progressData.moduleProgress['data-protection'] || { 
+  	                progressPercentage: 0, 
+  	                completedLessons: [], 
+  	                totalLessons: 7 
   	            };
   	            
-  	            console.log('ISO27001 specific progress:', iso27001Progress);
-  	            
   	            // Update progress display
-  	            updateProgressDisplay(iso27001Progress);
-  	            updateIconsFromProgress(iso27001Progress);
+  	            updateProgressDisplay(dataProtectionProgress);
+  	            updateIconsFromProgress(dataProtectionProgress);
   	            
   	        } catch (error) {
   	            console.error('Error loading user progress:', error);
@@ -278,64 +419,59 @@
   	    }
   	    
   	    // Function to update progress display
-  	    function updateProgressDisplay(iso27001Progress) {
+  	    function updateProgressDisplay(dataProtectionProgress) {
   	        // Update progress percentage text
   	        const completeElement = document.querySelector('.complete');
   	        if (completeElement) {
-  	            completeElement.textContent = `${iso27001Progress.progressPercentage}% Complete`;
+  	            completeElement.textContent = `${dataProtectionProgress.progressPercentage}% Complete`;
   	        }
   	        
   	        // Update lesson counter
   	        const lessonsElement = document.querySelector('.lessons');
   	        if (lessonsElement) {
-  	            lessonsElement.textContent = `${iso27001Progress.completedLessons.length}/${iso27001Progress.totalLessons}`;
+  	            lessonsElement.textContent = `${dataProtectionProgress.completedLessons.length}/${dataProtectionProgress.totalLessons}`;
   	        }
   	        
   	        // Update progress bar width
   	        const progressBar = document.querySelector('.on-click-module-inner');
   	        if (progressBar) {
   	            const maxWidth = 329; // Same as background progress bar
-  	            const newWidth = (iso27001Progress.progressPercentage / 100) * maxWidth;
+  	            const newWidth = (dataProtectionProgress.progressPercentage / 100) * maxWidth;
   	            progressBar.style.width = `${newWidth}px`;
   	        }
   	    }
   	    
   	    // Function to update icons based on progress
-  	    function updateIconsFromProgress(iso27001Progress) {
-  	        // Add debugging
-  	        console.log('ISO27001 Progress Data:', iso27001Progress);
-  	        console.log('Completed Lessons:', iso27001Progress.completedLessons);
-  	        
+  	    function updateIconsFromProgress(dataProtectionProgress) {
   	        const lessonMapping = {
-  	            'organizational-controls': 1,  // Fixed to match actual lesson ID
-  	            'people-controls': 2,
-  	            'physical-controls': 3,
-  	            'technological-controls': 4
+  	            'data-classification': 1,
+  	            'data-encryption': 2,
+  	            'data-backup': 3,
+  	            'access-controls': 4,
+  	            'data-sharing': 5,
+  	            'data-disposal': 6,
+  	            'compliance': 7
   	        };
   	        
-  	        const completedLessons = iso27001Progress.completedLessons || [];
+  	        const completedLessons = dataProtectionProgress.completedLessons || [];
   	        
   	        // Find next available lesson
   	        let nextAvailableLesson = 1;
-  	        for (let i = 1; i <= 4; i++) {
+  	        for (let i = 1; i <= 7; i++) {
   	            const lessonId = Object.keys(lessonMapping).find(key => lessonMapping[key] === i);
   	            if (!completedLessons.includes(lessonId)) {
   	                nextAvailableLesson = i;
   	                break;
   	            }
-  	            if (i === 4 && completedLessons.includes(lessonId)) {
-  	                nextAvailableLesson = 5; // All completed
+  	            if (i === 7 && completedLessons.includes(lessonId)) {
+  	                nextAvailableLesson = 8; // All completed
   	            }
   	        }
   	        
-  	        console.log('Next available lesson:', nextAvailableLesson);
-  	        
   	        // Update lesson icons and click handlers
-  	        for (let i = 1; i <= 4; i++) {
+  	        for (let i = 1; i <= 7; i++) {
   	            const lessonId = Object.keys(lessonMapping).find(key => lessonMapping[key] === i);
   	            const lessonElement = document.getElementById(`lesson${i}`);
-  	            
-  	            console.log(`Lesson ${i} (${lessonId}): completed=${completedLessons.includes(lessonId)}, isNext=${i === nextAvailableLesson}`);
   	            
   	            if (completedLessons.includes(lessonId)) {
   	                // Completed lesson - green checkmark
@@ -369,6 +505,12 @@
   	            iconElement = document.querySelector('.lock-icon1');
   	        } else if (lessonNumber === 4) {
   	            iconElement = document.querySelector('.lock-icon2');
+  	        } else if (lessonNumber === 5) {
+  	            iconElement = document.querySelector('.lock-icon3');
+  	        } else if (lessonNumber === 6) {
+  	            iconElement = document.querySelector('.lock-icon4');
+  	        } else if (lessonNumber === 7) {
+  	            iconElement = document.querySelector('.lock-icon5');
   	        }
   	        
   	        if (iconElement) {
@@ -378,10 +520,13 @@
   	    
   	    function navigateToLesson(lessonId) {
   	        const lessonUrls = {
-  	            'organizational-controls': '/html/materials/organizational-controls-lesson.html',
-  	            'people-controls': '/html/materials/people-controls-lesson.html',
-  	            'physical-controls': '/html/materials/physical-controls-lesson.html',
-  	            'technological-controls': '/html/materials/technological-controls-lesson.html'
+  	            'data-classification': '/html/materials/data-classification-lesson.html',
+  	            'data-encryption': '/html/materials/data-encryption-lesson.html',
+  	            'data-backup': '/html/materials/data-backup-lesson.html',
+  	            'access-controls': '/html/materials/access-controls-lesson.html',
+  	            'data-sharing': '/html/materials/data-sharing-lesson.html',
+  	            'data-disposal': '/html/materials/data-disposal-lesson.html',
+  	            'compliance': '/html/materials/compliance-lesson.html'
   	        };
   	        
   	        window.location.href = lessonUrls[lessonId];
@@ -410,7 +555,9 @@
   	            1: { title: '.password-security1', label: '.lesson', iconBg: '.ellipse-div', icon: '.check-ring-icon' },
   	            2: { title: '.common-password-mistakes', label: '.lesson1', iconBg: '.on-click-module-child3', icon: '.lock-icon' },
   	            3: { title: '.password-strength-quiz', label: '.quiz', iconBg: '.on-click-module-child5', icon: '.lock-icon1' },
-  	            4: { title: '.password-managers', label: '.lesson2', iconBg: '.on-click-module-child7', icon: '.lock-icon2' }
+  	            4: { title: '.password-managers', label: '.lesson2', iconBg: '.on-click-module-child7', icon: '.lock-icon2' },
+  	            5: { title: '.creating-strong-passwords', label: '.lesson3', iconBg: '.on-click-module-child9', icon: '.lock-icon3' },
+  	            6: { title: '.password-security2', label: '.lesson4', iconBg: '.on-click-module-child11', icon: '.lock-icon4' }
   	        };
   	        
   	        const mapping = lessonMappings[lessonNumber];
@@ -442,4 +589,4 @@
   	    }
   	</script>
 </body>
-</html>
+</html> 

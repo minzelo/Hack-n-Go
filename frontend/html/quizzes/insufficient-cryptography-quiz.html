@@ -3,11 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    
     <link rel="stylesheet" href="/html/css/on-start-quiz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
-    
-    <title>Improper Credential Usage Quiz - HacknGo</title>
+    <title>Insufficient Cryptography Quiz - HacknGo</title>
     <style>
         /* Fix title to be one line */
         .password-security-quiz {
@@ -128,7 +126,7 @@
             <img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
             
             <!-- Quiz Header -->
-            <b class="password-security-quiz" id="quizTitle">Improper Credential Usage Quiz</b>
+            <b class="password-security-quiz" id="quizTitle">Insufficient Cryptography Quiz</b>
             <b class="b" id="questionCounter">1/10</b>
             <div class="rectangle-div"></div>
             <div class="ellipse-div"></div>
@@ -228,110 +226,110 @@
         // Initialize sound effects
         const soundEffects = new SoundEffects();
         
-        // Quiz data for Improper Credential Usage
+        // Quiz data for Insufficient Cryptography
         const quizData = {
-            id: "improper-credential-usage",
-            title: "Improper Credential Usage",
+            id: "insufficient-cryptography",
+            title: "Insufficient Cryptography",
             questions: [
                 {
-                    question: "What is meant by \"improper Credential Usage\"?",
+                    question: "What is insufficient cryptography?",
                     options: [
-                        "Using encryption to store data",
-                        "Using default or easily guessable credentials",
-                        "Using strong and unique credentials",
-                        "Using multi-factor authentication"
+                        "Using too many encryption algorithms",
+                        "Using weak or poorly implemented encryption",
+                        "Using encryption for everything",
+                        "Using expensive encryption tools"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why is using passwords like \"123456\" risky?",
+                    question: "Which of these is considered a weak encryption algorithm?",
                     options: [
-                        "Too long",
-                        "Hard to remember",
-                        "Cannot be used on all sites",
-                        "Easily guessed by attackers"
-                    ],
-                    answer: 3
-                },
-                {
-                    question: "What is \"credential stuffing\"?",
-                    options: [
-                        "Storing credentials in a secure place",
-                        "Filling registration forms with fake data",
-                        "Testing combinations of stolen usernames and passwords",
-                        "Using the same credentials on many sites"
+                        "AES-256",
+                        "RSA-2048",
+                        "DES",
+                        "ChaCha20"
                     ],
                     answer: 2
                 },
                 {
-                    question: "How can you protect accounts from brute force attacks?",
+                    question: "What is the main problem with MD5 hashing?",
                     options: [
-                        "Using two-factor authentication (2FA)",
-                        "Using the same password for all accounts",
-                        "Disabling two-factor authentication",
-                        "Avoiding the use of passwords"
+                        "It's too slow",
+                        "It's vulnerable to collision attacks",
+                        "It uses too much memory",
+                        "It's not supported by browsers"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Why should you avoid creating your own encryption algorithms?",
+                    options: [
+                        "They are likely to have security flaws",
+                        "They are always slower",
+                        "They cost too much",
+                        "They are illegal"
                     ],
                     answer: 0
                 },
                 {
-                    question: "What is the risk of using default credentials on devices or applications?",
+                    question: "What is the recommended minimum key size for RSA encryption today?",
                     options: [
-                        "No risk",
-                        "Makes access easier for attackers",
-                        "Increases security",
-                        "Reduces training needs"
+                        "512 bits",
+                        "1024 bits",
+                        "2048 bits",
+                        "256 bits"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "What is a cryptographic salt used for?",
+                    options: [
+                        "Making passwords taste better",
+                        "Preventing rainbow table attacks",
+                        "Encrypting network traffic",
+                        "Generating random numbers"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why is it important to change passwords regularly?",
+                    question: "Which practice makes encryption ineffective?",
                     options: [
-                        "To make it harder for attackers to guess passwords",
-                        "To follow technology trends",
-                        "Not important",
-                        "To avoid forgetting passwords"
-                    ],
-                    answer: 0
-                },
-                {
-                    question: "What is a password manager?",
-                    options: [
-                        "A service to share passwords",
-                        "A program to hack passwords",
-                        "A tool to create and store strong passwords",
-                        "A system to delete passwords"
+                        "Using strong algorithms",
+                        "Storing encryption keys securely",
+                        "Hardcoding encryption keys in source code",
+                        "Using different keys for different data"
                     ],
                     answer: 2
                 },
                 {
-                    question: "What should you do if you suspect your account has been hacked?",
+                    question: "What is the purpose of using HTTPS?",
                     options: [
-                        "Create a new account",
-                        "Change password and enable 2FA",
-                        "Ignore it",
-                        "Disable the account"
+                        "To make websites load faster",
+                        "To encrypt data in transit",
+                        "To improve SEO rankings",
+                        "To reduce server costs"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is Two Factor Authentication (2FA)?",
+                    question: "What makes a cryptographic key strong?",
                     options: [
-                        "Using a long password",
-                        "Using two different passwords",
-                        "Using three verification methods to log in",
-                        "Combining username and password"
+                        "It contains only numbers",
+                        "It's easy to remember",
+                        "It has sufficient length and randomness",
+                        "It's based on personal information"
                     ],
                     answer: 2
                 },
                 {
-                    question: "Why is it not recommended to use the same password for multiple accounts?",
+                    question: "What should you do when a cryptographic standard becomes deprecated?",
                     options: [
-                        "No specific reason",
-                        "Reduces security risks",
-                        "If one account is hacked, other accounts are also at risk",
-                        "Makes account management easier"
+                        "Continue using it since it still works",
+                        "Migrate to newer, secure standards",
+                        "Use it only for non-critical data",
+                        "Add extra layers of the same encryption"
                     ],
-                    answer: 2
+                    answer: 1
                 }
             ]
         };

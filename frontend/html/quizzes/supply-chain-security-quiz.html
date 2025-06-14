@@ -3,11 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    
     <link rel="stylesheet" href="/html/css/on-start-quiz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
-    
-    <title>Improper Credential Usage Quiz - HacknGo</title>
+    <title>Supply Chain Security Quiz - HacknGo</title>
     <style>
         /* Fix title to be one line */
         .password-security-quiz {
@@ -128,7 +126,7 @@
             <img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
             
             <!-- Quiz Header -->
-            <b class="password-security-quiz" id="quizTitle">Improper Credential Usage Quiz</b>
+            <b class="password-security-quiz" id="quizTitle">Supply Chain Security Quiz</b>
             <b class="b" id="questionCounter">1/10</b>
             <div class="rectangle-div"></div>
             <div class="ellipse-div"></div>
@@ -228,110 +226,110 @@
         // Initialize sound effects
         const soundEffects = new SoundEffects();
         
-        // Quiz data for Improper Credential Usage
+        // Quiz data for Supply Chain Security
         const quizData = {
-            id: "improper-credential-usage",
-            title: "Improper Credential Usage",
+            id: "supply-chain-security",
+            title: "Supply Chain Security",
             questions: [
                 {
-                    question: "What is meant by \"improper Credential Usage\"?",
+                    question: "What is supply chain security in software development?",
                     options: [
-                        "Using encryption to store data",
-                        "Using default or easily guessable credentials",
-                        "Using strong and unique credentials",
-                        "Using multi-factor authentication"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "Why is using passwords like \"123456\" risky?",
-                    options: [
-                        "Too long",
-                        "Hard to remember",
-                        "Cannot be used on all sites",
-                        "Easily guessed by attackers"
-                    ],
-                    answer: 3
-                },
-                {
-                    question: "What is \"credential stuffing\"?",
-                    options: [
-                        "Storing credentials in a secure place",
-                        "Filling registration forms with fake data",
-                        "Testing combinations of stolen usernames and passwords",
-                        "Using the same credentials on many sites"
+                        "Organizing development teams",
+                        "Managing physical delivery of products",
+                        "Securing all components and dependencies in software",
+                        "Marketing software products"
                     ],
                     answer: 2
                 },
                 {
-                    question: "How can you protect accounts from brute force attacks?",
+                    question: "What is a common risk of using third-party libraries?",
                     options: [
-                        "Using two-factor authentication (2FA)",
-                        "Using the same password for all accounts",
-                        "Disabling two-factor authentication",
-                        "Avoiding the use of passwords"
+                        "They may contain vulnerabilities or malicious code",
+                        "They make code run slower",
+                        "They are always expensive",
+                        "They require special licenses"
                     ],
                     answer: 0
                 },
                 {
-                    question: "What is the risk of using default credentials on devices or applications?",
+                    question: "What should you do before using a third-party dependency?",
                     options: [
-                        "No risk",
-                        "Makes access easier for attackers",
-                        "Increases security",
-                        "Reduces training needs"
+                        "Use it immediately without checking",
+                        "Only use it in production",
+                        "Verify its authenticity and security",
+                        "Ignore its documentation"
                     ],
-                    answer: 1
+                    answer: 2
                 },
                 {
-                    question: "Why is it important to change passwords regularly?",
+                    question: "What is dependency confusion attack?",
                     options: [
-                        "To make it harder for attackers to guess passwords",
-                        "To follow technology trends",
-                        "Not important",
-                        "To avoid forgetting passwords"
+                        "When attackers upload malicious packages with similar names",
+                        "When developers don't understand dependencies",
+                        "When dependencies have poor documentation",
+                        "When there are too many dependencies"
                     ],
                     answer: 0
                 },
                 {
-                    question: "What is a password manager?",
+                    question: "Why is it important to regularly update dependencies?",
                     options: [
-                        "A service to share passwords",
-                        "A program to hack passwords",
-                        "A tool to create and store strong passwords",
-                        "A system to delete passwords"
+                        "To get new features only",
+                        "To make the code longer",
+                        "To fix security vulnerabilities and bugs",
+                        "To increase file size"
                     ],
                     answer: 2
                 },
                 {
-                    question: "What should you do if you suspect your account has been hacked?",
+                    question: "What is software composition analysis (SCA)?",
                     options: [
-                        "Create a new account",
-                        "Change password and enable 2FA",
-                        "Ignore it",
-                        "Disable the account"
+                        "A method to identify security risks in dependencies",
+                        "A tool to analyze code performance",
+                        "A way to compress software",
+                        "A design pattern"
+                    ],
+                    answer: 0
+                },
+                {
+                    question: "What should you check in a package before using it?",
+                    options: [
+                        "Only the file size",
+                        "Just the name",
+                        "Maintainer reputation, security history, and reviews",
+                        "Only the download count"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "What is typosquatting in the context of packages?",
+                    options: [
+                        "Writing documentation",
+                        "Creating packages with names similar to popular ones",
+                        "Fixing typing errors in code",
+                        "Testing software"
                     ],
                     answer: 1
                 },
                 {
-                    question: "What is Two Factor Authentication (2FA)?",
+                    question: "How can you verify package integrity?",
                     options: [
-                        "Using a long password",
-                        "Using two different passwords",
-                        "Using three verification methods to log in",
-                        "Combining username and password"
+                        "By checking file size only",
+                        "By reading reviews only",
+                        "Using cryptographic checksums and signatures",
+                        "By checking the package name"
                     ],
                     answer: 2
                 },
                 {
-                    question: "Why is it not recommended to use the same password for multiple accounts?",
+                    question: "What is the principle of least privilege in dependency management?",
                     options: [
-                        "No specific reason",
-                        "Reduces security risks",
-                        "If one account is hacked, other accounts are also at risk",
-                        "Makes account management easier"
+                        "Only giving dependencies the minimum permissions needed",
+                        "Using the most popular packages",
+                        "Installing all available packages",
+                        "Using the newest versions always"
                     ],
-                    answer: 2
+                    answer: 0
                 }
             ]
         };

@@ -98,29 +98,61 @@
     "username": "poo",
     "email": "pee@poo.com",
     "password": "$2b$10$ZlkrvkVYa.6dQDLIM5f4SuoU8FbZI0fq5BYKDGgXhAdOsPN7KNHOy",
-    "xp": 0,
-    "streak": 0,
+    "xp": 400,
+    "streak": 1,
     "completedLessons": [],
     "completedQuizzes": [],
     "achievements": [],
     "moduleProgress": {
       "owasp": {
-        "completedLessons": [],
+        "completedLessons": [
+          "improper-credential-usage",
+          "inadequate-supply-chain-security"
+        ],
         "totalLessons": 10,
-        "progressPercentage": 0
+        "progressPercentage": 20
       },
       "iso27001": {
         "completedLessons": [],
         "totalLessons": 4,
         "progressPercentage": 0
+      },
+      "password-security": {
+        "completedLessons": [],
+        "totalLessons": 5,
+        "progressPercentage": 0
+      },
+      "data-protection": {
+        "completedLessons": [],
+        "totalLessons": 7,
+        "progressPercentage": 0
+      },
+      "two-factor-authentication": {
+        "completedLessons": [],
+        "totalLessons": 4,
+        "progressPercentage": 0
+      },
+      "phishing-awareness": {
+        "completedLessons": [
+          "what-is-phishing",
+          "types-of-phishing",
+          "email-phishing",
+          "social-media-phishing",
+          "sms-phishing",
+          "prevention-strategies"
+        ],
+        "totalLessons": 6,
+        "progressPercentage": 100
       }
-    }
+    },
+    "lastActivityDate": "2025-06-14",
+    "lastActivity": "2025-06-14T16:39:41.107Z"
   },
   {
     "username": "test",
     "email": "test@test.com",
     "password": "$2b$10$AdJD0sNECqneaDP0wYPsseDjN/OTPMGSOO0gx6EdQPkIT36zDMEaq",
-    "xp": 0,
+    "xp": 1800,
     "streak": 0,
     "completedLessons": [],
     "completedQuizzes": [],
@@ -128,14 +160,76 @@
     "createdAt": "2025-05-25T10:50:15.083Z",
     "moduleProgress": {
       "owasp": {
-        "completedLessons": [],
+        "completedLessons": [
+          "improper-credential-usage",
+          "inadequate-supply-chain-security",
+          "insecure-authentication-authorization",
+          "insufficient-io-validation",
+          "insecure-communication",
+          "inadequate-privacy-controls",
+          "insufficient-binary-protections",
+          "security-misconfiguration",
+          "insecure-data-storage",
+          "insufficient-cryptography"
+        ],
         "totalLessons": 10,
-        "progressPercentage": 0
+        "progressPercentage": 100
       },
       "iso27001": {
-        "completedLessons": [],
+        "completedLessons": [
+          "organizational-controls",
+          "people-controls",
+          "physical-controls",
+          "technological-controls"
+        ],
         "totalLessons": 4,
-        "progressPercentage": 0
+        "progressPercentage": 100
+      },
+      "password-security": {
+        "completedLessons": [
+          "password-fundamentals",
+          "common-password-mistakes",
+          "creating-strong-passwords",
+          "password-managers",
+          "password-best-practices"
+        ],
+        "totalLessons": 5,
+        "progressPercentage": 100
+      },
+      "data-protection": {
+        "completedLessons": [
+          "data-classification",
+          "data-encryption",
+          "data-backup",
+          "access-controls",
+          "data-sharing",
+          "data-disposal",
+          "compliance"
+        ],
+        "totalLessons": 7,
+        "progressPercentage": 100
+      },
+      "two-factor-authentication": {
+        "completedLessons": [
+          "what-is-2fa",
+          "types-of-2fa",
+          "setting-up-2fa",
+          "2fa-best-practices"
+        ],
+        "totalLessons": 4,
+        "progressPercentage": 100
+      },
+      "phishing-awareness": {
+        "completedLessons": [
+          "what-is-phishing",
+          "types-of-phishing",
+          "email-phishing",
+          "social-media-phishing",
+          "sms-phishing",
+          "prevention-strategies"
+        ],
+        "totalLessons": 6,
+        "progressPercentage": 100
       }
     }
   },

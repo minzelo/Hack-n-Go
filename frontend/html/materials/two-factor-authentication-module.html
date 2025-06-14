@@ -7,15 +7,9 @@
   	<link rel="stylesheet" href="/html/css/on-click-module.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
   	
-  	<title>ISO/IEC 27001 - HacknGo</title>
+  	<title>Two-Factor Authentication - HacknGo</title>
   	
   	<style>
-  	    /* More aggressive CSS resets and overrides */
-  	    .on-click-module div[class^="on-click-module-child"] {
-  	        margin: 0 !important;
-  	        padding: 0 !important;
-  	    }
-  	    
   	    /* Change blue/colored icon backgrounds to light green */
   	    .ellipse-div,
   	    .on-click-module-child3,
@@ -40,46 +34,37 @@
   	    .next-available-lesson {
   	        border: 2px solid #06AD0B !important;
   	        border-radius: 10px !important;
-  	        transform: translateY(-2px) !important; /* Move up 2px to fix spacing */
   	    }
   	    
-  	    /* Clean lesson layout - remove manual positioning like OWASP */
-  	    .on-click-module .on-click-module-child1,
-  	    .on-click-module .on-click-module-child2,
-  	    .on-click-module .on-click-module-child4,
-  	    .on-click-module .on-click-module-child6 {
-  	        margin-bottom: 40px !important;
-  	    }
+  	    /* Spacing between lessons - match OWASP layout */
+  	    .on-click-module-child1 { top: 150px !important; }
+  	    .on-click-module-child2 { top: 215px !important; }
+  	    .on-click-module-child4 { top: 280px !important; }
+  	    .on-click-module-child6 { top: 345px !important; }
   	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP spacing values */
-  	    .on-click-module .on-click-module-child1 { top: 150px !important; }
-  	    .on-click-module .on-click-module-child2 { top: 215px !important; }
-  	    .on-click-module .on-click-module-child4 { top: 280px !important; }
-  	    .on-click-module .on-click-module-child6 { top: 345px !important; }
+  	    /* Adjust lesson titles to match new box positions */
+  	    .password-security1 { top: 162px !important; } /* Lesson 1 title: box + 12px */
+  	    .common-password-mistakes { top: 227px !important; } /* Lesson 2 title: box + 12px */
+  	    .password-strength-quiz { top: 292px !important; } /* Lesson 3 title: box + 12px */
+  	    .password-managers { top: 357px !important; } /* Lesson 4 title: box + 12px */
   	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP title positions */
-  	    .on-click-module .password-security1 { top: 162px !important; } /* Lesson 1 title: box + 12px */
-  	    .on-click-module .common-password-mistakes { top: 227px !important; } /* Lesson 2 title: box + 12px */
-  	    .on-click-module .password-strength-quiz { top: 292px !important; } /* Lesson 3 title: box + 12px */
-  	    .on-click-module .password-managers { top: 357px !important; } /* Lesson 4 title: box + 12px */
+  	    /* Adjust "Lesson" labels to match new box positions */
+  	    .lesson { top: 179px !important; } /* Lesson 1 label: box + 29px */
+  	    .lesson1 { top: 244px !important; } /* Lesson 2 label: box + 29px */
+  	    .quiz { top: 309px !important; } /* Lesson 3 label: box + 29px */
+  	    .lesson2 { top: 374px !important; } /* Lesson 4 label: box + 29px */
   	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP lesson label positions */
-  	    .on-click-module .lesson { top: 179px !important; } /* Lesson 1 label: box + 29px */
-  	    .on-click-module .lesson1 { top: 244px !important; } /* Lesson 2 label: box + 29px */
-  	    .on-click-module .quiz { top: 309px !important; } /* Lesson 3 label: box + 29px */
-  	    .on-click-module .lesson2 { top: 374px !important; } /* Lesson 4 label: box + 29px */
+  	    /* Adjust icon backgrounds to match new box positions */
+  	    .ellipse-div { top: 165px !important; } /* Lesson 1 icon bg: box + 15px */
+  	    .on-click-module-child3 { top: 230px !important; } /* Lesson 2 icon bg: box + 15px */
+  	    .on-click-module-child5 { top: 295px !important; } /* Lesson 3 icon bg: box + 15px */
+  	    .on-click-module-child7 { top: 360px !important; } /* Lesson 4 icon bg: box + 15px */
   	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP icon background positions */
-  	    .on-click-module .ellipse-div { top: 165px !important; } /* Lesson 1 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child3 { top: 230px !important; } /* Lesson 2 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child5 { top: 295px !important; } /* Lesson 3 icon bg: box + 15px */
-  	    .on-click-module .on-click-module-child7 { top: 360px !important; } /* Lesson 4 icon bg: box + 15px */
-  	    
-  	    /* HIGH SPECIFICITY - EXACT OWASP icon positions */
-  	    .on-click-module .check-ring-icon { top: 168px !important; } /* Lesson 1 icon: box + 18px */
-  	    .on-click-module .lock-icon { top: 233px !important; } /* Lesson 2 icon: box + 18px */
-  	    .on-click-module .lock-icon1 { top: 298px !important; } /* Lesson 3 icon: box + 18px */
-  	    .on-click-module .lock-icon2 { top: 363px !important; } /* Lesson 4 icon: box + 18px */
+  	    /* Adjust icons to match new positions */
+  	    .check-ring-icon { top: 168px !important; } /* Lesson 1 icon: box + 18px */
+  	    .lock-icon { top: 233px !important; } /* Lesson 2 icon: box + 18px */
+  	    .lock-icon1 { top: 298px !important; } /* Lesson 3 icon: box + 18px */
+  	    .lock-icon2 { top: 363px !important; } /* Lesson 4 icon: box + 18px */
   	    
   	    /* Improved hitbox styling - make all lesson elements clickable */
   	    .lesson-clickable {
@@ -153,7 +138,7 @@
     		</div>
     		<div class="complete">0% Complete</div>
     		<div class="lessons">0/4</div>
-    		<div class="learn-how-to">Learn about information security management systems (ISMS)</div>
+    		<div class="learn-how-to">Add an extra layer of security to your accounts</div>
     		<div class="rectangle-div">
     		</div>
     		<div class="home">Home</div>
@@ -171,10 +156,10 @@
     		
     		<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
     		
-    		<b class="password-security">ISO/IEC 27001</b>
+    		<b class="password-security">Two-Factor Authentication</b>
     		<div class="on-click-module-child1" id="lesson1">
     		</div>
-    		<b class="password-security1">Organizational Controls</b>
+    		<b class="password-security1">What is 2FA?</b>
     		<div class="lesson">Lesson</div>
     		<div class="ellipse-div">
     		</div>
@@ -182,7 +167,7 @@
     		
     		<div class="on-click-module-child2" id="lesson2">
     		</div>
-    		<b class="common-password-mistakes">People Controls</b>
+    		<b class="common-password-mistakes">Types of 2FA</b>
     		<div class="lesson1">Lesson</div>
     		<div class="on-click-module-child3">
     		</div>
@@ -190,7 +175,7 @@
     		
     		<div class="on-click-module-child4" id="lesson3">
     		</div>
-    		<b class="password-strength-quiz">Physical Controls</b>
+    		<b class="password-strength-quiz">Setting Up 2FA</b>
     		<div class="quiz">Lesson</div>
     		<div class="on-click-module-child5">
     		</div>
@@ -198,7 +183,7 @@
     		
     		<div class="on-click-module-child6" id="lesson4">
     		</div>
-    		<b class="password-managers">Technological Controls</b>
+    		<b class="password-managers">2FA Best Practices</b>
     		<div class="lesson2">Lesson</div>
     		<div class="on-click-module-child7">
     		</div>
@@ -258,19 +243,11 @@
   	            }
   	            
   	            const progressData = await response.json();
-  	            console.log('Full progress data from backend:', progressData);
-  	            
-  	            const iso27001Progress = progressData.moduleProgress.iso27001 || {
-  	                progressPercentage: 0,
-  	                completedLessons: [],
-  	                totalLessons: 4
-  	            };
-  	            
-  	            console.log('ISO27001 specific progress:', iso27001Progress);
+  	            const tfaProgress = progressData.moduleProgress['two-factor-authentication'] || { progressPercentage: 0, completedLessons: [], totalLessons: 4 };
   	            
   	            // Update progress display
-  	            updateProgressDisplay(iso27001Progress);
-  	            updateIconsFromProgress(iso27001Progress);
+  	            updateProgressDisplay(tfaProgress);
+  	            updateIconsFromProgress(tfaProgress);
   	            
   	        } catch (error) {
   	            console.error('Error loading user progress:', error);
@@ -278,42 +255,38 @@
   	    }
   	    
   	    // Function to update progress display
-  	    function updateProgressDisplay(iso27001Progress) {
+  	    function updateProgressDisplay(tfaProgress) {
   	        // Update progress percentage text
   	        const completeElement = document.querySelector('.complete');
   	        if (completeElement) {
-  	            completeElement.textContent = `${iso27001Progress.progressPercentage}% Complete`;
+  	            completeElement.textContent = `${tfaProgress.progressPercentage}% Complete`;
   	        }
   	        
   	        // Update lesson counter
   	        const lessonsElement = document.querySelector('.lessons');
   	        if (lessonsElement) {
-  	            lessonsElement.textContent = `${iso27001Progress.completedLessons.length}/${iso27001Progress.totalLessons}`;
+  	            lessonsElement.textContent = `${tfaProgress.completedLessons.length}/${tfaProgress.totalLessons}`;
   	        }
   	        
   	        // Update progress bar width
   	        const progressBar = document.querySelector('.on-click-module-inner');
   	        if (progressBar) {
   	            const maxWidth = 329; // Same as background progress bar
-  	            const newWidth = (iso27001Progress.progressPercentage / 100) * maxWidth;
+  	            const newWidth = (tfaProgress.progressPercentage / 100) * maxWidth;
   	            progressBar.style.width = `${newWidth}px`;
   	        }
   	    }
   	    
   	    // Function to update icons based on progress
-  	    function updateIconsFromProgress(iso27001Progress) {
-  	        // Add debugging
-  	        console.log('ISO27001 Progress Data:', iso27001Progress);
-  	        console.log('Completed Lessons:', iso27001Progress.completedLessons);
-  	        
+  	    function updateIconsFromProgress(tfaProgress) {
   	        const lessonMapping = {
-  	            'organizational-controls': 1,  // Fixed to match actual lesson ID
-  	            'people-controls': 2,
-  	            'physical-controls': 3,
-  	            'technological-controls': 4
+  	            'what-is-2fa': 1,
+  	            'types-of-2fa': 2,
+  	            'setting-up-2fa': 3,
+  	            '2fa-best-practices': 4
   	        };
   	        
-  	        const completedLessons = iso27001Progress.completedLessons || [];
+  	        const completedLessons = tfaProgress.completedLessons || [];
   	        
   	        // Find next available lesson
   	        let nextAvailableLesson = 1;
@@ -328,14 +301,10 @@
   	            }
   	        }
   	        
-  	        console.log('Next available lesson:', nextAvailableLesson);
-  	        
   	        // Update lesson icons and click handlers
   	        for (let i = 1; i <= 4; i++) {
   	            const lessonId = Object.keys(lessonMapping).find(key => lessonMapping[key] === i);
   	            const lessonElement = document.getElementById(`lesson${i}`);
-  	            
-  	            console.log(`Lesson ${i} (${lessonId}): completed=${completedLessons.includes(lessonId)}, isNext=${i === nextAvailableLesson}`);
   	            
   	            if (completedLessons.includes(lessonId)) {
   	                // Completed lesson - green checkmark
@@ -352,9 +321,9 @@
   	            } else {
   	                // Locked lesson - grey lock
   	                updateLessonIcon(i, '/html/icons/Group 8grey.svg');
-  	                setLessonCursor(i, 'not-allowed', false);
+  	                lessonElement.style.cursor = 'not-allowed';
   	                lessonElement.classList.remove('next-available-lesson');
-  	                addLessonClickHandlers(i, () => showLockedMessage());
+  	                lessonElement.onclick = () => showLockedMessage();
   	            }
   	        }
   	    }
@@ -378,10 +347,10 @@
   	    
   	    function navigateToLesson(lessonId) {
   	        const lessonUrls = {
-  	            'organizational-controls': '/html/materials/organizational-controls-lesson.html',
-  	            'people-controls': '/html/materials/people-controls-lesson.html',
-  	            'physical-controls': '/html/materials/physical-controls-lesson.html',
-  	            'technological-controls': '/html/materials/technological-controls-lesson.html'
+  	            'what-is-2fa': '/html/materials/what-is-2fa-lesson.html',
+  	            'types-of-2fa': '/html/materials/types-of-2fa-lesson.html',
+  	            'setting-up-2fa': '/html/materials/setting-up-2fa-lesson.html',
+  	            '2fa-best-practices': '/html/materials/2fa-best-practices-lesson.html'
   	        };
   	        
   	        window.location.href = lessonUrls[lessonId];
@@ -393,7 +362,10 @@
   	    
   	    // Function to add click handlers to all lesson elements
   	    function addLessonClickHandlers(lessonNumber, clickHandler) {
+  	        // Get all elements for this lesson
   	        const elements = getLessonElements(lessonNumber);
+  	        
+  	        // Add click handler to all elements
   	        elements.forEach(element => {
   	            if (element) {
   	                element.addEventListener('click', clickHandler);
@@ -404,21 +376,30 @@
   	    // Function to get all clickable elements for a lesson
   	    function getLessonElements(lessonNumber) {
   	        const elements = [];
+  	        
+  	        // Add lesson box
   	        elements.push(document.getElementById(`lesson${lessonNumber}`));
   	        
-  	        const lessonMappings = {
-  	            1: { title: '.password-security1', label: '.lesson', iconBg: '.ellipse-div', icon: '.check-ring-icon' },
-  	            2: { title: '.common-password-mistakes', label: '.lesson1', iconBg: '.on-click-module-child3', icon: '.lock-icon' },
-  	            3: { title: '.password-strength-quiz', label: '.quiz', iconBg: '.on-click-module-child5', icon: '.lock-icon1' },
-  	            4: { title: '.password-managers', label: '.lesson2', iconBg: '.on-click-module-child7', icon: '.lock-icon2' }
-  	        };
-  	        
-  	        const mapping = lessonMappings[lessonNumber];
-  	        if (mapping) {
-  	            elements.push(document.querySelector(mapping.title));
-  	            elements.push(document.querySelector(mapping.label));
-  	            elements.push(document.querySelector(mapping.iconBg));
-  	            elements.push(document.querySelector(mapping.icon));
+  	        if (lessonNumber === 1) {
+  	            elements.push(document.querySelector('.password-security1')); // title
+  	            elements.push(document.querySelector('.lesson')); // label
+  	            elements.push(document.querySelector('.ellipse-div')); // icon background
+  	            elements.push(document.querySelector('.check-ring-icon')); // icon
+  	        } else if (lessonNumber === 2) {
+  	            elements.push(document.querySelector('.common-password-mistakes')); // title
+  	            elements.push(document.querySelector('.lesson1')); // label
+  	            elements.push(document.querySelector('.on-click-module-child3')); // icon background
+  	            elements.push(document.querySelector('.lock-icon')); // icon
+  	        } else if (lessonNumber === 3) {
+  	            elements.push(document.querySelector('.password-strength-quiz')); // title
+  	            elements.push(document.querySelector('.quiz')); // label
+  	            elements.push(document.querySelector('.on-click-module-child5')); // icon background
+  	            elements.push(document.querySelector('.lock-icon1')); // icon
+  	        } else if (lessonNumber === 4) {
+  	            elements.push(document.querySelector('.password-managers')); // title
+  	            elements.push(document.querySelector('.lesson2')); // label
+  	            elements.push(document.querySelector('.on-click-module-child7')); // icon background
+  	            elements.push(document.querySelector('.lock-icon2')); // icon
   	        }
   	        
   	        return elements.filter(el => el !== null);
@@ -442,4 +423,4 @@
   	    }
   	</script>
 </body>
-</html>
+</html> 

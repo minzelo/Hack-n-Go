@@ -37,7 +37,7 @@ body {
 }
 .on-click-lesson-item {
   	position: absolute;
-  	top: 680px;
+  	top: 685px;
   	left: 42px;
   	border-radius: 10px;
   	background-color: #151628;
@@ -48,7 +48,7 @@ body {
 }
 .on-click-lesson-inner {
   	position: absolute;
-  	top: 680px;
+  	top: 685px;
   	left: 232px;
   	border-radius: 10px;
   	background-color: #0418f4;
@@ -58,9 +58,19 @@ body {
   	height: 37px;
   	cursor: pointer;
 }
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 32px;
+    position: absolute;
+    top: 810px;
+    left: 42px;
+    width: 319px;
+}
 .back-to-module {
   	position: absolute;
-  	top: 691px;
+  	top: 696px;
   	left: 63px;
   	display: inline-block;
   	color: #fff;
@@ -70,9 +80,8 @@ body {
 }
 .mark-as-complete {
   	position: absolute;
-  	top: 691px;
+  	top: 696px;
   	left: 244px;
-  	display: inline-block;
   	color: #fff;
   	width: 94px;
   	height: 21px;
@@ -288,39 +297,6 @@ body {
 .password-container ul.requirements li {
   margin-bottom: 7px;
   list-style: disc;
-}
-
-.button-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 32px;
-}
-
-.back-btn,
-.complete-btn {
-  padding: 10px 0;
-  border-radius: 10px;
-  border: none;
-  font-size: 15px;
-  font-family: inherit;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-  min-width: 150px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-}
-
-.back-btn {
-  background: #23243a;
-  color: #fff;
-  border: 1.5px solid #545297;
-}
-
-.complete-btn {
-  background: #3b47ff;
-  color: #fff;
-  border: none;
 }
 
 @media (max-width: 430px) {

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    
+    <link rel="stylesheet" href="/html/css/on-click-lessons.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+    
+    <title>People Controls - HacknGo</title>
+    <style>
+        /* Custom CSS to make title fit properly */
+        .password-security {
+            width: 280px !important;
+            white-space: nowrap !important;
+            font-size: 14px !important;
+            margin-top: 3px;
+        }
+        
+        /* Center the button text properly */
+        .mark-as-complete {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-top: -4px !important;
+        }
+        
+        /* Extend the content container to fit all text */
+        .passwords-are-the-container {
+            height: 430px !important; /* Make it taller to accommodate all content */
+        }
+        
+        /* Move buttons down to avoid overlapping with content */
+        .back-to-module {
+            top: 690px !important; /* Lower text by 5px for better alignment */
+        }
+        
+        .mark-as-complete {
+            top: 685px !important; /* Align with back button */
+        }
+        
+        #rectangle2 {
+            top: 672px !important; /* Align button background with text */
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="on-click-lesson">
+            <div class="on-click-lesson-child"></div>
+            <div class="on-click-lesson-item"></div>
+            <div class="on-click-lesson-inner" id="rectangle2"></div>
+            <b class="back-to-module" id="backToModule">Back to Module</b>
+            <b class="mark-as-complete">Mark as Complete</b>
+            <div class="rectangle-div"></div>
+            <div class="home">Home</div>
+            <div class="learn">Learn</div>
+            <div class="practice">Practice</div>
+            <div class="profile">Profile</div>
+            <div class="leaderboard">Leaderboard</div>
+            <img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+            <img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+            <img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+            <img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+            <img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+            <b class="password-security">People Controls</b>
+            <div class="on-click-lesson-child1"></div>
+            <img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+            <div class="passwords-are-the-container">
+                <p class="passwords-are-the">
+                    Human resources often become weak points in information security. People controls aim to increase awareness and compliance with security policies.
+                </p>
+                <p class="blank-line">&nbsp;</p>
+                <p class="why-passwords-matter"><b>Examples of People Controls</b></p>
+                <p class="passwords-are-the"><b>&nbsp;</b></p>
+                <ul class="at-least-12-characters-long-mi">
+                    <li class="at-least-12-characters-long"><span>Information security awareness training</span></li>
+                    <li class="at-least-12-characters-long"><span>Secure onboarding and offboarding processes</span></li>
+                    <li class="at-least-12-characters-long"><span>Non-disclosure agreements (NDAs) for employees</span></li>
+                    <li class="at-least-12-characters-long"><span>Background checks before recruitment</span></li>
+                    <li class="at-least-12-characters-long"><span>Assigning security roles and responsibilities</span></li>
+                </ul>
+                <p class="blank-line">&nbsp;</p>
+                <p class="why-passwords-matter"><b>Benefits of People Controls</b></p>
+                <p class="passwords-are-the"><b>&nbsp;</b></p>
+                <ul class="at-least-12-characters-long-mi">
+                    <li class="at-least-12-characters-long"><span>Reduce human error risks</span></li>
+                    <li class="at-least-12-characters-long"><span>Increase security awareness across the organization</span></li>
+                    <li class="at-least-12-characters-long"><span>Ensure compliance with policies and regulations</span></li>
+                </ul>
+                <p class="passwords-are-the">
+                    Remember, people are often the weakest link in cybersecurity. Proper training and clear policies can significantly strengthen your organization's security posture.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation JavaScript -->
+    <script>
+        // Navigation event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLessonCompletion();
+            
+            // Back to module button
+            document.getElementById('backToModule').addEventListener('click', () => {
+                window.location.href = '/html/materials/iso27001-module.html';
+            });
+            
+            // Back button (arrow)
+            document.getElementById('backButton').addEventListener('click', () => {
+                window.location.href = '/html/materials/iso27001-module.html';
+            });
+            
+            // Navigation clicks
+            document.getElementById('homeIcon').addEventListener('click', () => {
+                window.location.href = '/html/home.html';
+            });
+            
+            document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/learning.html';
+            });
+            
+            document.getElementById('atomAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/practice.html';
+            });
+            
+            document.getElementById('trophyIcon').addEventListener('click', () => {
+                window.location.href = '/html/leaderboard.html';
+            });
+            
+            document.getElementById('userIcon').addEventListener('click', () => {
+                window.location.href = '/html/profile.html';
+            });
+            
+            // Mark as complete functionality
+            document.querySelector('.mark-as-complete').addEventListener('click', () => {
+                markLessonComplete();
+            });
+        });
+        
+        async function checkLessonCompletion() {
+            try {
+                const userData = JSON.parse(localStorage.getItem('userData'));
+                if (!userData || !userData.username) return;
+                
+                const response = await fetch(`/api/users/${userData.username}/progress`);
+                const progressData = await response.json();
+                const iso27001Progress = progressData.moduleProgress.iso27001 || { completedLessons: [] };
+                
+                if (iso27001Progress.completedLessons.includes('people-controls')) {
+                    transformToCompletionPage();
+                }
+            } catch (error) {
+                console.error('Error checking lesson completion:', error);
+            }
+        }
+        
+        // Function to mark lesson as complete
+        async function markLessonComplete() {
+            try {
+                const userData = JSON.parse(localStorage.getItem('userData'));
+                if (!userData || !userData.username) {
+                    alert('Please log in to save your progress.');
+                    return;
+                }
+                
+                const response = await fetch(`/api/users/${userData.username}/progress`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        module: 'iso27001',
+                        lessonId: 'people-controls'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to update progress');
+                }
+                
+                const result = await response.json();
+                userData.xp = result.xp;
+                userData.moduleProgress = result.moduleProgress;
+                localStorage.setItem('userData', JSON.stringify(userData));
+                transformToCompletionPage();
+                
+            } catch (error) {
+                console.error('Error marking lesson complete:', error);
+                alert('Failed to save progress. Please try again.');
+            }
+        }
+        
+        // Function to transform page to completion state
+        function transformToCompletionPage() {
+            // Hide the "Mark as Complete" button text
+            const markCompleteBtn = document.querySelector('.mark-as-complete');
+            if (markCompleteBtn) {
+                markCompleteBtn.style.display = 'none';
+                markCompleteBtn.style.visibility = 'hidden';
+            }
+            
+            // Hide the button background
+            const markCompleteBg = document.getElementById('rectangle2');
+            if (markCompleteBg) {
+                markCompleteBg.style.display = 'none';
+                markCompleteBg.style.visibility = 'hidden';
+            }
+            
+            // Add "Completed" text
+            const completedText = document.createElement('b');
+            completedText.textContent = 'Completed';
+            completedText.style.cssText = `
+                position: absolute;
+                top: 685px;
+                left: 275px;
+                font-size: 15px;
+                color: #32de07;
+                width: 94px;
+                height: 21px;
+                z-index: 999;
+            `;
+            document.querySelector('.on-click-lesson').appendChild(completedText);
+            
+            // Add checkmark icon
+            const checkIcon = document.createElement('img');
+            checkIcon.src = '/html/icons/Done_ring_round.svg';
+            checkIcon.style.cssText = `
+                position: absolute;
+                top: 685px;
+                left: 245px;
+                width: 24px;
+                height: 24px;
+                z-index: 999;
+            `;
+            document.querySelector('.on-click-lesson').appendChild(checkIcon);
+            
+            // Create "Continue Learning" section
+            const continueSection = document.createElement('div');
+            continueSection.style.cssText = `
+                position: absolute;
+                top: 740px;
+                left: 18px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                background-color: #8bacff;
+                border: 2px solid #0065c3;
+                box-sizing: border-box;
+                width: 362px;
+                height: 55px;
+                cursor: pointer;
+            `;
+            continueSection.onclick = () => {
+                window.location.href = '/html/materials/physical-controls-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(continueSection);
+            
+            // Add continue learning text
+            const continueText = document.createElement('div');
+            continueText.textContent = 'Continue Learning';
+            continueText.style.cssText = `
+                position: absolute;
+                top: 748px;
+                left: 75px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #313131;
+                cursor: pointer;
+            `;
+            continueText.onclick = () => {
+                window.location.href = '/html/materials/physical-controls-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(continueText);
+            
+            // Add "Move on to next lesson" text
+            const moveOnText = document.createElement('div');
+            moveOnText.textContent = 'Move on to the next lesson';
+            moveOnText.style.cssText = `
+                position: absolute;
+                top: 763px;
+                left: 75px;
+                font-size: 10px;
+                font-weight: 500;
+                color: #323232;
+                width: 144px;
+                cursor: pointer;
+            `;
+            moveOnText.onclick = () => {
+                window.location.href = '/html/materials/physical-controls-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(moveOnText);
+            
+            // Add book icon for continue learning
+            const bookIconContainer = document.createElement('div');
+            bookIconContainer.style.cssText = `
+                position: absolute;
+                top: 750px;
+                left: 31px;
+                border-radius: 50%;
+                background-color: #3d8bff;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+            `;
+            bookIconContainer.onclick = () => {
+                window.location.href = '/html/materials/physical-controls-lesson.html';
+            };
+            
+            const bookIcon = document.createElement('img');
+            bookIcon.src = '/html/icons/Book_open_altdarkb.svg';
+            bookIcon.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+            `;
+            bookIconContainer.appendChild(bookIcon);
+            document.querySelector('.on-click-lesson').appendChild(bookIconContainer);
+            
+            // Add arrow right icon
+            const arrowRight = document.createElement('img');
+            arrowRight.src = '/html/icons/Arrow_right.svg';
+            arrowRight.style.cssText = `
+                position: absolute;
+                top: 760px;
+                left: 330px;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            `;
+            arrowRight.onclick = () => {
+                window.location.href = '/html/materials/physical-controls-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(arrowRight);
+        }
+    </script>
+</body>
+</html> 

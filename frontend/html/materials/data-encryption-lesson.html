@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="/html/css/on-click-lessons.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
+    <title>Data Encryption - HacknGo</title>
+    <style>
+        .data-protection {
+            width: 280px !important;
+            white-space: nowrap !important;
+            font-size: 14px !important;
+            margin-top: 8px !important;
+            position: relative !important;
+            top: 18px !important;
+            left: 45px;
+        }
+        
+        .mark-as-complete {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-top: -4px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="on-click-lesson">
+            <div class="on-click-lesson-child"></div>
+            <div class="on-click-lesson-item"></div>
+            <div class="on-click-lesson-inner" id="rectangle2"></div>
+            <b class="back-to-module" id="backToModule">Back to Module</b>
+            <b class="mark-as-complete">Mark as Complete</b>
+            <div class="rectangle-div"></div>
+            <div class="home">Home</div>
+            <div class="learn">Learn</div>
+            <div class="practice">Practice</div>
+            <div class="profile">Profile</div>
+            <div class="leaderboard">Leaderboard</div>
+            <img class="home-icon" alt="" src="/html/icons/Homepurp.svg" id="homeIcon">
+            <img class="book-open-alt-icon" alt="" src="/html/icons/Book_open_altred.svg" id="bookOpenAltIcon">
+            <img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
+            <img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
+            <img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
+            <b class="data-protection">Data Encryption</b>
+            <div class="on-click-lesson-child1"></div>
+            <img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
+            <div class="passwords-are-the-container">
+                <p class="passwords-are-the">
+                    Data encryption is the process of converting readable data into an unreadable format to protect it from unauthorized access. It's a fundamental security measure for protecting sensitive information.
+                </p>
+                <p class="blank-line">&nbsp;</p>
+                <p class="why-passwords-matter"><b>Types of Encryption</b></p>
+                <p class="passwords-are-the"><b>&nbsp;</b></p>
+                <ul class="at-least-12-characters-long-mi">
+                    <li class="at-least-12-characters-long"><span>Symmetric encryption (same key for encrypt/decrypt)</span></li>
+                    <li class="at-least-12-characters-long"><span>Asymmetric encryption (public/private key pairs)</span></li>
+                    <li class="at-least-12-characters-long"><span>Hash functions (one-way encryption)</span></li>
+                    <li class="at-least-12-characters-long"><span>End-to-end encryption (data encrypted throughout transmission)</span></li>
+                </ul>
+                <p class="blank-line">&nbsp;</p>
+                <p class="why-passwords-matter"><b>When to Use Encryption</b></p>
+                <p class="passwords-are-the"><b>&nbsp;</b></p>
+                <ul class="at-least-12-characters-long-mi">
+                    <li class="at-least-12-characters-long"><span>Storing sensitive data on devices or servers</span></li>
+                    <li class="at-least-12-characters-long"><span>Transmitting data over networks</span></li>
+                    <li class="at-least-12-characters-long"><span>Backing up important information</span></li>
+                    <li class="at-least-12-characters-long"><span>Protecting personal and financial data</span></li>
+                </ul>
+                <p class="passwords-are-the">
+                    Modern encryption standards like AES-256 provide strong protection when implemented correctly. Always use encryption for sensitive data both at rest and in transit.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLessonCompletion();
+            
+            document.getElementById('backToModule').addEventListener('click', () => {
+                window.location.href = '/html/materials/data-protection-module.html';
+            });
+            
+            document.getElementById('backButton').addEventListener('click', () => {
+                window.location.href = '/html/materials/data-protection-module.html';
+            });
+            
+            document.getElementById('homeIcon').addEventListener('click', () => {
+                window.location.href = '/html/home.html';
+            });
+            
+            document.getElementById('bookOpenAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/learning.html';
+            });
+            
+            document.getElementById('atomAltIcon').addEventListener('click', () => {
+                window.location.href = '/html/practice.html';
+            });
+            
+            document.getElementById('trophyIcon').addEventListener('click', () => {
+                window.location.href = '/html/leaderboard.html';
+            });
+            
+            document.getElementById('userIcon').addEventListener('click', () => {
+                window.location.href = '/html/profile.html';
+            });
+            
+            document.querySelector('.mark-as-complete').addEventListener('click', () => {
+                markLessonComplete();
+            });
+        });
+        
+        async function checkLessonCompletion() {
+            try {
+                const userData = JSON.parse(localStorage.getItem('userData'));
+                if (!userData || !userData.username) return;
+                
+                const response = await fetch(`/api/users/${userData.username}/progress`);
+                const progressData = await response.json();
+                const dataProtectionProgress = progressData.moduleProgress['data-protection'] || { completedLessons: [] };
+                
+                if (dataProtectionProgress.completedLessons.includes('data-encryption')) {
+                    transformToCompletionPage();
+                }
+            } catch (error) {
+                console.error('Error checking lesson completion:', error);
+            }
+        }
+        
+        async function markLessonComplete() {
+            try {
+                const userData = JSON.parse(localStorage.getItem('userData'));
+                if (!userData || !userData.username) {
+                    alert('Please log in to save your progress.');
+                    return;
+                }
+                
+                const response = await fetch(`/api/users/${userData.username}/progress`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        module: 'data-protection',
+                        lessonId: 'data-encryption'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to update progress');
+                }
+                
+                const result = await response.json();
+                userData.xp = result.xp;
+                userData.moduleProgress = result.moduleProgress;
+                localStorage.setItem('userData', JSON.stringify(userData));
+                transformToCompletionPage();
+                
+            } catch (error) {
+                console.error('Error marking lesson complete:', error);
+                alert('Failed to save progress. Please try again.');
+            }
+        }
+        
+        function transformToCompletionPage() {
+            const markCompleteBtn = document.querySelector('.mark-as-complete');
+            if (markCompleteBtn) {
+                markCompleteBtn.style.display = 'none';
+                markCompleteBtn.style.visibility = 'hidden';
+                markCompleteBtn.textContent = '';
+            }
+            
+            const markCompleteBg = document.getElementById('rectangle2');
+            if (markCompleteBg) {
+                markCompleteBg.style.display = 'none';
+                markCompleteBg.style.visibility = 'hidden';
+            }
+            
+            const completedText = document.createElement('b');
+            completedText.textContent = 'Completed';
+            completedText.style.cssText = `
+                position: absolute;
+                top: 686px;
+                left: 275px;
+                font-size: 15px;
+                color: #32de07;
+                width: 94px;
+                height: 21px;
+                z-index: 1000;
+            `;
+            document.querySelector('.on-click-lesson').appendChild(completedText);
+            
+            const checkIcon = document.createElement('img');
+            checkIcon.src = '/html/icons/Done_ring_round.svg';
+            checkIcon.style.cssText = `
+                position: absolute;
+                top: 686px;
+                left: 245px;
+                width: 24px;
+                height: 24px;
+                z-index: 1000;
+            `;
+            document.querySelector('.on-click-lesson').appendChild(checkIcon);
+            
+            const continueSection = document.createElement('div');
+            continueSection.style.cssText = `
+                position: absolute;
+                top: 740px;
+                left: 18px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                background-color: #8bacff;
+                border: 2px solid #0065c3;
+                box-sizing: border-box;
+                width: 362px;
+                height: 55px;
+                cursor: pointer;
+            `;
+            continueSection.onclick = () => {
+                window.location.href = '/html/materials/data-backup-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(continueSection);
+            
+            const continueText = document.createElement('div');
+            continueText.textContent = 'Continue Learning';
+            continueText.style.cssText = `
+                position: absolute;
+                top: 748px;
+                left: 75px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #313131;
+                cursor: pointer;
+            `;
+            continueText.onclick = () => {
+                window.location.href = '/html/materials/data-backup-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(continueText);
+            
+            const moveOnText = document.createElement('div');
+            moveOnText.textContent = 'Move on to the next lesson';
+            moveOnText.style.cssText = `
+                position: absolute;
+                top: 763px;
+                left: 75px;
+                font-size: 10px;
+                font-weight: 500;
+                color: #323232;
+                width: 144px;
+                cursor: pointer;
+            `;
+            moveOnText.onclick = () => {
+                window.location.href = '/html/materials/data-backup-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(moveOnText);
+            
+            const bookIconContainer = document.createElement('div');
+            bookIconContainer.style.cssText = `
+                position: absolute;
+                top: 750px;
+                left: 31px;
+                border-radius: 50%;
+                background-color: #3d8bff;
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+            `;
+            bookIconContainer.onclick = () => {
+                window.location.href = '/html/materials/data-backup-lesson.html';
+            };
+            
+            const bookIcon = document.createElement('img');
+            bookIcon.src = '/html/icons/Book_open_altdarkb.svg';
+            bookIcon.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+            `;
+            bookIconContainer.appendChild(bookIcon);
+            document.querySelector('.on-click-lesson').appendChild(bookIconContainer);
+            
+            const arrowRight = document.createElement('img');
+            arrowRight.src = '/html/icons/Arrow_right.svg';
+            arrowRight.style.cssText = `
+                position: absolute;
+                top: 760px;
+                left: 330px;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            `;
+            arrowRight.onclick = () => {
+                window.location.href = '/html/materials/data-backup-lesson.html';
+            };
+            document.querySelector('.on-click-lesson').appendChild(arrowRight);
+        }
+    </script>
+</body>
+</html> 

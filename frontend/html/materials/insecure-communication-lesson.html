@@ -5,44 +5,21 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
   	<link rel="stylesheet" href="/html/css/on-click-lessons.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
-  	<title>Organizational Controls - HacknGo</title>
+  	<title>Insecure Communication - HacknGo</title>
   	<style>
-  	    /* Custom CSS to make title fit on one line */
   	    .password-security {
-  	        width: 250px !important;
+  	        width: 280px !important;
   	        white-space: nowrap !important;
+  	        font-size: 14px !important;
+  	        margin-top: 3px;
   	    }
   	    
-  	    /* Make the main content box taller to fit all content */
-  	    .on-click-lesson-child {
-  	        height: 700px !important;
-  	    }
-  	    
-  	    /* Move text content up within the box */
-  	    .passwords-are-the-container {
-  	        top: 84px !important;
-  	    }
-  	    
-  	    /* Move button backgrounds inside the content box - moved up */
-  	    .on-click-lesson-item {
-  	        top: 715px !important;
-  	    }
-  	    
-  	    .on-click-lesson-inner {
-  	        top: 715px !important;
-  	    }
-  	    
-  	    /* Move button text inside the content box - back to module lowered */
-  	    .back-to-module {
-  	        top: 726px !important;
-  	    }
-  	    
+  	    /* Center the button text properly */
   	    .mark-as-complete {
   	        display: flex !important;
   	        align-items: center !important;
   	        justify-content: center !important;
   	        margin-top: -4px !important;
-  	        top: 726px !important;
   	    }
   	</style>
 </head>
@@ -65,56 +42,51 @@
 			<img class="atom-alt-icon" alt="" src="/html/icons/Atom_alt.svg" id="atomAltIcon">
 			<img class="trophy-icon" alt="" src="/html/icons/Trophy.svg" id="trophyIcon">
 			<img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
-			<b class="password-security">Organizational Controls</b>
+			<b class="password-security">Insecure Communication</b>
 			<div class="on-click-lesson-child1"></div>
 			<img class="arrow-left-icon" alt="" src="/html/icons/Arrow_left.svg" id="backButton">
 			<div class="passwords-are-the-container">
 				<p class="passwords-are-the">
-					Organizational controls in ISO/IEC 27001 include policies, roles, and processes used to maintain information security within an organization.
+					Insecure communication can lead to data theft, man-in-the-middle (MITM) attacks, or sensitive information leaks.
 				</p>
 				<p class="blank-line">&nbsp;</p>
-				<p class="why-passwords-matter"><b>Examples of Organizational Controls</b></p>
+				<p class="why-passwords-matter"><b>Examples of Insecure Communication</b></p>
 				<p class="passwords-are-the"><b>&nbsp;</b></p>
 				<ul class="at-least-12-characters-long-mi">
-					<li class="at-least-12-characters-long"><span>Establishing information security policies</span></li>
-					<li class="at-least-12-characters-long"><span>Assigning roles and responsibilities</span></li>
-					<li class="at-least-12-characters-long"><span>Conducting security awareness training</span></li>
-					<li class="at-least-12-characters-long"><span>Incident management processes</span></li>
-					<li class="at-least-12-characters-long"><span>Regular internal audits</span></li>
+					<li class="at-least-12-characters-long"><span>Sending data without encryption</span></li>
+					<li class="at-least-12-characters-long"><span>Using insecure protocols like HTTP</span></li>
+					<li class="at-least-12-characters-long"><span>Not validating SSL/TLS certificates</span></li>
+					<li class="at-least-12-characters-long"><span>Using weak encryption algorithms</span></li>
+					<li class="at-least-12-characters-long"><span>Transmitting credentials in plain text</span></li>
 				</ul>
 				<p class="blank-line">&nbsp;</p>
-				<p class="why-passwords-matter"><b>Benefits of Control Implementation</b></p>
+				<p class="why-passwords-matter"><b>Securing Communication</b></p>
 				<p class="passwords-are-the"><b>&nbsp;</b></p>
 				<ul class="at-least-12-characters-long-mi">
-					<li class="at-least-12-characters-long"><span>Increases security awareness across the organization</span></li>
-					<li class="at-least-12-characters-long"><span>Helps with compliance to standards and regulations</span></li>
-					<li class="at-least-12-characters-long"><span>Reduces the risk of data breaches</span></li>
-					<li class="at-least-12-characters-long"><span>Increases trust from partners and customers</span></li>
+					<li class="at-least-12-characters-long"><span>Use HTTPS protocol for web communication</span></li>
+					<li class="at-least-12-characters-long"><span>Encrypt data in transit using TLS</span></li>
+					<li class="at-least-12-characters-long"><span>Validate server certificates to prevent MITM</span></li>
+					<li class="at-least-12-characters-long"><span>Use strong cipher suites</span></li>
+					<li class="at-least-12-characters-long"><span>Implement certificate pinning for mobile apps</span></li>
 				</ul>
 				<p class="passwords-are-the">
-					Implementing proper organizational controls creates a strong foundation for information security management and helps organizations meet their security objectives while maintaining compliance with relevant standards.
+					Secure communication is essential for protecting data in transit. Always encrypt sensitive data and use modern protocols like TLS 1.3 for the best security.
 				</p>
 			</div>
 		</div>
 	</div>
   	
-  	<!-- Navigation JavaScript -->
   	<script>
-  	    // Navigation event listeners
   	    document.addEventListener('DOMContentLoaded', function() {
   	        checkLessonCompletion();
-  	        
-  	        // Back to module button
   	        document.getElementById('backToModule').addEventListener('click', () => {
-  	            window.location.href = '/html/materials/iso27001-module.html';
+  	            window.location.href = '/html/materials/owasp-module.html';
   	        });
   	        
-  	        // Back button (arrow)
   	        document.getElementById('backButton').addEventListener('click', () => {
-  	            window.location.href = '/html/materials/iso27001-module.html';
+  	            window.location.href = '/html/materials/owasp-module.html';
   	        });
   	        
-  	        // Navigation clicks
   	        document.getElementById('homeIcon').addEventListener('click', () => {
   	            window.location.href = '/html/home.html';
   	        });
@@ -135,7 +107,6 @@
   	            window.location.href = '/html/profile.html';
   	        });
   	        
-  	        // Mark as complete functionality
   	        document.querySelector('.mark-as-complete').addEventListener('click', () => {
   	            markLessonComplete();
   	        });
@@ -148,9 +119,9 @@
   	            
   	            const response = await fetch(`/api/users/${userData.username}/progress`);
   	            const progressData = await response.json();
-  	            const iso27001Progress = progressData.moduleProgress.iso27001 || { completedLessons: [] };
+  	            const owaspProgress = progressData.moduleProgress['owasp'] || { completedLessons: [] };
   	            
-  	            if (iso27001Progress.completedLessons.includes('organizational-controls')) {
+  	            if (owaspProgress.completedLessons.includes('insecure-communication')) {
   	                transformToCompletionPage();
   	            }
   	        } catch (error) {
@@ -158,7 +129,6 @@
   	        }
   	    }
   	    
-  	    // Function to mark lesson as complete
   	    async function markLessonComplete() {
   	        try {
   	            const userData = JSON.parse(localStorage.getItem('userData'));
@@ -167,15 +137,14 @@
   	                return;
   	            }
   	            
-  	            // Update progress in backend
   	            const response = await fetch(`/api/users/${userData.username}/progress`, {
   	                method: 'POST',
   	                headers: {
   	                    'Content-Type': 'application/json'
   	                },
   	                body: JSON.stringify({
-  	                    module: 'iso27001',
-  	                    lessonId: 'organizational-controls'
+  	                    module: 'owasp',
+  	                    lessonId: 'insecure-communication'
   	                })
   	            });
   	            
@@ -184,13 +153,9 @@
   	            }
   	            
   	            const result = await response.json();
-  	            
-  	            // Update local storage with new XP
   	            userData.xp = result.xp;
   	            userData.moduleProgress = result.moduleProgress;
   	            localStorage.setItem('userData', JSON.stringify(userData));
-  	            
-  	            // Transform page to completion state
   	            transformToCompletionPage();
   	            
   	        } catch (error) {
@@ -199,7 +164,6 @@
   	        }
   	    }
   	    
-  	    // Function to transform page to completion state
   	    function transformToCompletionPage() {
   	        // Hide the "Mark as Complete" button completely
   	        const markCompleteBtn = document.querySelector('.mark-as-complete');
@@ -209,39 +173,42 @@
   	            markCompleteBtn.textContent = ''; // Clear the text content as well
   	        }
   	        
-  	        // Hide the blue background for mark as complete button
+  	        // Hide the button background
   	        const markCompleteBg = document.getElementById('rectangle2');
   	        if (markCompleteBg) {
   	            markCompleteBg.style.display = 'none';
+  	            markCompleteBg.style.visibility = 'hidden';
   	        }
   	        
-  	        // Add "Completed" text with checkmark (positioned to align with back to module button)
+  	        // Add "Completed" text
   	        const completedText = document.createElement('b');
   	        completedText.textContent = 'Completed';
   	        completedText.style.cssText = `
   	            position: absolute;
-  	            top: 721px;
+  	            top: 685px;
   	            left: 275px;
   	            font-size: 15px;
   	            color: #32de07;
   	            width: 94px;
   	            height: 21px;
+  	            z-index: 999;
   	        `;
   	        document.querySelector('.on-click-lesson').appendChild(completedText);
   	        
-  	        // Add checkmark icon (positioned to align with back to module button)
+  	        // Add checkmark icon
   	        const checkIcon = document.createElement('img');
   	        checkIcon.src = '/html/icons/Done_ring_round.svg';
   	        checkIcon.style.cssText = `
   	            position: absolute;
-  	            top: 721px;
+  	            top: 685px;
   	            left: 245px;
   	            width: 24px;
   	            height: 24px;
+  	            z-index: 999;
   	        `;
   	        document.querySelector('.on-click-lesson').appendChild(checkIcon);
   	        
-  	        // Create "Continue Learning" section (moved up closer to lesson box)
+  	        // Create "Continue Learning" section
   	        const continueSection = document.createElement('div');
   	        continueSection.style.cssText = `
   	            position: absolute;
@@ -257,35 +224,34 @@
   	            cursor: pointer;
   	        `;
   	        continueSection.onclick = () => {
-  	            // Navigate to next lesson in the ISO27001 module: People Controls
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/inadequate-privacy-controls-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(continueSection);
   	        
-  	        // Add continue learning text (lowered to align with book icon)
+  	        // Add continue learning text
   	        const continueText = document.createElement('div');
   	        continueText.textContent = 'Continue Learning';
   	        continueText.style.cssText = `
   	            position: absolute;
-  	            top: 751px;
-  	            left: 70px;
+  	            top: 748px;
+  	            left: 75px;
   	            font-size: 13px;
   	            font-weight: 600;
   	            color: #313131;
   	            cursor: pointer;
   	        `;
   	        continueText.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/inadequate-privacy-controls-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(continueText);
   	        
-  	        // Add "Move on to next lesson" text (lowered to align with book icon)
+  	        // Add "Move on to next lesson" text
   	        const moveOnText = document.createElement('div');
   	        moveOnText.textContent = 'Move on to the next lesson';
   	        moveOnText.style.cssText = `
   	            position: absolute;
-  	            top: 766px;
-  	            left: 70px;
+  	            top: 763px;
+  	            left: 75px;
   	            font-size: 10px;
   	            font-weight: 500;
   	            color: #323232;
@@ -293,11 +259,11 @@
   	            cursor: pointer;
   	        `;
   	        moveOnText.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/inadequate-privacy-controls-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(moveOnText);
   	        
-  	        // Add book icon for continue learning (adjusted position)
+  	        // Add book icon for continue learning
   	        const bookIconContainer = document.createElement('div');
   	        bookIconContainer.style.cssText = `
   	            position: absolute;
@@ -310,7 +276,7 @@
   	            cursor: pointer;
   	        `;
   	        bookIconContainer.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/inadequate-privacy-controls-lesson.html';
   	        };
   	        
   	        const bookIcon = document.createElement('img');
@@ -326,7 +292,7 @@
   	        bookIconContainer.appendChild(bookIcon);
   	        document.querySelector('.on-click-lesson').appendChild(bookIconContainer);
   	        
-  	        // Add arrow right icon (adjusted position)
+  	        // Add arrow right icon
   	        const arrowRight = document.createElement('img');
   	        arrowRight.src = '/html/icons/Arrow_right.svg';
   	        arrowRight.style.cssText = `
@@ -338,7 +304,7 @@
   	            cursor: pointer;
   	        `;
   	        arrowRight.onclick = () => {
-  	            window.location.href = '/html/materials/people-controls-lesson.html';
+  	            window.location.href = '/html/materials/inadequate-privacy-controls-lesson.html';
   	        };
   	        document.querySelector('.on-click-lesson').appendChild(arrowRight);
   	    }

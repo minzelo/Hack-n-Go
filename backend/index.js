@@ -377,8 +377,8 @@ app.post('/api/users/update-stats', async (req, res) => {
       console.log(`Quiz completed by user ${email}. Total quizzes: ${user.quizzesTaken}`);
     }
 
-    // Update last activity
-    user.lastActivity = new Date().toISOString();
+    // Update activity and streak
+    updateUserActivity(user);
 
     // Save updated users
     users[userIndex] = user;
@@ -406,6 +406,106 @@ app.post('/api/users/update-stats', async (req, res) => {
   }
 });
 
+// === Daily Streak System Functions ===
+
+// Function to update user activity and calculate streak
+function updateUserActivity(user) {
+    const now = new Date();
+    const today = now.toISOString().split('T')[0]; // YYYY-MM-DD format
+    
+    // Initialize streak tracking fields if they don't exist
+    if (!user.lastActivityDate) {
+        user.lastActivityDate = today;
+        user.streak = 1;
+        user.lastActivity = now.toISOString();
+        console.log(`First activity for user ${user.username}, streak set to 1`);
+        return;
+    }
+    
+    const lastActivityDate = user.lastActivityDate;
+    
+    // If user already had activity today, don't increment streak
+    if (lastActivityDate === today) {
+        user.lastActivity = now.toISOString();
+        console.log(`User ${user.username} already active today, streak maintained at ${user.streak}`);
+        return;
+    }
+    
+    // Calculate days since last activity
+    const lastDate = new Date(lastActivityDate);
+    const daysDiff = Math.floor((now - lastDate) / (1000 * 60 * 60 * 24));
+    
+    if (daysDiff === 1) {
+        // Consecutive day - increment streak
+        user.streak = (user.streak || 0) + 1;
+        user.lastActivityDate = today;
+        user.lastActivity = now.toISOString();
+        console.log(`User ${user.username} active on consecutive day, streak increased to ${user.streak}`);
+    } else if (daysDiff > 1) {
+        // Missed day(s) - reset streak
+        user.streak = 1;
+        user.lastActivityDate = today;
+        user.lastActivity = now.toISOString();
+        console.log(`User ${user.username} missed ${daysDiff - 1} day(s), streak reset to 1`);
+    }
+    // If daysDiff === 0, it's the same day (already handled above)
+}
+
+// Function to calculate current streak for a user
+function calculateCurrentStreak(user) {
+    if (!user.lastActivityDate) {
+        return 0;
+    }
+    
+    const now = new Date();
+    const today = now.toISOString().split('T')[0];
+    const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    
+    const lastActivityDate = user.lastActivityDate;
+    
+    // If last activity was today or yesterday, streak is valid
+    if (lastActivityDate === today || lastActivityDate === yesterday) {
+        return user.streak || 0;
+    } else {
+        // Streak is broken, reset to 0
+        return 0;
+    }
+}
+
+// === Streak validation endpoint ===
+app.get('/api/users/:username/streak', (req, res) => {
+    try {
+        const username = req.params.username;
+        const users = getUsers();
+        const userIndex = users.findIndex(u => u.username === username);
+        
+        if (userIndex === -1) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        
+        const user = users[userIndex];
+        const currentStreak = calculateCurrentStreak(user);
+        
+        // Update streak if it has changed
+        if (currentStreak !== user.streak) {
+            user.streak = currentStreak;
+            users[userIndex] = user;
+            saveUsers(users);
+            console.log(`Streak updated for user ${username}: ${currentStreak}`);
+        }
+        
+        res.json({ 
+            streak: currentStreak,
+            lastActivityDate: user.lastActivityDate,
+            lastActivity: user.lastActivity
+        });
+        
+    } catch (error) {
+        console.error('Error validating streak:', error);
+        res.status(500).json({ error: 'Failed to validate streak' });
+    }
+});
+
 // === Get user progress for modules ===
 app.get('/api/users/:username/progress', (req, res) => {
     try {
@@ -429,11 +529,58 @@ app.get('/api/users/:username/progress', (req, res) => {
                     completedLessons: [],
                     totalLessons: 4,
                     progressPercentage: 0
+                },
+                'password-security': {
+                    completedLessons: [],
+                    totalLessons: 5,
+                    progressPercentage: 0
+                },
+                'data-protection': {
+                    completedLessons: [],
+                    totalLessons: 7,
+                    progressPercentage: 0
+                },
+                'two-factor-authentication': {
+                    completedLessons: [],
+                    totalLessons: 4,
+                    progressPercentage: 0
+                },
+                'phishing-awareness': {
+                    completedLessons: [],
+                    totalLessons: 6,
+                    progressPercentage: 0
                 }
             };
             saveUsers(users);
         }
         
+        // Ensure all modules exist and recalculate progress percentages
+        const moduleConfigs = {
+            owasp: 10,
+            iso27001: 4,
+            'password-security': 5,
+            'data-protection': 7,
+            'two-factor-authentication': 4,
+            'phishing-awareness': 6
+        };
+        
+        Object.keys(moduleConfigs).forEach(moduleKey => {
+            if (!user.moduleProgress[moduleKey]) {
+                user.moduleProgress[moduleKey] = {
+                    completedLessons: [],
+                    totalLessons: moduleConfigs[moduleKey],
+                    progressPercentage: 0
+                };
+            } else {
+                // Recalculate progress percentage to ensure accuracy
+                const totalLessons = moduleConfigs[moduleKey];
+                const completedCount = user.moduleProgress[moduleKey].completedLessons.length;
+                user.moduleProgress[moduleKey].totalLessons = totalLessons;
+                user.moduleProgress[moduleKey].progressPercentage = Math.round((completedCount / totalLessons) * 100);
+            }
+        });
+        
+        saveUsers(users);
         res.json({ moduleProgress: user.moduleProgress });
     } catch (error) {
         console.error('Error getting user progress:', error);
@@ -467,7 +614,48 @@ app.post('/api/users/:username/progress', (req, res) => {
                     completedLessons: [],
                     totalLessons: 4,
                     progressPercentage: 0
+                },
+                'password-security': {
+                    completedLessons: [],
+                    totalLessons: 5,
+                    progressPercentage: 0
+                },
+                'data-protection': {
+                    completedLessons: [],
+                    totalLessons: 7,
+                    progressPercentage: 0
+                },
+                'two-factor-authentication': {
+                    completedLessons: [],
+                    totalLessons: 4,
+                    progressPercentage: 0
+                },
+                'phishing-awareness': {
+                    completedLessons: [],
+                    totalLessons: 6,
+                    progressPercentage: 0
                 }
+            };
+        }
+        
+        // Module configuration mapping
+        const moduleConfigs = {
+            owasp: 10,
+            iso27001: 4,
+            'password-security': 5,
+            'data-protection': 7,
+            'two-factor-authentication': 4,
+            'phishing-awareness': 6
+        };
+        
+        // Initialize specific module if it doesn't exist
+        if (!user.moduleProgress[module]) {
+            const totalLessons = moduleConfigs[module] || 10; // default to 10 if not found
+            
+            user.moduleProgress[module] = {
+                completedLessons: [],
+                totalLessons: totalLessons,
+                progressPercentage: 0
             };
         }
         
@@ -475,13 +663,19 @@ app.post('/api/users/:username/progress', (req, res) => {
         if (!user.moduleProgress[module].completedLessons.includes(lessonId)) {
             user.moduleProgress[module].completedLessons.push(lessonId);
             
-            // Update progress percentage
-            const totalLessons = user.moduleProgress[module].totalLessons;
+            // Update progress percentage with proper calculation
+            const totalLessons = moduleConfigs[module] || user.moduleProgress[module].totalLessons;
             const completedCount = user.moduleProgress[module].completedLessons.length;
+            user.moduleProgress[module].totalLessons = totalLessons; // Ensure correct total
             user.moduleProgress[module].progressPercentage = Math.round((completedCount / totalLessons) * 100);
+            
+            console.log(`Module: ${module}, Completed: ${completedCount}/${totalLessons}, Progress: ${user.moduleProgress[module].progressPercentage}%`);
             
             // Add XP for completing lesson
             user.xp += 50;
+            
+            // Update activity and streak for lesson completion
+            updateUserActivity(user);
             
             saveUsers(users);
             

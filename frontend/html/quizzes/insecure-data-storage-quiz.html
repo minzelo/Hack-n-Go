@@ -3,11 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    
     <link rel="stylesheet" href="/html/css/on-start-quiz.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
-    
-    <title>Improper Credential Usage Quiz - HacknGo</title>
+    <title>Insecure Data Storage Quiz - HacknGo</title>
     <style>
         /* Fix title to be one line */
         .password-security-quiz {
@@ -128,7 +126,7 @@
             <img class="user-icon" alt="" src="/html/icons/User.svg" id="userIcon">
             
             <!-- Quiz Header -->
-            <b class="password-security-quiz" id="quizTitle">Improper Credential Usage Quiz</b>
+            <b class="password-security-quiz" id="quizTitle">Insecure Data Storage Quiz</b>
             <b class="b" id="questionCounter">1/10</b>
             <div class="rectangle-div"></div>
             <div class="ellipse-div"></div>
@@ -228,110 +226,110 @@
         // Initialize sound effects
         const soundEffects = new SoundEffects();
         
-        // Quiz data for Improper Credential Usage
+        // Quiz data for Insecure Data Storage
         const quizData = {
-            id: "improper-credential-usage",
-            title: "Improper Credential Usage",
+            id: "insecure-data-storage",
+            title: "Insecure Data Storage",
             questions: [
                 {
-                    question: "What is meant by \"improper Credential Usage\"?",
+                    question: "What is insecure data storage?",
                     options: [
-                        "Using encryption to store data",
-                        "Using default or easily guessable credentials",
-                        "Using strong and unique credentials",
-                        "Using multi-factor authentication"
+                        "Storing data in too many locations",
+                        "Storing sensitive data without proper protection",
+                        "Using cloud storage services",
+                        "Backing up data regularly"
                     ],
                     answer: 1
                 },
                 {
-                    question: "Why is using passwords like \"123456\" risky?",
+                    question: "Which data should never be stored in plain text?",
                     options: [
-                        "Too long",
-                        "Hard to remember",
-                        "Cannot be used on all sites",
-                        "Easily guessed by attackers"
-                    ],
-                    answer: 3
-                },
-                {
-                    question: "What is \"credential stuffing\"?",
-                    options: [
-                        "Storing credentials in a secure place",
-                        "Filling registration forms with fake data",
-                        "Testing combinations of stolen usernames and passwords",
-                        "Using the same credentials on many sites"
+                        "User preferences",
+                        "Public information",
+                        "Passwords and credit card numbers",
+                        "Application logs"
                     ],
                     answer: 2
                 },
                 {
-                    question: "How can you protect accounts from brute force attacks?",
+                    question: "What is the best practice for storing passwords?",
                     options: [
-                        "Using two-factor authentication (2FA)",
-                        "Using the same password for all accounts",
-                        "Disabling two-factor authentication",
-                        "Avoiding the use of passwords"
+                        "Store them in plain text for easy access",
+                        "Encrypt them with a simple algorithm",
+                        "Hash them with a strong algorithm and salt",
+                        "Store them in cookies"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "Which storage location is most vulnerable on mobile devices?",
+                    options: [
+                        "Internal secure storage",
+                        "External SD card storage",
+                        "Encrypted databases",
+                        "Keychain/Keystore"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What should you do with temporary files containing sensitive data?",
+                    options: [
+                        "Leave them for automatic cleanup",
+                        "Store them permanently for backup",
+                        "Securely delete them after use",
+                        "Make them read-only"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "Why is it risky to store API keys in client-side code?",
+                    options: [
+                        "It makes the app slower",
+                        "Anyone can extract them from the app",
+                        "It violates app store policies",
+                        "It uses too much memory"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "What is data classification?",
+                    options: [
+                        "Organizing files by type",
+                        "Categorizing data by sensitivity level",
+                        "Sorting data alphabetically",
+                        "Grouping data by size"
+                    ],
+                    answer: 1
+                },
+                {
+                    question: "Which is the most secure way to store encryption keys?",
+                    options: [
+                        "In the same database as encrypted data",
+                        "In source code comments",
+                        "In a dedicated key management system",
+                        "In configuration files"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "What should you check before storing data in the cloud?",
+                    options: [
+                        "Only the cost",
+                        "Only the speed",
+                        "Security measures and compliance certifications",
+                        "Only the storage capacity"
+                    ],
+                    answer: 2
+                },
+                {
+                    question: "What is the principle of data minimization?",
+                    options: [
+                        "Store only necessary data for the shortest time needed",
+                        "Minimize the number of databases",
+                        "Use the smallest possible data types",
+                        "Reduce the frequency of data backups"
                     ],
                     answer: 0
-                },
-                {
-                    question: "What is the risk of using default credentials on devices or applications?",
-                    options: [
-                        "No risk",
-                        "Makes access easier for attackers",
-                        "Increases security",
-                        "Reduces training needs"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "Why is it important to change passwords regularly?",
-                    options: [
-                        "To make it harder for attackers to guess passwords",
-                        "To follow technology trends",
-                        "Not important",
-                        "To avoid forgetting passwords"
-                    ],
-                    answer: 0
-                },
-                {
-                    question: "What is a password manager?",
-                    options: [
-                        "A service to share passwords",
-                        "A program to hack passwords",
-                        "A tool to create and store strong passwords",
-                        "A system to delete passwords"
-                    ],
-                    answer: 2
-                },
-                {
-                    question: "What should you do if you suspect your account has been hacked?",
-                    options: [
-                        "Create a new account",
-                        "Change password and enable 2FA",
-                        "Ignore it",
-                        "Disable the account"
-                    ],
-                    answer: 1
-                },
-                {
-                    question: "What is Two Factor Authentication (2FA)?",
-                    options: [
-                        "Using a long password",
-                        "Using two different passwords",
-                        "Using three verification methods to log in",
-                        "Combining username and password"
-                    ],
-                    answer: 2
-                },
-                {
-                    question: "Why is it not recommended to use the same password for multiple accounts?",
-                    options: [
-                        "No specific reason",
-                        "Reduces security risks",
-                        "If one account is hacked, other accounts are also at risk",
-                        "Makes account management easier"
-                    ],
-                    answer: 2
                 }
             ]
         };

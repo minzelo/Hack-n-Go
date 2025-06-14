@@ -25,7 +25,7 @@
     		<div class="home-inner">
     		</div>
     		<b class="daily-goal">Daily Goal</b>
-    		<b class="day-streak" id="userStreak">5 day Streak</b>
+    		<b class="day-streak" id="userStreak">0 day Streak</b>
     		<div class="xp">15/20 XP</div>
     		<div class="rectangle-div">
     		</div>
@@ -107,7 +107,7 @@
     		// The following click handlers are integrated into the navigation manager
     		
     		// Load user data and update streak display
-    		document.addEventListener('DOMContentLoaded', function() {
+    		document.addEventListener('DOMContentLoaded', async function() {
     		    console.log('HacknGo Home page loaded successfully');
     		    
     		    // Load user data from localStorage
@@ -118,11 +118,8 @@
     		        try {
     		            const user = JSON.parse(userData);
     		            
-    		            // Update streak display
-    		            const streakElement = document.getElementById('userStreak');
-    		            if (streakElement && user.streak !== undefined) {
-    		                streakElement.textContent = user.streak + ' day Streak';
-    		            }
+    		            // Validate and update daily streak from backend
+    		            await validateDailyStreak(user.username);
     		            
     		            console.log('Home page updated with user data:', {
     		                username: user.username,
@@ -146,5 +143,40 @@
     		    // Page initialization complete
     		    console.log('Home page navigation system initialized');
     		});
+    		
+    		// Function to validate and update daily streak
+    		async function validateDailyStreak(username) {
+    		    try {
+    		        // Fetch current streak from backend
+    		        const response = await fetch(`/api/users/${username}/streak`);
+    		        if (!response.ok) {
+    		            throw new Error('Failed to fetch streak data');
+    		        }
+    		        
+    		        const streakData = await response.json();
+    		        const currentStreak = streakData.streak;
+    		        
+    		        // Update the streak display
+    		        updateStreakDisplay(currentStreak);
+    		        
+    		        console.log(`Home streak validation: ${currentStreak} day streak`);
+    		        console.log('Last activity date:', streakData.lastActivityDate);
+    		        
+    		    } catch (error) {
+    		        console.error('Error validating daily streak on home page:', error);
+    		        // Set default value on error
+    		        updateStreakDisplay(0);
+    		    }
+    		}
+    		
+    		// Function to update the streak display
+    		function updateStreakDisplay(streakCount) {
+    		    const streakElement = document.getElementById('userStreak');
+    		    if (streakElement) {
+    		        const streakText = streakCount === 1 ? '1 day Streak' : `${streakCount} day Streak`;
+    		        streakElement.textContent = streakText;
+    		        console.log(`Updated home streak display: ${streakText}`);
+    		    }
+    		}
     		</script></body>
 </html>

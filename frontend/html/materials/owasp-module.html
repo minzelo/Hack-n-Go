@@ -8,6 +8,234 @@
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400;700&display=swap" />
   	
   	<title>OWASP Top 10 - HacknGo</title>
+  	
+  	<style>
+  	    /* Change blue/colored icon backgrounds to light green */
+  	    .ellipse-div,
+  	    .on-click-module-child3,
+  	    .on-click-module-child5,
+  	    .on-click-module-child7,
+  	    .on-click-module-child9,
+  	    .on-click-module-child11,
+  	    .on-click-module-child13,
+  	    .on-click-module-child15,
+  	    .lesson9-bg,
+  	    .lesson10-bg {
+  	        background-color: #f0f9f0 !important; /* Light green background */
+  	        display: flex !important;
+  	        align-items: center !important;
+  	        justify-content: center !important;
+  	    }
+  	    
+  	    /* Center all lesson icons */
+  	    .check-ring-icon,
+  	    .lock-icon,
+  	    .lock-icon1,
+  	    .lock-icon2,
+  	    .lock-icon3,
+  	    .lock-icon4,
+  	    .lock-icon5,
+  	    .lock-icon6,
+  	    .lock-icon7,
+  	    .lock-icon8 {
+  	        display: block;
+  	        margin: auto;
+  	    }
+  	    
+  	    /* Next available lesson styling */
+  	    .next-available-lesson {
+  	        border: 2px solid #06AD0B !important;
+  	        border-radius: 10px !important;
+  	    }
+  	    
+  	    /* Clean lesson layout - remove manual positioning */
+  	    .on-click-module-child1,
+  	    .on-click-module-child2,
+  	    .on-click-module-child4,
+  	    .on-click-module-child6,
+  	    .on-click-module-child8,
+  	    .on-click-module-child10,
+  	    .on-click-module-child12,
+  	    .on-click-module-child14,
+  	    .on-click-module-child16,
+  	    .on-click-module-child17 {
+  	        margin-bottom: 40px !important;
+  	    }
+  	    
+  	    /* Increase spacing between lessons by adjusting top positions */
+  	    .on-click-module-child1 { top: 150px !important; }
+  	    .on-click-module-child2 { top: 215px !important; }
+  	    .on-click-module-child4 { top: 280px !important; }
+  	    .on-click-module-child6 { top: 345px !important; }
+  	    .on-click-module-child8 { top: 410px !important; }
+  	    .on-click-module-child10 { top: 475px !important; }
+  	    .on-click-module-child12 { top: 540px !important; }
+  	    .on-click-module-child14 { top: 605px !important; }
+  	    .on-click-module-child16 { top: 670px !important; }
+  	    .on-click-module-child17 { top: 735px !important; }
+  	    
+  	    /* Adjust lesson titles to match new box positions */
+  	    .password-security1 { top: 162px !important; } /* Lesson 1 title: box + 12px */
+  	    .common-password-mistakes { top: 227px !important; } /* Lesson 2 title: box + 12px */
+  	    .password-strength-quiz { top: 292px !important; } /* Lesson 3 title: box + 12px */
+  	    .password-managers { top: 357px !important; } /* Lesson 4 title: box + 12px */
+  	    .creating-strong-passwords { top: 422px !important; } /* Lesson 5 title: box + 12px */
+  	    .password-security2 { top: 487px !important; } /* Lesson 6 title: box + 12px */
+  	    .password-security3 { top: 552px !important; } /* Lesson 7 title: box + 12px */
+  	    .password-security4 { top: 617px !important; } /* Lesson 8 title: box + 12px */
+  	    .lesson9-title { top: 682px !important; } /* Lesson 9 title: box + 12px */
+  	    .lesson10-title { top: 747px !important; } /* Lesson 10 title: box + 12px */
+  	    
+  	    /* Adjust "Lesson" labels to match new box positions */
+  	    .lesson { top: 179px !important; } /* Lesson 1 label: box + 29px */
+  	    .lesson1 { top: 244px !important; } /* Lesson 2 label: box + 29px */
+  	    .quiz { top: 309px !important; } /* Lesson 3 label: box + 29px */
+  	    .lesson2 { top: 374px !important; } /* Lesson 4 label: box + 29px */
+  	    .lesson3 { top: 439px !important; } /* Lesson 5 label: box + 29px */
+  	    .lesson4 { top: 504px !important; } /* Lesson 6 label: box + 29px */
+  	    .lesson5 { top: 569px !important; } /* Lesson 7 label: box + 29px */
+  	    .lesson6 { top: 634px !important; } /* Lesson 8 label: box + 29px */
+  	    .lesson7 { top: 699px !important; } /* Lesson 9 label: box + 29px */
+  	    .lesson8 { top: 764px !important; } /* Lesson 10 label: box + 29px */
+  	    
+  	    /* Adjust icon backgrounds to match new box positions */
+  	    .ellipse-div { top: 165px !important; } /* Lesson 1 icon bg: box + 15px */
+  	    .on-click-module-child3 { top: 230px !important; } /* Lesson 2 icon bg: box + 15px */
+  	    .on-click-module-child5 { top: 295px !important; } /* Lesson 3 icon bg: box + 15px */
+  	    .on-click-module-child7 { top: 360px !important; } /* Lesson 4 icon bg: box + 15px */
+  	    .on-click-module-child9 { top: 425px !important; } /* Lesson 5 icon bg: box + 15px */
+  	    .on-click-module-child11 { top: 490px !important; } /* Lesson 6 icon bg: box + 15px */
+  	    .on-click-module-child13 { top: 555px !important; } /* Lesson 7 icon bg: box + 15px */
+  	    .on-click-module-child15 { top: 620px !important; } /* Lesson 8 icon bg: box + 15px */
+  	    .lesson9-bg { top: 685px !important; } /* Lesson 9 icon bg: box + 15px */
+  	    .lesson10-bg { top: 750px !important; } /* Lesson 10 icon bg: box + 15px */
+  	    
+  	    /* Adjust icons to match new positions */
+  	    .check-ring-icon { top: 168px !important; } /* Lesson 1 icon: box + 18px */
+  	    .lock-icon { top: 233px !important; } /* Lesson 2 icon: box + 18px */
+  	    .lock-icon1 { top: 298px !important; } /* Lesson 3 icon: box + 18px */
+  	    .lock-icon2 { top: 363px !important; } /* Lesson 4 icon: box + 18px */
+  	    .lock-icon3 { 
+    	        position: absolute;
+    	        top: 427px; 
+    	        left: 35px;
+    	        width: 21px;
+    	        height: 21px;
+    	    } /* Lesson 5 icon with custom properties */
+  	    .lock-icon4 { top: 493px !important; } /* Lesson 6 icon: box + 18px */
+  	    .lock-icon5 { top: 558px !important; } /* Lesson 7 icon: box + 18px */
+  	    .lock-icon6 { top: 623px !important; } /* Lesson 8 icon: box + 18px */
+  	    .lock-icon7 { top: 688px !important; } /* Lesson 9 icon: box + 18px */
+  	    .lock-icon8 { top: 753px !important; } /* Lesson 10 icon: box + 18px */
+  	    
+  	    /* Improved hitbox styling - make all lesson elements clickable */
+  	    .lesson-clickable {
+  	        cursor: pointer !important;
+  	    }
+  	    
+  	    .lesson-locked {
+  	        cursor: not-allowed !important;
+  	    }
+  	    
+  	    /* Make lesson titles, labels, and icons clickable */
+  	    .password-security1,
+  	    .common-password-mistakes,
+  	    .password-strength-quiz,
+  	    .password-managers,
+  	    .creating-strong-passwords,
+  	    .password-security2,
+  	    .password-security3,
+  	    .password-security4,
+  	    .lesson9-title,
+  	    .lesson10-title,
+  	    .lesson,
+  	    .lesson1,
+  	    .quiz,
+  	    .lesson2,
+  	    .lesson3,
+  	    .lesson4,
+  	    .lesson5,
+  	    .lesson6,
+  	    .lesson7,
+  	    .lesson8,
+  	    .ellipse-div,
+  	    .on-click-module-child3,
+  	    .on-click-module-child5,
+  	    .on-click-module-child7,
+  	    .on-click-module-child9,
+  	    .on-click-module-child11,
+  	    .on-click-module-child13,
+  	    .on-click-module-child15,
+  	    .lesson9-bg,
+  	    .lesson10-bg,
+  	    .check-ring-icon,
+  	    .lock-icon,
+  	    .lock-icon1,
+  	    .lock-icon2,
+  	    .lock-icon3,
+  	    .lock-icon4,
+  	    .lock-icon5,
+  	    .lock-icon6,
+  	    .lock-icon7,
+  	    .lock-icon8 {
+  	        cursor: pointer;
+  	        transition: opacity 0.2s ease;
+  	    }
+  	    
+  	    /* Hover effects for better user feedback */
+  	    .lesson-clickable:hover {
+  	        opacity: 0.8;
+  	    }
+  	    
+  	    /* Hover effects for all accessible lesson elements */
+  	    .password-security1:hover,
+  	    .common-password-mistakes:hover,
+  	    .password-strength-quiz:hover,
+  	    .password-managers:hover,
+  	    .creating-strong-passwords:hover,
+  	    .password-security2:hover,
+  	    .password-security3:hover,
+  	    .password-security4:hover,
+  	    .lesson9-title:hover,
+  	    .lesson10-title:hover,
+  	    .lesson:hover,
+  	    .lesson1:hover,
+  	    .quiz:hover,
+  	    .lesson2:hover,
+  	    .lesson3:hover,
+  	    .lesson4:hover,
+  	    .lesson5:hover,
+  	    .lesson6:hover,
+  	    .lesson7:hover,
+  	    .lesson8:hover,
+  	    .ellipse-div:hover,
+  	    .on-click-module-child3:hover,
+  	    .on-click-module-child5:hover,
+  	    .on-click-module-child7:hover,
+  	    .on-click-module-child9:hover,
+  	    .on-click-module-child11:hover,
+  	    .on-click-module-child13:hover,
+  	    .on-click-module-child15:hover,
+  	    .lesson9-bg:hover,
+  	    .lesson10-bg:hover,
+  	    .check-ring-icon:hover,
+  	    .lock-icon:hover,
+  	    .lock-icon1:hover,
+  	    .lock-icon2:hover,
+  	    .lock-icon3:hover,
+  	    .lock-icon4:hover,
+  	    .lock-icon5:hover,
+  	    .lock-icon6:hover,
+  	    .lock-icon7:hover,
+  	    .lock-icon8:hover {
+  	        opacity: 0.8 !important;
+  	    }
+  	    
+  	    /* Disable hover for locked lessons */
+  	    .lesson-locked:hover {
+  	        opacity: 0.6 !important;
+  	    }
+  	</style>
 </head>
 <body>
   <div class="phone-frame">
@@ -127,26 +355,37 @@
   	<!-- Navigation JavaScript -->
   	<script>
   	    document.addEventListener('DOMContentLoaded', function() {
-  	        // Load user progress on page load
+  	        console.log('🚀 Loading OWASP module...');
+  	        
+  	        // Load user progress from backend
   	        loadUserProgress();
+  	        
+  	        // Navigation function for lessons
+  	        function navigateToLesson(lessonNumber) {
+  	            const lessonUrls = [
+  	                '/html/materials/improper-credential-usage-lesson.html',           // Lesson 1
+  	                '/html/materials/inadequate-supply-chain-security-lesson.html',    // Lesson 2
+  	                '/html/materials/insecure-authentication-authorization-lesson.html', // Lesson 3
+  	                '/html/materials/insufficient-io-validation-lesson.html',          // Lesson 4
+  	                '/html/materials/insecure-communication-lesson.html',              // Lesson 5
+  	                '/html/materials/inadequate-privacy-controls-lesson.html',         // Lesson 6
+  	                '/html/materials/insufficient-binary-protections-lesson.html',     // Lesson 7
+  	                '/html/materials/security-misconfiguration-lesson.html',           // Lesson 8
+  	                '/html/materials/insecure-data-storage-lesson.html',               // Lesson 9
+  	                '/html/materials/insufficient-cryptography-lesson.html'            // Lesson 10
+  	            ];
+  	            
+  	            if (lessonNumber >= 1 && lessonNumber <= lessonUrls.length) {
+  	                window.location.href = lessonUrls[lessonNumber - 1];
+  	            }
+  	        }
+  	        
+  	        // Make navigateToLesson available globally for updateIconsFromProgress
+  	        window.navigateToLesson = navigateToLesson;
   	        
   	        // Back button
   	        document.getElementById('backButton').addEventListener('click', () => {
   	            window.location.href = '/html/learning.html';
-  	        });
-  	        
-  	        // Lesson 1 - Available (Improper Credential Usage)
-  	        document.getElementById('lesson1').addEventListener('click', () => {
-  	            window.location.href = '/html/materials/improper-credential-usage-lesson.html';
-  	        });
-  	        
-  	        // Other lessons - Coming soon
-  	        const comingSoonLessons = ['lesson2', 'lesson3', 'lesson4', 'lesson5', 'lesson6', 'lesson7', 'lesson8', 'lesson9', 'lesson10'];
-  	        
-  	        comingSoonLessons.forEach(lessonId => {
-  	            document.getElementById(lessonId).addEventListener('click', () => {
-  	                alert('This lesson is coming soon! Stay tuned for more content.');
-  	            });
   	        });
   	        
   	        // Navigation clicks
@@ -176,48 +415,264 @@
   	        try {
   	            const userData = JSON.parse(localStorage.getItem('userData'));
   	            if (!userData || !userData.username) {
-  	                console.log('No user data found');
+  	                console.log('No user data found, showing default state');
+  	                updateProgressDisplay(10, 0);
   	                return;
   	            }
   	            
-  	            // Fetch user progress from backend
-  	            const response = await fetch(`/api/users/${userData.username}/progress`);
-  	            if (!response.ok) {
-  	                throw new Error('Failed to fetch user progress');
+  	            // Try to fetch user progress from backend
+  	            try {
+  	                const response = await fetch(`/api/users/${userData.username}/progress`);
+  	                if (response.ok) {
+  	                    const progressData = await response.json();
+  	                    
+  	                    // Update localStorage with latest data from backend
+  	                    if (progressData.moduleProgress) {
+  	                        userData.moduleProgress = progressData.moduleProgress;
+  	                        localStorage.setItem('userData', JSON.stringify(userData));
+  	                        
+  	                        // Update icons and progress based on backend data
+  	                        updateIconsFromProgress(progressData.moduleProgress.owasp);
+  	                    }
+  	                    
+  	                    console.log('Successfully loaded progress from backend');
+  	                } else {
+  	                    console.log('Backend progress not available, using default state');
+  	                    updateProgressDisplay(10, 0);
+  	                }
+  	            } catch (backendError) {
+  	                console.log('Backend not available, using default state:', backendError.message);
+  	                updateProgressDisplay(10, 0);
   	            }
-  	            
-  	            const progressData = await response.json();
-  	            const owaspProgress = progressData.moduleProgress.owasp;
-  	            
-  	            // Update progress display
-  	            updateProgressDisplay(owaspProgress);
   	            
   	        } catch (error) {
   	            console.error('Error loading user progress:', error);
+  	            updateProgressDisplay(10, 0);
   	        }
   	    }
   	    
-  	    // Function to update progress display
-  	    function updateProgressDisplay(owaspProgress) {
+  	    // Function to update icons based on progress data
+  	    function updateIconsFromProgress(owaspProgress) {
+  	        console.log('=== UPDATING ICONS FROM PROGRESS ===');
+  	        console.log('OWASP Progress:', owaspProgress);
+  	        
+  	        const lessonIds = [
+  	            'improper-credential-usage',           // Lesson 1
+  	            'inadequate-supply-chain-security',    // Lesson 2
+  	            'insecure-authentication-authorization', // Lesson 3
+  	            'insufficient-io-validation',          // Lesson 4
+  	            'insecure-communication',              // Lesson 5
+  	            'inadequate-privacy-controls',         // Lesson 6
+  	            'insufficient-binary-protections',     // Lesson 7
+  	            'security-misconfiguration',           // Lesson 8
+  	            'insecure-data-storage',               // Lesson 9
+  	            'insufficient-cryptography'            // Lesson 10
+  	        ];
+  	        
+  	        const iconSelectors = [
+  	            '.check-ring-icon',  // Lesson 1
+  	            '.lock-icon',        // Lesson 2  
+  	            '.lock-icon1',       // Lesson 3
+  	            '.lock-icon2',       // Lesson 4
+  	            '.lock-icon3',       // Lesson 5
+  	            '.lock-icon4',       // Lesson 6
+  	            '.lock-icon5',       // Lesson 7
+  	            '.lock-icon6',       // Lesson 8
+  	            '.lock-icon7',       // Lesson 9
+  	            '.lock-icon8'        // Lesson 10
+  	        ];
+  	        
+  	        const allLessonContainers = [
+  	            '#lesson1', '#lesson2', '#lesson3', '#lesson4', '#lesson5',
+  	            '#lesson6', '#lesson7', '#lesson8', '#lesson9', '#lesson10'
+  	        ];
+  	        
+  	        const completedLessons = owaspProgress?.completedLessons || [];
+  	        console.log('Completed lessons:', completedLessons);
+  	        
+  	        let completedCount = 0;
+  	        let nextAvailableIndex = -1;
+  	        
+  	        // Update icons based on completion status
+  	        iconSelectors.forEach((selector, index) => {
+  	            const icon = document.querySelector(selector);
+  	            const lessonId = lessonIds[index];
+  	            const isCompleted = completedLessons.includes(lessonId);
+  	            
+  	            if (icon) {
+  	                if (isCompleted) {
+  	                    icon.src = '/html/icons/Check_ring.svg';
+  	                    completedCount++;
+  	                    console.log(`✅ Lesson ${index + 1} (${lessonId}): COMPLETED`);
+  	                } else if (nextAvailableIndex === -1 && completedCount === index) {
+  	                    // This is the next available lesson
+  	                    icon.src = '/html/icons/Book_open_alt.svg';
+  	                    nextAvailableIndex = index;
+  	                    console.log(`📖 Lesson ${index + 1} (${lessonId}): NEXT AVAILABLE`);
+  	                } else {
+  	                    // This lesson is locked
+  	                    icon.src = '/html/icons/Group 8grey.svg';
+  	                    console.log(`🔒 Lesson ${index + 1} (${lessonId}): LOCKED`);
+  	                }
+  	            }
+  	        });
+  	        
+  	        // Update lesson access controls
+  	        allLessonContainers.forEach((containerSelector, index) => {
+  	            const container = document.querySelector(containerSelector);
+  	            if (container) {
+  	                const lessonId = lessonIds[index];
+  	                const isCompleted = completedLessons.includes(lessonId);
+  	                const isNextAvailable = (index === nextAvailableIndex);
+  	                
+  	                if (isCompleted || isNextAvailable) {
+  	                    // Allow access to completed and next available lessons
+  	                    setLessonCursor(index + 1, 'pointer', true);
+  	                    container.style.opacity = '1';
+  	                    addLessonClickHandlers(index + 1, () => {
+  	                        navigateToLesson(index + 1);
+  	                    });
+  	                    
+  	                    if (isNextAvailable) {
+  	                        container.classList.add('next-available-lesson');
+  	                    }
+  	                } else {
+  	                    // Lock inaccessible lessons
+  	                    setLessonCursor(index + 1, 'not-allowed', false);
+  	                    container.style.opacity = '0.6';
+  	                    addLessonClickHandlers(index + 1, (e) => {
+  	                        e.preventDefault();
+  	                        alert(`Please complete the previous lessons first before accessing this lesson.`);
+  	                    });
+  	                }
+  	            }
+  	        });
+  	        
+  	        // Update progress display
+  	        updateProgressDisplay(10, completedCount);
+  	        
+  	        console.log(`📊 Progress updated: ${completedCount}/10 lessons completed`);
+  	    }
+  	    
+  	    // Function to validate lesson icons (simplified)
+  	    function validateLessonIcons() {
+  	        console.log('=== VALIDATING LESSON ICONS ===');
+  	        
+  	        // Count current visual state for validation
+  	        const iconSelectors = [
+  	            '.check-ring-icon', '.lock-icon', '.lock-icon1', '.lock-icon2', '.lock-icon3',
+  	            '.lock-icon4', '.lock-icon5', '.lock-icon6', '.lock-icon7', '.lock-icon8'
+  	        ];
+  	        
+  	        let completedCount = 0;
+  	        iconSelectors.forEach((selector, index) => {
+  	            const icon = document.querySelector(selector);
+  	            if (icon) {
+  	                const iconSrc = icon.src || '';
+  	                const isCompleted = iconSrc.includes('Check_ring.svg');
+  	                if (isCompleted) {
+  	                    completedCount++;
+  	                }
+  	            }
+  	        });
+  	        
+  	        console.log(`📊 Visual validation: ${completedCount}/10 lessons appear completed`);
+  	        updateProgressDisplay(10, completedCount);
+  	    }
+  	    
+  	    // Function to update progress display based on completed lessons
+  	    function updateProgressDisplay(totalLessons, completedCount) {
+  	        const progressPercentage = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
+  	        
+  	        console.log(`📈 Updating display: ${completedCount}/${totalLessons} = ${progressPercentage}%`);
+  	        
   	        // Update progress percentage text
   	        const completeElement = document.querySelector('.complete');
   	        if (completeElement) {
-  	            completeElement.textContent = `${owaspProgress.progressPercentage}% Complete`;
+  	            completeElement.textContent = `${progressPercentage}% Complete`;
+  	            console.log(`✅ Updated progress text: ${progressPercentage}% Complete`);
+  	        } else {
+  	            console.log('❌ Progress element (.complete) not found');
   	        }
   	        
   	        // Update lesson counter
   	        const lessonsElement = document.querySelector('.lessons');
   	        if (lessonsElement) {
-  	            lessonsElement.textContent = `${owaspProgress.completedLessons.length}/${owaspProgress.totalLessons}`;
+  	            lessonsElement.textContent = `${completedCount}/${totalLessons}`;
+  	            console.log(`✅ Updated lesson counter: ${completedCount}/${totalLessons}`);
+  	        } else {
+  	            console.log('❌ Lessons element (.lessons) not found');
   	        }
   	        
   	        // Update progress bar width
   	        const progressBar = document.querySelector('.on-click-module-inner');
-  	        if (progressBar) {
+  	        if (progressBar && progressPercentage > 0) {
   	            const maxWidth = 329; // Same as background progress bar
-  	            const newWidth = (owaspProgress.progressPercentage / 100) * maxWidth;
+  	            const newWidth = (progressPercentage / 100) * maxWidth;
   	            progressBar.style.width = `${newWidth}px`;
+  	            console.log(`✅ Updated progress bar width: ${newWidth}px`);
+  	        } else if (progressBar) {
+  	            progressBar.style.width = '0px';
+  	            console.log('✅ Set progress bar to 0px (no progress)');
+  	        } else {
+  	            console.log('❌ Progress bar element (.on-click-module-inner) not found');
   	        }
+  	    }
+  	    
+  	    // Function to add click handlers to all lesson elements
+  	    function addLessonClickHandlers(lessonNumber, clickHandler) {
+  	        const elements = getLessonElements(lessonNumber);
+  	        elements.forEach(element => {
+  	            if (element) {
+  	                element.addEventListener('click', clickHandler);
+  	            }
+  	        });
+  	    }
+  	    
+  	    // Function to get all clickable elements for a lesson
+  	    function getLessonElements(lessonNumber) {
+  	        const elements = [];
+  	        elements.push(document.getElementById(`lesson${lessonNumber}`));
+  	        
+  	        const lessonMappings = {
+  	            1: { title: '.password-security1', label: '.lesson', iconBg: '.ellipse-div', icon: '.check-ring-icon' },
+  	            2: { title: '.common-password-mistakes', label: '.lesson1', iconBg: '.on-click-module-child3', icon: '.lock-icon' },
+  	            3: { title: '.password-strength-quiz', label: '.quiz', iconBg: '.on-click-module-child5', icon: '.lock-icon1' },
+  	            4: { title: '.password-managers', label: '.lesson2', iconBg: '.on-click-module-child7', icon: '.lock-icon2' },
+  	            5: { title: '.creating-strong-passwords', label: '.lesson3', iconBg: '.on-click-module-child9', icon: '.lock-icon3' },
+  	            6: { title: '.password-security2', label: '.lesson4', iconBg: '.on-click-module-child11', icon: '.lock-icon4' },
+  	            7: { title: '.password-security3', label: '.lesson5', iconBg: '.on-click-module-child13', icon: '.lock-icon5' },
+  	            8: { title: '.password-security4', label: '.lesson6', iconBg: '.on-click-module-child15', icon: '.lock-icon6' },
+  	            9: { title: '.lesson9-title', label: '.lesson7', iconBg: '.lesson9-bg', icon: '.lock-icon7' },
+  	            10: { title: '.lesson10-title', label: '.lesson8', iconBg: '.lesson10-bg', icon: '.lock-icon8' }
+  	        };
+  	        
+  	        const mapping = lessonMappings[lessonNumber];
+  	        if (mapping) {
+  	            elements.push(document.querySelector(mapping.title));
+  	            elements.push(document.querySelector(mapping.label));
+  	            elements.push(document.querySelector(mapping.iconBg));
+  	            elements.push(document.querySelector(mapping.icon));
+  	        }
+  	        
+  	        return elements.filter(el => el !== null);
+  	    }
+  	    
+  	    // Function to set cursor style for all lesson elements
+  	    function setLessonCursor(lessonNumber, cursorStyle, isClickable = true) {
+  	        const elements = getLessonElements(lessonNumber);
+  	        elements.forEach(element => {
+  	            if (element) {
+  	                element.style.cursor = cursorStyle;
+  	                if (isClickable) {
+  	                    element.classList.add('lesson-clickable');
+  	                    element.classList.remove('lesson-locked');
+  	                } else {
+  	                    element.classList.add('lesson-locked');
+  	                    element.classList.remove('lesson-clickable');
+  	                }
+  	            }
+  	        });
   	    }
   	</script>
 </body>
