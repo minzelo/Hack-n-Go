@@ -86,11 +86,6 @@ http://localhost:8000
 - **JohnSmith-Cloud** — Algifary Noer Umaro (2702293506)  
 - **Agi-123** — Andragi Bianca (2702385791)  
 - **snakebytee** — Darrius Wirya Prajna (2702303791)  
-- **eyetolog1st** — Samuel Adrian Murwanto (2702244984)
-
-## 🛡️ License
-
-This project is licensed under the MIT License.
-See the LICENSE file for details.
+- **eyetolog1st** — Samuel Adrian Murwanto (2702244984) 
 
 🎓 Hack’n Go is an open-source educational tool developed as part of a university cybersecurity project and is not intended for commercial distribution. Contributions and feedback are welcome!
