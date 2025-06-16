@@ -1,7 +1,7 @@
 # Hack’n Go: Web-Based Cybersecurity Education Game Inspired by Duolingo
 
 <p align="center" width="100">
-  <img src="static/assets/hackngo-banner.svg" alt="Hack'n Go Banner" width="700">
+  <img src="static/assets/hackngo-banner.png" alt="Hack'n Go Banner" width="700">
 </p>
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
