@@ -1,119 +1,96 @@
-# Hack-n-Go
-Pengembangan aplikasi Game Quizz Cyber Security "Hack'n Go"
+# Hack’n Go: Web-Based Cybersecurity Education Game Inspired by Duolingo
 
------------------------------------------
+<p align="center" width="100">
+  <img src="static/assets/hackngo-banner.png" alt="Hack'n Go Banner" width="700">
+</p>
 
-# Git Guide - Hack'n Go
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Cybersecurity-Quiz](https://img.shields.io/badge/Cybersecurity_Quiz-blue)
+![Gamified-Learning](https://img.shields.io/badge/Gamified_Learning-orange)
+![Beginner-Friendly](https://img.shields.io/badge/Beginner_Friendly-yellow)
 
-Panduan ini disusun agar seluruh tim Hack'n Go dapat bekerja secara kolaboratif dan konsisten menggunakan Git dan GitHub.
+Hack’n Go is a beginner-friendly web application designed to gamify cybersecurity education through interactive quizzes and bite-sized learning modules. Inspired by Duolingo, the app empowers users to learn crucial cybersecurity concepts while earning points, tracking progress, and competing with others on the leaderboard.
 
+This project was developed as part of a university Software Engineering course by a team of cybersecurity students, aiming to create an accessible platform for raising cybersecurity awareness across different skill levels.
 
-## 1. Tujuan
+---
 
-Dokumen ini membantu:
-- Menyatukan alur kerja Git seluruh anggota tim (PM, frontend, backend)
-- Menghindari konflik perubahan dan push sembarangan
-- Menjaga struktur proyek tetap rapi dan terorganisir
+## 🔥 Why Hack’n Go?
 
+In a digital age where cyber threats are evolving rapidly, many users remain unaware of basic security practices. Hack’n Go was built to bridge this knowledge gap by offering a simple, fun, and accessible way to learn cybersecurity fundamentals. The app focuses on technical topics such as OWASP Top 10 and ISO 27001, repackaged into modules and quizzes designed for hands-on microlearning.
 
-## 2. Branching Model
+Unlike traditional learning platforms, Hack’n Go uses gamification elements such as daily challenges, levels, and leaderboards to keep users motivated. This approach encourages consistent learning and helps foster healthy cybersecurity habits for individuals, students, and professionals alike.
 
-### Branch Utama:
-- `main` → branch **stabil** untuk versi yang dirilis
-- `dev` → branch **pengembangan aktif**, tempat menggabungkan semua fitur
+---
 
-### Branch Fitur (dibuat oleh tim dev):
-Gunakan format:
+## ✨ Main Features
 
-`divisi/nama-fitur`
+| No. | Feature                     | Description |
+|:---:|-----------------------------|-------------|
+| 1.  | Interactive Cyber Quizzes   | Answer gamified quizzes on topics like OWASP Top 10 and ISO 27001. Each level presents 10 randomized questions with instant feedback. |
+| 2.  | Learning Modules            | Understand security topics through simplified, beginner-friendly modules before starting the quiz. |
+| 3.  | Daily Challenge & Points    | Earn XP daily through quizzes and challenges to maintain a learning streak and unlock achievements. |
+| 4.  | Leaderboard System          | Compete with other users based on points and progress to stay on top of the cybersecurity leaderboard. |
+| 5.  | Responsive Web Design       | Hack’n Go is designed to run on both desktop and mobile browsers. |
+| 6.  | User Progress Tracking      | Each user can track completed levels, earned XP, and badges via the Profile tab. |
 
-Contoh:
-- `frontend/login-page`
-- `backend/register-api`
+---
 
+## 🧰 Requirements
 
-## 3. Langkah-langkah untuk Project Manager (PM)
+Before running the application, make sure you have:
 
-### Hanya dilakukan 1 kali di awal proyek
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- npm (usually comes with Node.js)
+- Modern web browser (Chrome, Firefox, Edge, etc.)
 
-```bash
-git checkout -b dev
-git push -u origin dev
-```
+---
 
-## 4. Langkah-langkah untuk Tim Developer (Frontend & Backend)
+## 🚀 Getting Started
 
-### Pertama Kali:
-
-```bash
-git clone https://github.com/username/hackn-go.git
-cd hackn-go
-git checkout dev
-git pull origin dev
-```
-
-### Buat Branch Baru untuk Fitur:
+### 1. Clone the repository
 
 ```bash
-git checkout -b frontend/nama-fitur
+git clone https://github.com/your-username/hack-n-go.git
+cd hack-n-go
 ```
 
-### atau
+### 2. Run the app locally
 
+Double-click the following script:
 ```bash
-git checkout -b backend/nama-fitur
+start-server.bat
 ```
-
-### Setelah Fitur Selesai:
-
+OR, from terminal:
 ```bash
-git add .
-git commit -m "[FE] feat: buat tampilan login"
-git push origin frontend/nama-fitur
+./start-server.bat
 ```
+By default, the app will be available at:
 
-### Buat Pull Request:
-1. Masuk ke GitHub
-2. Klik "Compare & Pull Request"
-3. Pastikan dari branch kamu → ke dev
-4. Tambahkan deskripsi yang jelas
+```arduino
+http://localhost:8000
+```
+💡 No complex setup or installation—everything runs locally and instantly!
 
+## 🧪 Sample Content (Preview)
 
-## 5. Format Commit Message
-
-### Gunakan format berikut:
-
-[DIVISI] tipe: deskripsi singkat
-Contoh:
-
-- [FE] feat: buat halaman register
-
-- [FE] fix: perbaiki typo di form
-
-- [BE] feat: tambah endpoint login
-
-- [BE] docs: update README setup firebase
-
-### Tipe Commit:
-
-- feat = Menambahkan fitur baru
-- fix = Memperbaiki bug atau error
-- docs = Perubahan dokumentasi
-- refactor = Mengubah struktur kode tanpa ubah fungsi
+| Category     | Learning Module Preview                          | Quiz Preview                          |
+|--------------|--------------------------------------------------|----------------------------------------|
+| OWASP Top 10 | ![](static/assets/module-preview.png)            | ![](static/assets/quiz-preview.png)   |
+| ISO 27001    | ![](static/assets/module-iso.png)                | ![](static/assets/quiz-iso.png)       |
 
 
-## 6. Aturan Pull Request (PR)
+## 👨‍💻 Authors
 
-- Semua perubahan harus melalui Pull Request ke dev
-- Tidak ada yang boleh push langsung ke main
-- PR harus diberi deskripsi fitur atau perubahan yang jelas
-- Reviewer (PM atau sesama tim) dapat melakukan review sebelum merge
+- **minzelo** — Raihan Rahman Syah Putra (2702211941)  
+- **JohnSmith-Cloud** — Algifary Noer Umaro (2702293506)  
+- **Agi-123** — Andragi Bianca (2702385791)  
+- **snakebytee** — Darrius Wirya Prajna (2702303791)  
+- **eyetolog1st** — Samuel Adrian Murwanto (2702244984)
 
+## 🛡️ License
 
-## 7. Tips Kerja Aman
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-- Selalu lakukan git pull origin dev sebelum mulai kerja
-- Jangan kerja langsung di main
-- Gunakan .gitignore agar file sampah atau sensitif tidak ikut ter-push
-- Jika terjadi konflik saat merge, selesaikan bersama tim
-- Dikelola oleh Project Manager Hack'n Go
+🎓 Hack’n Go is an open-source educational tool developed as part of a university cybersecurity project and is not intended for commercial distribution. Contributions and feedback are welcome!
