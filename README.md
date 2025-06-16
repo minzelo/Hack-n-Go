@@ -101,4 +101,16 @@ Link : www.figma.com/design/Xzf0Tc1dUtNw6pzBiqfmmI/HackNGo?node-id=0-1
 - **snakebytee** — Darrius Wirya Prajna (2702303791) — Backend & Frontend Merge
 - **eyetolog1st** — Samuel Adrian Murwanto (2702244984) — Design & Frontend
 
+## 🔮 Future Works
+
+While Hack’n Go is currently functional as a cybersecurity learning platform, there are several features we plan to enhance in future iterations:
+
+- **Leaderboard Functionality**  
+  The leaderboard UI is in place, but real-time score tracking and dynamic ranking are still under development. This feature will allow users to compete and track progress globally.
+
+- **Interactive Polishing**  
+  Additional UI/UX improvements are planned to enhance animations, responsiveness, and interactivity—especially on mobile views and during quiz transitions—to create a more engaging experience.
+
+> Contributions and feature suggestions are welcome as we continue improving Hack’n Go in the next development phase.
+
 🎓 Hack’n Go is an open-source educational tool developed as part of a university cybersecurity project and is not intended for commercial distribution. Contributions and feedback are welcome!
