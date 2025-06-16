@@ -78,7 +78,7 @@ OR, from terminal:
 By default, the app will be available at:
 
 ```arduino
-http://localhost:8000
+http://localhost:3000
 ```
 💡 No complex setup or installation—everything runs locally and instantly!
 
