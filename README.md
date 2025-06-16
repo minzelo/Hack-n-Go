@@ -91,7 +91,7 @@ http://localhost:3000
 
 ## 🖊️ Figma Design
 
-www.figma.com/design/Xzf0Tc1dUtNw6pzBiqfmmI/HackNGo?node-id=0-1
+Link : www.figma.com/design/Xzf0Tc1dUtNw6pzBiqfmmI/HackNGo?node-id=0-1
 
 ## 👨‍💻 Authors
 
