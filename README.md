@@ -89,6 +89,9 @@ http://localhost:3000
 | OWASP Top 10 | ![](static/assets/module-preview.png)            | ![](static/assets/quiz-preview.png)   |
 | ISO 27001    | ![](static/assets/module-iso.png)                | ![](static/assets/quiz-iso.png)       |
 
+## 🖊️ Figma Design
+
+www.figma.com/design/Xzf0Tc1dUtNw6pzBiqfmmI/HackNGo?node-id=0-1
 
 ## 👨‍💻 Authors
 
