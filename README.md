@@ -82,10 +82,10 @@ http://localhost:8000
 
 ## 👨‍💻 Authors
 
-- **minzelo** — Raihan Rahman Syah Putra (2702211941)  
-- **JohnSmith-Cloud** — Algifary Noer Umaro (2702293506)  
+- **minzelo** — Raihan Rahman Syah Putra (2702211941) — Backend
+- **JohnSmith-Cloud** — Algifary Noer Umaro (2702293506) — Quiz & Learning Content
 - **Agi-123** — Andragi Bianca (2702385791)  
-- **snakebytee** — Darrius Wirya Prajna (2702303791)  
-- **eyetolog1st** — Samuel Adrian Murwanto (2702244984) 
+- **snakebytee** — Darrius Wirya Prajna (2702303791) — Backend & Frontend Merge
+- **eyetolog1st** — Samuel Adrian Murwanto (2702244984) — Design & Frontend
 
 🎓 Hack’n Go is an open-source educational tool developed as part of a university cybersecurity project and is not intended for commercial distribution. Contributions and feedback are welcome!
